@@ -5,7 +5,6 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 # Create your views here.
-
 #access the homepage by localhost:8000/accounts because  path('accounts/', include('signup.urls'))from the project urls.py
 
 # dummy Homepage View to check that the login was working
