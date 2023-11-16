@@ -16,7 +16,14 @@ def homepage(request):
 
 # registration view
 
-
+def Registration(request):
+    form = RegistrationForm()
+    if request.method =="POST":
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/accounts/login') #redirects to the login page
+    return render(request,"signup/registration.html",{"form":form} )
 
 
 #login view
