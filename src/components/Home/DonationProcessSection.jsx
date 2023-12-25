@@ -2,7 +2,7 @@ import React from 'react'
 
 const DonationProcessSection = () => {
   return (
-      <div className=' bg-white mx-auto w-full'>
+      <div className="bg-white mx-auto w-full ">
           <div className=' container mx-auto w-full'>
               <div className='py-6 md:py-12'>
                  
@@ -13,7 +13,7 @@ const DonationProcessSection = () => {
                                   <h3 className=" text-neutral-800 max-w-xl">Making a Difference: Learning the Donation Process</h3>
                                   <p className=" text-neutral-600 text-base font-normal max-w-lg ">Empower Positive Change in a Few Simple Steps. Discover the Seamless Process of Donating on Donation Trace.</p>
                               </div>
-                              <img src='/assets/donate_image.jpg' className="h-40 w-auto rounded-md" />
+                              <img src='/assets/donate_image.jpg' className="h-40 w-auto rounded-md" alt=''/>
                           </div>
                           
                      
@@ -64,7 +64,7 @@ const DonationProcessSection = () => {
                               <div className="self-stretch text-neutral-600 text-base font-medium font-['Nunito'] leading-normal">Finalize your donation by submitting your payment, and watch your support create meaningful change. Every contribution counts, and we appreciate your commitment to making a positive impact.</div>
                           </div>
                       </div>
-                      <div className="w-40 rounded-lg justify-start items-start inline-flex">
+                      <div className=" mb-0 w-40 rounded-lg justify-start items-start inline-flex max-sm:mb-96">
                           <div className="grow shrink basis-0 h-14 px-5 py-4 bg-teal-600 rounded-lg shadow border border-teal-600 justify-center items-center gap-2 flex">
                               <div className="text-white text-base font-bold font-['Nunito'] leading-normal">Donate Now</div>
                           </div>
