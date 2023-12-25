@@ -3,7 +3,8 @@ import React from 'react'
 import HeroSection from './HeroSection'
 import ActivitySection from './ActivitySection'
 import TrendingSection from './TrendingSection'
-import Cta from './Cta'
+import Cta from './CtaSection'
+import DonationProcessSection from './DonationProcessSection'
 
 const HomePage = () => {
   return (
@@ -12,7 +13,8 @@ const HomePage = () => {
       <HeroSection />
       <ActivitySection />
       <TrendingSection />
-      <Cta/>
+      <Cta />
+      <DonationProcessSection/>
       
     </div>
   )
