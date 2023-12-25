@@ -1,5 +1,5 @@
 import NavBar from './components/Navbar';
-//import Footer from './components/footer'
+import Footer from './components/footer'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -10,6 +10,7 @@ import {
 
 import "./style.css";
 import HomePage from './components/Home/HomePage';
+import FrequentlyAsked from './components/frequentlyask';
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -18,8 +19,12 @@ function App() {
 
     <Router>
          <NavBar />
+         <HomePage />
+         <FrequentlyAsked />
         <Routes>
-           <Route path="/" element={<HomePage />} />
+           <Route path="/"
+          //  element={}
+           />
           
           <Route path="/project"
           // element={<Projects />}
@@ -34,7 +39,7 @@ function App() {
           element={<Navigate to="/"/>}
           />
         </Routes>
-       
+       {/* <Footer /> */}
 
     </Router>
   );
