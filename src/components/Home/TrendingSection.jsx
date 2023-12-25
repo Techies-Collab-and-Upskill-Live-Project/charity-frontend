@@ -13,7 +13,7 @@ const TrendingSection = () => {
                             and make a lasting impact – because changing the world starts with your support.
                         </p>
                     </div>
-                    <div className='grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full mt-10 lg:mt-16'>
+                    <div className='grid gap-5 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:max-w-full sm:mx-auto xl:max-w-full mt-10 lg:mt-16'>
                         {trendingdata.map((trendings) => (
                             <div key={trendings.id} className='overflow-hidden transition-shadow duration-300 bg-white rounded-md'>
                                 <img src={trendings.CoverImg} className='0bject-cover w-full h-64 rounded-md' alt='trending_inage' />
@@ -28,7 +28,7 @@ const TrendingSection = () => {
                                             <div className="w-[326px] lg:w-[368px] h-2 left-0 top-0 absolute bg-neutral-200 rounded-lg" />
                                             <div className="  w-[170.30px] lg:w-[192.24px] h-2 left-0 top-0 absolute bg-teal-600 rounded-lg" />
                                         </div>
-                                        <div className="w-[66px] h-9 left-[140.85px] lg:left-[159px] top-0 absolute">
+                                        <div className="w-[66px] h-9 left-[140.85px] lg:left-[160px] top-0 absolute">
                                             <div className="w-[66px] h-7 px-2 py-1 left-0 top-0 absolute bg-emerald-50 rounded-lg justify-center items-center inline-flex">
                                                 <div className="text-center text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">{trendings.currentvalue }</div>
                                             </div>
