@@ -3,6 +3,7 @@ import React from 'react'
 import HeroSection from './HeroSection'
 import ActivitySection from './ActivitySection'
 import TrendingSection from './TrendingSection'
+import Cta from './Cta'
 
 const HomePage = () => {
   return (
@@ -10,7 +11,8 @@ const HomePage = () => {
          
       <HeroSection />
       <ActivitySection />
-      <TrendingSection/>
+      <TrendingSection />
+      <Cta/>
       
     </div>
   )

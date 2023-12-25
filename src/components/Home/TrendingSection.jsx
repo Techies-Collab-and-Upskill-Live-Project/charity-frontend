@@ -49,12 +49,15 @@ const TrendingSection = () => {
                                             <img className="w-8 h-8 -ml-2 rounded-full border border-white" alt='trending2' src={trendings.donatingImg3} />
                                         </div>
                                         <div className="w-[190px] px-4 py-2 bg-orange-50 rounded-[20px] justify-center items-center flex">
-                                            <div className="text-yellow-800 text-sm font-semibold font-['Nunito'] leading-tight">{trendings.totalDonation }</div>
+                                            <div className="text-yellow-800 text-sm font-semibold  leading-tight">{trendings.totalDonation }</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         ))}
+                    </div>
+                    <div className='mt-10 flex items-center justify-center'>
+                         <button className="border border-[#04A38A] text-[#04A38A] rounded-md py-3 px-5 font-medium">See more campaigns</button>
                     </div>
                 </div>
             </div>
