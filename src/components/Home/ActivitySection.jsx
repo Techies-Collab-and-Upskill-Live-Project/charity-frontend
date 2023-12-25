@@ -8,7 +8,7 @@ const ActivitySection = () => {
             <div className='container mx-auto w-full'>
                 <div className='py-6 md:py-12'>
                     <div className="flex flex-col items-center sm:max-auto">
-                        <h2 className="mb-4 tracking-wide text-center "> Explore Our Ongoing Causes</h2>
+                        <h3 className="mb-4 tracking-wide text-center "> Explore Our Ongoing Causes</h3>
                         <p className="max-w-2xl font-medium text-center leading-5 text-[#515151] text-md">
                           Each cause is a chapter in our collective story of compassion. Explore,
                           engage, and make a lasting impact – because changing

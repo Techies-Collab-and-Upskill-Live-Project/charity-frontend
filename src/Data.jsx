@@ -32,13 +32,41 @@ export const activitiesdata = [
     },
 ];export default activitiesdata;
 
-export const tradingdata = [
+export const trendingdata = [
     {
         id: 1,
         CoverImg: "/assets/image1.jpg",
         title: "Support for Helmes Orphanage, East Legon...",
         content: "Lorem ipsum dolor sit amet consectetur. Pharetra mi purus mi scelerisque habitasse pulvinar. Velitt amet consectet......",
         targetvalue: "$ 1000",
-        currentvalue:"$ 50.00"
-    }
+        currentvalue: "$ 50.00",
+        donatingImg: "/assets/image3.jpg",
+        donatingImg2: "/assets/image4.jpg",
+        donatingImg3: "/assets/image5.jpg",
+        totalDonation: "+26 People are donating"
+    },
+     {
+        id: 2,
+        CoverImg: "/assets/image6.jpg",
+        title: "Support for Helmes Orphanage, East Legon...",
+        content: "Lorem ipsum dolor sit amet consectetur. Pharetra mi purus mi scelerisque habitasse pulvinar. Velitt amet consectet......",
+        targetvalue: "$ 1000",
+        currentvalue: "$ 50.00",
+        donatingImg: "/assets/image3.jpg",
+        donatingImg2: "/assets/image4.jpg",
+        donatingImg3: "/assets/image5.jpg",
+        totalDonation: "+26 People are donating"
+    },
+      {
+        id: 2,
+        CoverImg: "/assets/image2.jpg",
+        title: "Support for Helmes Orphanage, East Legon...",
+        content: "Lorem ipsum dolor sit amet consectetur. Pharetra mi purus mi scelerisque habitasse pulvinar. Velitt amet consectet......",
+        targetvalue: "$ 1000",
+        currentvalue: "$ 50.00",
+        donatingImg: "/assets/image3.jpg",
+        donatingImg2: "/assets/image4.jpg",
+        donatingImg3: "/assets/image5.jpg",
+        totalDonation: "+26 People are donating"
+    },
 ]

@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-[34px] md:text-[80px] font-bold;
+    @apply text-[34px] md:text-[70px] font-bold;
   }
 
   h2 {
@@ -21,6 +21,9 @@
 
   h5 {
     @apply text-[16px] md:text-[20px] font-bold;
+  }
+  h6 {
+    @apply text-[10px] md:text-[16px] font-bold
   }
 
 
