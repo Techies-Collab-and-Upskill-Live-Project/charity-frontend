@@ -5,32 +5,33 @@ const Cta = () => {
       <div className=' bg-white mx-auto w-full'>
           <div className=' container mx-auto w-full'>
               <div className='py-6 md:py-12'>
-                  <div className=" h-[938px] px-4 py-12 lg:h-[565px] lg:px-10 lg:py-20 bg-emerald-800 rounded-lg">
+                  <div className="  px-4 py-6 lg:px-10 lg:py-20 bg-emerald-800 rounded-lg">
                       <h3 className=" text-white ">Featured Campaign</h3>
-                      <div className="gap-8 items-center py-4 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid lg:grid-cols-2 sm:py-8 lg:px-6">
-                          <img className="object-cover w-[326px] h-[353px] lg:w-[500px] lg:h-[300px] self-stretch rounded-lg" alt='cta_image' src="/assets/ctaimage.jpg" />
-                          <div class="">
+                      <div className="gap-8 items-center py-4 px-4 mx-auto  xl:gap-16 md:grid lg:grid-cols-2 sm:py-8 lg:px-6">
+                          <img className="object-cover w-auto h-auto rounded-lg" alt='cta_image' src="/assets/ctaimage.jpg" />
+                          <div class=" self-stretch">
                               <h4 className="  text-white leading-loose">Support for Whirlwind pandemic.</h4>
-                              <p className=" text-white text-base font-medium leading-normal">Lorem ipsum dolor sit amet consectetur. Pharetra mi purus mi scelerisque habitasse pulvinar. Velitt amet consectet......</p>
-                              <div className="pt-4 flex-col justify-start items-start gap-1 flex">
-                                  <div className="self-stretch h-[53px] relative">
-                                      <div className=" w-[326px] lg:w-[476px] h-3 left-0 top-[41px] absolute">
-                                          <div className="w-[326px] lg:w-[476px] h-3 left-0 top-0 absolute bg-zinc-400 rounded-lg" />
-                                          <div className="w-[170.30px] lg:w-[248.66px] h-3 left-0 top-0 absolute bg-white rounded-lg" />
-                                      </div>
-                                      <div className="w-[73px] h-[39px] left-[211px] top-0 absolute">
-                                          <div className="w-[73px] h-8 px-2 py-1 left-0 top-0 absolute bg-white rounded-lg justify-center items-center inline-flex">
-                                              <span className="text-center text-emerald-800 text-base font-bold leading-normal">$ 50.00</span>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="self-stretch justify-start items-start inline-flex">
-                                      <div className="grow shrink basis-0 h-6 justify-end items-center gap-2.5 flex">
-                                          <p className="grow shrink basis-0 text-right text-white text-base font-bold leading-normal">$ 100.00</p>
-                                      </div>
-                                  </div>
-                              </div>
-                               <div className="flex-col justify-start items-start gap-3 flex">
+                              <p className=" text-white text-base font-medium leading-normal pb-6">Lorem ipsum dolor sit amet consectetur. Pharetra mi purus mi scelerisque habitasse pulvinar. Velitt amet consectet......</p>
+                               <div className="w-[326px] lg:w-[368px] h-[72px] flex-col justify-start items-start gap-1 inline-flex">
+                                    <div className="self-stretch h-12 relative">
+                                        <div className="w-[326px] lg:w-[368px] h-2 left-0 top-[40px] absolute">
+                                            <div className="w-[326px] lg:w-[368px] h-2 left-0 top-0 absolute bg-zinc-400 rounded-lg" />
+                                            <div className="  w-[170.30px] lg:w-[192.24px] h-2 left-0 top-0 absolute  bg-neutral-200   rounded-lg" />
+                                        </div>
+                                        <div className="w-[66px] h-9 left-[140.85px] lg:left-[160px] top-0 absolute">
+                                            <div className="w-[66px] h-7 px-2 py-1 left-0 top-0 absolute bg-emerald-50 rounded-lg justify-center items-center inline-flex">
+                                                <div className="text-center text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">$ 50.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="self-stretch justify-start items-start inline-flex">
+                                        <div className="grow shrink basis-0 h-5 justify-end items-center gap-2.5 flex">
+                                            <div className="grow shrink basis-0 text-right text-white text-sm font-bold font-['Nunito'] leading-tight">$ 1000</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                               <div className="flex-col justify-start items-start gap-3 flex pt-4">
                                     <div className="justify-start items-start inline-flex">
                                       <div className="justify-start items-start flex">
                                           <img className="w-10 h-10 rounded-full border border-white" src="https://via.placeholder.com/40x40" />
@@ -49,17 +50,11 @@ const Cta = () => {
                                   </span>
                               </button>
                           </div>
-
-
-                          
-                          
-                              </div>
-                          </div>
                       </div>
                   </div>
               </div>
-          
-   
+          </div>
+      </div>
   )
 }
 
