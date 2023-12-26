@@ -1,5 +1,6 @@
 import NavBar from './components/Navbar';
 import Footer from './components/footer'
+import ContactUs from './components/contactus/Contactuspage';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -18,17 +19,12 @@ function App() {
   return (
 
     <Router>
-         <NavBar />
-         <HomePage />
-         <FrequentlyAsked />
+
         <Routes>
-           <Route path="/"
-          //  element={}
-           />
-          
-          <Route path="/project"
-          // element={<Projects />}
-          />
+           <Route path="/" element={ <HomePage />} />
+
+          <Route path="/contactus" element={<ContactUs />}/>
+
           <Route path="/about"
           // element={<About />}
           />
@@ -36,10 +32,9 @@ function App() {
           // element={<Resume />}
           />
           <Route path="*"
-          element={<Navigate to="/"/>}
+          // element={<Navigate to="/"/>}
           />
         </Routes>
-       {/* <Footer /> */}
 
     </Router>
   );

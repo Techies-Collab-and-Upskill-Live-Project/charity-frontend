@@ -6,16 +6,21 @@ import TrendingSection from './TrendingSection'
 import Cta from './CtaSection'
 import DonationProcessSection from './DonationProcessSection'
 
+
+import NavBar from '../Navbar'
+import FrequentlyAsked from '../frequentlyask'
+import Footer from '../footer'
 const HomePage = () => {
   return (
       <div>
-         
+      <NavBar />
       <HeroSection />
       <ActivitySection />
       <TrendingSection />
       <Cta />
       <DonationProcessSection/>
-      
+      <FrequentlyAsked />
+      <Footer />
     </div>
   )
 }

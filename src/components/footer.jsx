@@ -3,6 +3,8 @@ import logo from "../assets/logo.png"
 import { FaInstagram } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
 import { CiTwitter } from "react-icons/ci";
+import { Link } from "react-router-dom";
+
 
 
 function Footer() {
@@ -28,10 +30,10 @@ function Footer() {
 
         <div className="flex mt-9">
             <div className="ml-3 mr-64">
-                <a href="/" className="ml-5 font-semibold">Home</a>
+                <Link  to="/" className="ml-5 font-semibold">Home</Link>
                 <a href="/" className="ml-10 font-semibold"> Link 1</a>
                 <a href="/" className="ml-10 font-semibold"> Link 2</a>
-                <a href="/" className="ml-10 font-semibold"> Contact us</a>
+                <Link to="/contactus" className="ml-10 font-semibold"> Contact us</Link>
             </div>
 
             <div className="flex ml-72">
