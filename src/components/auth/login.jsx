@@ -44,12 +44,14 @@ const Login = () =>{
                         </div>
 
                         <div className="">
-                            <a href="/" className="text-teal-500">Forget password?</a>
+                            <a href="/" className="text-teal-500">Forgot password?</a>
                         </div>
                       </div>
 
                       <button type="submit" className="bg-teal-500 rounded-md px-3 text-sm text-white mt-5 w-96 h-10" style={{width: "100%"}}> Login</button>
 
+
+                       <p className="text-center mt-12">Not A User Yet? <a href="/signup" className="text-teal-500">Signup</a></p>
                     </div>
                </form>
             </div>
