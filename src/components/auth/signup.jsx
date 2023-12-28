@@ -1,7 +1,8 @@
 import facebookicon from "../../assets/icons/facebookicon.png"
 import googleicon from "../../assets/icons/googleicon.png"
 import Navber from "../Navbar"
-import Footer from "../footer"
+
+import { Link } from "react-router-dom"
 
 
 const Signup = () =>{
@@ -63,7 +64,9 @@ const Signup = () =>{
                             We will also subscribe you to our level up newsletter. You can also unsubscribe at anytime</p>
                       </div>
 
-                      <p className="text-center mt-12">Already have an account? <a href="/login" className="text-teal-500">Login</a></p>
+                      <p className="text-center mt-12">Already have an account?
+                        <Link to="/login" className="text-teal-500">Login</Link>
+                      </p>
 
 
 
@@ -71,7 +74,7 @@ const Signup = () =>{
                </form>
             </div>
 
-            {/* <Footer /> */}
+
         </div>
     )
 }
