@@ -5,9 +5,9 @@ const Cta = () => {
       <div className=' bg-white mx-auto w-full'>
           <div className=' container mx-auto w-full'>
               <div className='py-6 md:py-12'>
-                  <div className="  px-4 py-6 lg:px-10 lg:py-20 bg-emerald-800 rounded-lg">
+                  <div className="  px-2 py-6 lg:px-10 lg:py-20 bg-emerald-800 rounded-lg">
                       <h3 className=" text-white ">Featured Campaign</h3>
-                      <div className="gap-8 items-center py-4 px-4 mx-auto  xl:gap-16 md:grid lg:grid-cols-2 sm:py-8 lg:px-6">
+                      <div className="gap-8 items-center py-4 px-2 mx-auto  xl:gap-16 md:grid lg:grid-cols-2 sm:py-8 lg:px-6">
                           <img className="object-cover w-auto h-auto rounded-lg" alt='cta_image' src="/assets/ctaimage.jpg" />
                           <div class=" self-stretch">
                               <h4 className="  text-white leading-loose">Support for Whirlwind pandemic.</h4>
@@ -34,9 +34,9 @@ const Cta = () => {
                                <div className="flex-col justify-start items-start gap-3 flex pt-4">
                                     <div className="justify-start items-start inline-flex">
                                       <div className="justify-start items-start flex">
-                                          <img className="w-10 h-10 rounded-full border border-white" src="https://via.placeholder.com/40x40" />
-                                          <img className="w-10 h-10 -ml-2 rounded-full border border-white" src="https://via.placeholder.com/40x40" />
-                                          <img className="w-10 h-10 -ml-2 rounded-full border border-white" src="https://via.placeholder.com/40x40" />
+                                          <img className="w-10 h-10 rounded-full border border-white" src="https://via.placeholder.com/40x40" alt='activeUser' />
+                                          <img className="w-10 h-10 -ml-2 rounded-full border border-white" src="https://via.placeholder.com/40x40" alt='activeUser' />
+                                          <img className="w-10 h-10 -ml-2 rounded-full border border-white" src="https://via.placeholder.com/40x40" alt='activeUser' />
                                         </div>
                                       <div className="w-[220px] px-5 py-2.5 bg-white rounded-[25px] justify-center items-center flex">
                                           <span className="text-emerald-800 text-base font-semibold  leading-normal">+26 People are donating</span>
