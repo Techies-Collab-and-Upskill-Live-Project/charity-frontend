@@ -11,7 +11,7 @@ import {
 
 import "./style.css";
 import HomePage from './components/Home/HomePage';
-import FrequentlyAsked from './components/frequentlyask';
+import Login from './components/auth/login';
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -25,9 +25,7 @@ function App() {
 
           <Route path="/contactus" element={<ContactUs />}/>
 
-          <Route path="/about"
-          // element={<About />}
-          />
+          <Route path="/login" element={<Login />}/>
           <Route path="/resume"
           // element={<Resume />}
           />
