@@ -30,28 +30,28 @@ const Signup = () =>{
                       <div className="flex max-sm:block">
                         <div className="max-sm:hidden ">
                             <label htmlFor="firstName" className="mb-10">First Name</label>
-                            <input type="text" name="firstName" id="" placeholder="John" className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
+                            <input type="text" name="firstName" id="" placeholder="John" className="block  rounded-md border-2 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
                         </div>
 
                         <div className="ml-5 max-sm:hidden ">
                             <label htmlFor="secondName" className="mb-10">Second Name</label>
-                            <input type="text" name="secondName" id="" placeholder="Sarah" className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
+                            <input type="text" name="secondName" id="" placeholder="Sarah" className="block  rounded-md border-2 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
                         </div>
 
                         <div className="hidden max-sm:block">
                             <label htmlFor="fullName" className="mb-10">Full Name</label>
-                            <input type="text" name="fullName" id="" placeholder="John" className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
+                            <input type="text" name="fullName" id="" placeholder="John" className="block  rounded-md border-2 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
                         </div>
                       </div>
 
                       <div>
                             <label htmlFor="email" className="mb-10">Email</label>
-                            <input type="email" name="email" id="" placeholder="olivia@untitledui.com" className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
+                            <input type="email" name="email" id="" placeholder="olivia@untitledui.com" className="block  rounded-md border-2 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
                         </div>
 
                       <div>
                         <label htmlFor="password">Password</label>
-                        <input type="password" name="passsword" id="" placeholder="***********************" className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96" style={{width: "100%", height: "50px"}}/>
+                        <input type="password" name="passsword" id="" placeholder="***********************" className="block  rounded-md border-2 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96" style={{width: "100%", height: "50px"}}/>
                       </div>
 
                       <button type="submit" className="bg-teal-500 rounded-md px-3 text-sm text-white mt-5 w-96 h-10" style={{width: "100%"}}> Login</button>

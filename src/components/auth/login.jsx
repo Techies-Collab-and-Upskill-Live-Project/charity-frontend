@@ -29,12 +29,12 @@ const Login = () =>{
                     <div >
                       <div>
                         <label htmlFor="email" className="mb-10">Email</label>
-                        <input type="email" name="email" id="" placeholder="olivia@untitledui.com" className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
+                        <input type="email" name="email" id="" placeholder="olivia@untitledui.com" className="block  rounded-md border-2 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 " style={{width: "100%", height: "50px"}} />
                       </div>
 
                       <div>
                         <label htmlFor="password">Password</label>
-                        <input type="password" name="passsword" id="" placeholder="***********************" className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96" style={{width: "100%", height: "50px"}}/>
+                        <input type="password" name="passsword" id="" placeholder="***********************" className="block  rounded-md border-2 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96" style={{width: "100%", height: "50px"}}/>
                       </div>
 
                       <div className="flex mt-0 justify-between">
@@ -45,7 +45,7 @@ const Login = () =>{
                         </div>
 
                         <div className="">
-                            <a href="/" className="text-teal-500">Forgot password?</a>
+                            <Link to="/forgotpassword" className="text-teal-500">Forgot password?</Link>
                         </div>
                       </div>
 
