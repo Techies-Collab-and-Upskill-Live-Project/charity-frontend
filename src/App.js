@@ -15,6 +15,7 @@ import Login from './components/auth/login';
 import Signup from './components/auth/signup';
 import Forgotpassword from './components/auth/forgotpassword';
 import DicoverPage from './components/dicover/dicover';
+import ExploreCategory from "./components/explore category/main"
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
           <Route path="forgotpassword" element={<Forgotpassword/>}/>
 
           <Route path="/discover" element={<DicoverPage/>}/>
+
+          <Route path="/explorecategory" element={<ExploreCategory/>}/>
         </Routes>
 
     </Router>

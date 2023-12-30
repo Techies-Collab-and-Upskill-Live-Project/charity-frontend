@@ -28,7 +28,7 @@ const CategoryList = () =>{
                                     </div>
                                     <div className='flex-grow'>
                                         <div className='p-4'>
-                                            <Link to="/">
+                                            <Link to="/explorecategory">
                                             <button className="mt-4 text-[12px] bg-transparent">
                                                 <span className="  text-[#04A38A]  flex items-center justify-center space-x-5">
                                                     Donate Now
