@@ -20,7 +20,6 @@ const HomePage = () => {
       <Cta />
       <DonationProcessSection/>
       <FrequentlyAsked />
-      <Footer />
     </div>
   )
 }
