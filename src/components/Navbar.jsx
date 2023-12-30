@@ -33,7 +33,7 @@ const [navbarOpen, setNavBarOpen] = useState(false);
           }
         >
           <div className="flex flex-col items-center justify-center lg:flex-row lg:ml-auto">
-            <Link href="/" className="nav-link">Explore</Link>
+            <Link to="/discover" className="nav-link">Explore</Link>
             <Link href="/" className="nav-link">Link 2  </Link>
             <Link to="/contactus">Contact Us</Link>
 

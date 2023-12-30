@@ -21,7 +21,7 @@ const TrendingSection = () => {
                                     <h5 className=' text-[#161616] '>{trendings.title}</h5>
                                     <p className='text-[12px] text-[#515151]'> {trendings.content }</p>
                                 </div>
-                                {/*---- prohress bar----*/}
+                                {/*--- prohress bar----*/}
                                 <div className="w-[326px] lg:w-[368px] h-[72px] flex-col justify-start items-start gap-1 inline-flex">
                                     <div className="self-stretch h-12 relative">
                                         <div className="w-[326px] lg:w-[368px] h-2 left-0 top-[40px] absolute">

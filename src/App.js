@@ -14,6 +14,7 @@ import HomePage from './components/Home/HomePage';
 import Login from './components/auth/login';
 import Signup from './components/auth/signup';
 import Forgotpassword from './components/auth/forgotpassword';
+import DicoverPage from './components/dicover/dicover';
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
           <Route path="/signup" element={<Signup />}/>
 
           <Route path="forgotpassword" element={<Forgotpassword/>}/>
+
+          <Route path="/discover" element={<DicoverPage/>}/>
         </Routes>
 
     </Router>
