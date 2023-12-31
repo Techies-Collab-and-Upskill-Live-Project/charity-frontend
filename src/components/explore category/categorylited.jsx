@@ -5,7 +5,7 @@ const CategoryList = () => {
         <div className="container w-full mt-10">
             <div>
                   <label htmlFor="selctcategory" className="mr-5 font-medium">Enquiry type:</label>
-                  <select name="selctcategory" id="" className=" rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96" >
+                  <select name="selctcategory" id="" className=" rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96 max-sm:w-80" >
                     <option value="Technical Support">Technical Support</option>
                   </select>
             </div>

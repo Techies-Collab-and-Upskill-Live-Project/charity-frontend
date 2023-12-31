@@ -4,6 +4,7 @@ import FirstSection from "./first-section";
 import CategoryList from "./categorylited";
 import StartaCampaign from "../startacampaign";
 import ImpactStories from "./inpactstories";
+import Footer from "../footer"
 
 const DicoverPage = () =>{
     return(
@@ -13,7 +14,7 @@ const DicoverPage = () =>{
            <CategoryList />
            <StartaCampaign />
            <ImpactStories />
-
+           <Footer />
         </div>
     )
 }

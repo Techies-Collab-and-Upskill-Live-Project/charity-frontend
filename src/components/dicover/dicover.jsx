@@ -10,7 +10,7 @@ const DicoverPage = () =>{
           <NavBar />
           <CategoryList />
           <StartaCampaign />
-
+          <Footer />
         </div>
     )
 }
