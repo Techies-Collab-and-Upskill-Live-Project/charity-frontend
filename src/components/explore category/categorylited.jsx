@@ -1,4 +1,5 @@
 import { explorecategorylist } from "../../Data";
+import { Link } from "react-router-dom";
 
 const CategoryList = () => {
     return(
@@ -21,7 +22,9 @@ const CategoryList = () => {
             <div className='grid gap-5 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:max-w-full sm:mx-auto xl:max-w-full mt-10 lg:mt-16'>
                         {explorecategorylist.map((explorelist) => (
                             <div key={explorelist.id} className='overflow-hidden transition-shadow duration-300 bg-white rounded-md'>
-                                <img src={explorelist.CoverImg} className='0bject-cover w-full h-64 rounded-md' alt='trending_inage' />
+                               <Link to="/donate-page">
+                                 <img src={explorelist.CoverImg} className='0bject-cover w-full h-64 rounded-md' alt='trending_inage' />
+                               </Link>
                                 <div className='p-2'>
                                     <h5 className=' text-[#161616] '>{explorelist.title}</h5>
                                     <p className='text-[12px] text-[#515151]'> {explorelist.content }</p>

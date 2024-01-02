@@ -16,6 +16,7 @@ import Signup from './components/auth/signup';
 import Forgotpassword from './components/auth/forgotpassword';
 import DicoverPage from './components/dicover/dicover';
 import ExploreCategory from "./components/explore category/main"
+import DonatePage from "./components/donate/main.jsx"
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path="/discover" element={<DicoverPage/>}/>
 
           <Route path="/explorecategory" element={<ExploreCategory/>}/>
+          <Route path="/donate-page" element={<DonatePage/>}/>
         </Routes>
 
     </Router>
