@@ -5,9 +5,36 @@ import numdonatedimg from "../../assets/icons/numdonated.png"
 import reportflag from "../../assets/icons/flag.png"
 import locationimg from "../../assets/icons/location.png"
 import calendarimg from "../../assets/icons/calendar.png"
+import React, { useState } from 'react';
+import clockimg from "../../assets/icons/clock.png"
 
 const DonateLine = () =>{
     const selectedActivity = explorecategorylist[1];
+
+    const [isParagraph1Visible, setParagraph1Visibility] = useState(true);
+    const [isParagraph2Visible, setParagraph2Visibility] = useState(false);
+    const [isParagraph3Visible, setParagraph3Visibility] = useState(false);
+
+    // Function to toggle visibility of paragraph 1
+    const toggleParagraph1Visibility = () => {
+    setParagraph1Visibility(!isParagraph1Visible);
+    // Hide paragraph 2 when showing paragraph 1
+    setParagraph2Visibility(false);
+  };
+
+  // Function to toggle visibility of paragraph 2
+     const toggleParagraph2Visibility = () => {
+    setParagraph2Visibility(!isParagraph2Visible);
+    // Hide paragraph 1 when showing paragraph 2
+    setParagraph1Visibility(false);
+  };
+
+  const toggleParagraph3Visibility = () => {
+    setParagraph3Visibility(!isParagraph3Visible);
+    // Hide paragraph 1 when showing paragraph 2
+    setParagraph2Visibility(false);
+    setParagraph1Visibility(false);
+  };
 
     return(
         <div className="container w-full pt-28 flex justify-between">
@@ -34,17 +61,126 @@ const DonateLine = () =>{
 
                 <div>
                     <div className="flex mt-10 justify-between">
-                        <h5 className="border-b-4 w-60 text-center">About this campaign</h5>
-                        <div className="flex border-b-4 w-60 ml-1 justify-center"><h5>Updates </h5> <p>3</p></div>
-                        <div className="flex border-b-4 w-60 ml-1 text-center justify-center"><h5>Donations</h5> <p>100</p></div>
+                        <h5 onClick={toggleParagraph1Visibility} className="border-b-4 w-60 text-center pb-5">About this campaign</h5>
+                        <div onClick={toggleParagraph2Visibility} className="flex border-b-4 w-60 ml-1 justify-center"><h5>Updates </h5> <p>3</p></div>
+                        <div onClick={toggleParagraph3Visibility} className="flex border-b-4 w-60 ml-1 text-center justify-center"><h5>Donations</h5> <p>100</p></div>
                     </div>
 
+                    {isParagraph1Visible && (<div className="mt-7">
+                                            <p >Step into a journey of compassion and change with our monumental campaign, "Hearts United for Hope." In the vast landscapes of Africa, where young hearts beat with dreams yet to unfold, we invite you to become a beacon of light and love. This initiative is more than a mere fundraiser; it's a movement to uplift, empower, and secure a brighter tomorrow for orphaned children.</p>
+                                            <p className="mt-7">Picture a world where every child has the chance to thrive, regardless of their circumstances. That's the vision we're weaving into reality, and we invite you to be a vital thread in this tapestry of transformation. Your support goes beyond monetary contributions; it's a promise to these children that they are seen, heard, and valued.
+                    From providing quality education and nurturing environments to fostering talents and dreams, your generosity becomes the catalyst for a positive ripple effect. Each donation, every share, and the collective energy of our community resonate far beyond the immediate impact, creating a legacy of love that transcends borders and generations.</p>
+                                            <p className="mt-7">Join us on this extraordinary journey. Let's stand united, hearts entwined, as we make a profound and lasting difference in the lives of these resilient souls. Together, we can rewrite the narrative for orphaned children in Africa, turning every challenge into an opportunity and every dream into a reality. Hearts United for Hope—because transformation begins with compassion, and change starts with us.</p>
+                                        </div>
+                                        )}
+
+                    {isParagraph2Visible && (
                     <div>
-                        <p>Step into a journey of compassion and change with our monumental campaign, "Hearts United for Hope." In the vast landscapes of Africa, where young hearts beat with dreams yet to unfold, we invite you to become a beacon of light and love. This initiative is more than a mere fundraiser; it's a movement to uplift, empower, and secure a brighter tomorrow for orphaned children.</p>
-                        <p>Picture a world where every child has the chance to thrive, regardless of their circumstances. That's the vision we're weaving into reality, and we invite you to be a vital thread in this tapestry of transformation. Your support goes beyond monetary contributions; it's a promise to these children that they are seen, heard, and valued.
-From providing quality education and nurturing environments to fostering talents and dreams, your generosity becomes the catalyst for a positive ripple effect. Each donation, every share, and the collective energy of our community resonate far beyond the immediate impact, creating a legacy of love that transcends borders and generations.</p>
-                        <p>Join us on this extraordinary journey. Let's stand united, hearts entwined, as we make a profound and lasting difference in the lives of these resilient souls. Together, we can rewrite the narrative for orphaned children in Africa, turning every challenge into an opportunity and every dream into a reality. Hearts United for Hope—because transformation begins with compassion, and change starts with us.</p>
+                        <div className="bg bg-orange-50 py-3 px-9 container mt-10 ">
+                                                <div className="flex">
+                                                <img src={donationimg} alt=""/> <h6 className="mt-2 ml-2">Ahmed Tinubu </h6> <p className="mt-2 ml-2 text-gray-500">-fundraiser</p>
+                                                </div>
+
+                                                <div className="flex mt-5">
+                                                    <div className="flex">
+                                                        <img src={calendarimg} alt="" />
+                                                        <p className="ml-3 text-gray-600 font-medium">23 December, 2023</p>
+                                                    </div>
+                                                    <div className="flex ml-10">
+                                                       <img src={clockimg} alt="" />
+                                                       <p>22:11</p>
+                                                    </div>
+                                                </div>
+                                                <p className="mt-5">Step into a journey of compassion and change with our monumental campaign, "Hearts United for Hope." In the vast landscapes of Africa, where young hearts beat with dreams yet to unfold, we invite you to become a beacon of light and love. This initiative is more than a mere fundraiser; it's a movement to uplift, empower, and secure a brighter tomorrow for orphaned children.</p>
+                                                <p className="mt-5"> Picture a world where every child has the chance to thrive, regardless of their circumstances. That's the vision we're weaving into reality, and we invite you to be a vital thread in this tapestry of transformation. Your support goes beyond monetary contributions; it's a promise to these children that they are seen, heard, and valued.From providing quality education and nurturing environments to fostering talents and dreams, your generosity becomes the catalyst for a positive ripple effect. Each donation, every share, and the collective energy of our community resonate far beyond the immediate impact, creating a legacy of love that transcends borders and generations.</p>
+                                                <p className="mt-5">Join us on this extraordinary journey. Let's stand united, hearts entwined, as we make a profound and lasting difference in the lives of these resilient souls. Together, we can rewrite the narrative for orphaned children in Africa, turning every challenge into an opportunity and every dream into a reality. Hearts United for Hope—because transformation begins with compassion, and change starts with us.</p>
+
+                                                <img src={selectedActivity.CoverImg} alt="" className="mt-5 rounded-xl"/>
+
+                        </div>
+
+                        <div className="bg bg-orange-50 py-3 px-9 container mt-10 ">
+                                                <div className="flex">
+                                                <img src={donationimg} alt=""/> <h6 className="mt-2 ml-2">Ahmed Tinubu </h6> <p className="mt-2 ml-2 text-gray-500">-fundraiser</p>
+                                                </div>
+
+                                                <div className="flex mt-5">
+                                                    <div className="flex">
+                                                        <img src={calendarimg} alt="" />
+                                                        <p className="ml-3 text-gray-600 font-medium">23 December, 2023</p>
+                                                    </div>
+                                                    <div className="flex ml-10">
+                                                       <img src={clockimg} alt="" />
+                                                       <p>22:11</p>
+                                                    </div>
+                                                </div>
+                                                <p className="mt-5">Step into a journey of compassion and change with our monumental campaign, "Hearts United for Hope." In the vast landscapes of Africa, where young hearts beat with dreams yet to unfold, we invite you to become a beacon of light and love. This initiative is more than a mere fundraiser; it's a movement to uplift, empower, and secure a brighter tomorrow for orphaned children.</p>
+                                                <p className="mt-5"> Picture a world where every child has the chance to thrive, regardless of their circumstances. That's the vision we're weaving into reality, and we invite you to be a vital thread in this tapestry of transformation. Your support goes beyond monetary contributions; it's a promise to these children that they are seen, heard, and valued.From providing quality education and nurturing environments to fostering talents and dreams, your generosity becomes the catalyst for a positive ripple effect. Each donation, every share, and the collective energy of our community resonate far beyond the immediate impact, creating a legacy of love that transcends borders and generations.</p>
+                                                <p className="mt-5">Join us on this extraordinary journey. Let's stand united, hearts entwined, as we make a profound and lasting difference in the lives of these resilient souls. Together, we can rewrite the narrative for orphaned children in Africa, turning every challenge into an opportunity and every dream into a reality. Hearts United for Hope—because transformation begins with compassion, and change starts with us.</p>
+
+                                                <img src={selectedActivity.CoverImg} alt="" className="mt-5 rounded-xl"/>
+
+                        </div>
                     </div>
+
+
+
+
+
+
+                                )}
+
+                    {isParagraph3Visible && ( <div className="mt-10">
+                        <div className="flex">
+                            <img src={donationimg} alt="" className="w-12 h-12"/>
+                            <div className="flex ">
+                                <div className="ml-5 mr-96">
+                                    <h5 className="text text-lg">Tafawa Balewa</h5>
+                                    <p className="text text-gray-500">2 days ago</p>
+                                </div>
+
+                                <p className="ml-32">
+                                $ 5
+                                </p>
+                            </div>
+                        </div>
+                         <hr className="mt-7 mb-7 " />
+                        <div className="flex">
+                            <img src={donationimg} alt="" className="w-12 h-12" />
+                            <div className="flex">
+                                <div className="ml-5 mr-96">
+                                    <h5 className="text text-lg">Tafawa Balewa</h5>
+                                    <p className="text text-gray-500">1 month ago</p>
+                                </div>
+
+                                <p className="ml-32">
+                                $ 5
+                                </p>
+                            </div>
+                        </div>
+                          <hr className="mt-7 mb-7"/>
+                        <div className="flex">
+                            <img src={donationimg} alt="" className="w-12 h-12"/>
+                            <div className="flex justify-between">
+                                <div className="ml-5 mr-96">
+                                    <h5 className="text text-lg">Tafawa Balewa</h5>
+                                    <p className="text text-gray-500">2 month ago</p>
+                                </div>
+
+                                <p className="ml-32">
+                                $ 5
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    )}
+
+
+
+
+
+
                 </div>
             </div>
         </div>
