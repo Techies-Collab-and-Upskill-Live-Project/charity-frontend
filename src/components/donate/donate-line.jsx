@@ -7,6 +7,7 @@ import locationimg from "../../assets/icons/location.png"
 import calendarimg from "../../assets/icons/calendar.png"
 import React, { useState } from 'react';
 import clockimg from "../../assets/icons/clock.png"
+import { Link } from "react-router-dom";
 
 const DonateLine = () =>{
     const selectedActivity = explorecategorylist[1];
@@ -257,7 +258,9 @@ const DonateLine = () =>{
                     <p className="mt-1 ml-3 font-bold text-orange-400">5k people just donated</p>
                 </div>
                 <div className="flex flex-col mt-2">
-                    <button className="bg-teal-500 rounded-md px-3 text-white mt-5 w-96 h-14 font-bold text-base">Donate now</button>
+                    <Link to={"/paymentpage"}>
+                       <button className="bg-teal-500 rounded-md px-3 text-white mt-5 w-96 h-14 font-bold text-base">Donate now</button>
+                    </Link>
                     <button className="bg-white rounded-md px-3 text-teal-500 border-2 border-teal-500  font-bold text-base mt-5 w-96 h-14"> Share Campaign</button>
                 </div>
                 <hr className="mt-5 mb-5"/>

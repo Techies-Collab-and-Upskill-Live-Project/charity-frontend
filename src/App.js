@@ -17,6 +17,7 @@ import Forgotpassword from './components/auth/forgotpassword';
 import DicoverPage from './components/dicover/dicover';
 import ExploreCategory from "./components/explore category/main"
 import DonatePage from "./components/donate/main.jsx"
+import Payment from './components/payment/payment.jsx';
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
 
           <Route path="/explorecategory" element={<ExploreCategory/>}/>
           <Route path="/donate-page" element={<DonatePage/>}/>
+
+          <Route path="/paymentpage" element={<Payment/>}/>
         </Routes>
 
     </Router>
