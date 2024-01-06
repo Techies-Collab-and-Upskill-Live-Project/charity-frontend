@@ -20,7 +20,7 @@ const PaymentPage = () => {
   ];
 
   return (
-    <div className="flex">
+    <div className="flex pt-36">
       <div>
       <div>
         <img src={lefticon} alt="" />
