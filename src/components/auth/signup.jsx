@@ -49,7 +49,7 @@ const Signup = () => {
       } catch (error) {
         if (error.response) {
           console.error("Registration failed:", error.response.data);
-          toast.error("Registration failed. Please try again.");
+          toast.error("Registration failed. Please try again.", error.response.data);
         } else {
           console.error("Registration failed:", error.message);
           toast.error(
