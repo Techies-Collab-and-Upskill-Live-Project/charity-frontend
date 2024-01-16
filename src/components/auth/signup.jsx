@@ -53,7 +53,7 @@ const Signup = () => {
         } else {
           console.error("Registration failed:", error.message);
           toast.error(
-            "Registration failed. Please check your network connection."
+            error.message
           );
         }
       } finally {
