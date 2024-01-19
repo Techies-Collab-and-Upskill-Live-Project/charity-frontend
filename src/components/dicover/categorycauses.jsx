@@ -3,15 +3,15 @@ import { discoverpagesdata } from "../../Data";
 import { HiOutlineChevronRight } from "react-icons/hi2";
 
 const CategoryList = () =>{
-    return(
-        <div className="container mx-auto w-full pt-28 text-center">
-            <div className="">
-                <h3>Explore & Discover Impactful Causes</h3>
-                <p className=" text-zinc-500">Trace the Stories, Suport the Change</p>
-            </div>
-
-
-                <div className='grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 mt-10 lg:mt-16'>
+    return (
+        <div className=" bg-white w-full">
+            <div className="container mx-auto w-full">
+                <div className="py-16 lg:py-20 mx-auto">
+                    <div className=" text-center">
+                        <h3>Explore & Discover Impactful Causes</h3>
+                        <p className=" text-zinc-500">Trace the Stories, Suport the Change</p>
+                    </div>
+                    <div className='grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 mt-10 lg:mt-16'>
                         {discoverpagesdata.map((discoverpagesdata) => (
                             <div key={discoverpagesdata.id} className=' relative inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2'>
                                 <div className='flex flex-col h-full'>
@@ -42,9 +42,10 @@ const CategoryList = () =>{
                             </div>
                         ))}
                     </div>
-
-
+                </div>
+                </div>
         </div>
+        
     )
 }
 

@@ -5,7 +5,7 @@ import donate from "../../assets/Video place holder.png"
 
 const FirstSection = () =>{
     return(
-        <div>
+        <div className="">
            <div className="w-full pt-28 bg-orange-50 flex px-20 pb-20 max-sm:flex-col max-sm:pt-5 max-sm:px-1">
              <div className="mt-20">
                 <Link to="/discover" className="flex ml-5 mb-5 mr-96 max-sm:mr-10 max-sm:ml-0">

@@ -5,8 +5,9 @@ import collumimg from "../../assets/fluent_text-quote-24-filled.png"
 
 const ImpactStories = () =>{
     return(
-        <div className="container w-full mt-20">
-            <h3 className="text-center">Our Impact Stories</h3>
+        <div className="container w-full mx-auto">
+            <div className="py-16 lg:py-20 mx-auto">
+                 <h3 className="text-center">Our Impact Stories</h3>
             <div className="flex mt-10 max-sm:flex-col" >
                 <div className="cx rounded-md bg-orange-50 mr-16 px-10 py-7  max-sm:mr-0 max-sm:mb-5">
                     <img src={collumimg} alt="" />
@@ -32,6 +33,8 @@ const ImpactStories = () =>{
                     </div>
                 </div>
             </div>
+            </div>
+           
         </div>
     )
 }

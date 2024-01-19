@@ -27,7 +27,7 @@ const PaymentPage = () => {
   };
 
   return (
-    <div className="flex pt-28 container w-full">
+    <div className="flex pt-28 container w-full mx-auto">
       <div>
       <div >
          <Link className="flex mb-5">

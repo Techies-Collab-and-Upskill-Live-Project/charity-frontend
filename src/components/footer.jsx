@@ -11,9 +11,10 @@ function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-
-    <div  className="container mx-auto mb-10 mt-28 md:max-lg:flex"   >
-      <hr className="mb-16"/>
+    <div className="bg-white w-full">
+       <div className="container mx-auto  w-full">
+      <div className="py-16 lg:py-20 mx-auto">
+         <hr className="mb-16"/>
       <div>
         <div className="flex flex-col">
           <h3 className="text text-center text-3xl font-semibold mb-3">Subscribe to our newsletter</h3>
@@ -48,7 +49,12 @@ function Footer() {
          <p className="font font-thin max-sm:font-normal">Copywright  2023 Your Company. All Rights Reserved</p>
         </div>
       </div>
+      </div>
+     
     </div>
+    </div>
+
+   
   );
 }
 
