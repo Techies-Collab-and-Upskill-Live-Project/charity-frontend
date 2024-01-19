@@ -35,10 +35,10 @@ const [navbarOpen, setNavBarOpen] = useState(false);
           <div className="flex flex-col items-center justify-center lg:flex-row lg:ml-auto">
             <Link href="/" className="nav-link">Explore</Link>
             <Link href="/" className="nav-link">Link 2  </Link>
-            <Link href="/" className="nav-link">Contact Us</Link>
+            <Link to="/contactus">Contact Us</Link>
 
             <div className="flex flex-row items-center justify-center py-6 lg:py-0 lg:ml-60">
-            <button className="border border-[#04A38A] rounded-md mr-1 py-3 text-[#04A38A] px-5 font-medium">Login</button>
+            <Link to="/login"><button className="border border-[#04A38A] rounded-md mr-1 py-3 text-[#04A38A] px-5 font-medium">Login</button></Link>
             <button className="bg-[#04A38A] border-2 border-[#04A38A] rounded-md min-w-max ml-5 p-3 px-5 font-medium text-white text-base">Start a Campaign</button>
           </div>
           </div>

@@ -1,15 +1,19 @@
 import React from "react";
-import logo from "../assest/logo.png"
+import logo from "../assets/logo.png"
 import { FaInstagram } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
 import { CiTwitter } from "react-icons/ci";
+import { Link } from "react-router-dom";
+
 
 
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <div  className="container mx-auto">
+
+    <div  className="container mx-auto mb-10 mt-28 md:max-lg:flex"   >
+      <hr className="mb-16"/>
       <div>
         <div className="flex flex-col">
           <h3 className="text text-center text-3xl font-semibold mb-3">Subscribe to our newsletter</h3>
@@ -20,28 +24,28 @@ function Footer() {
           </div>
         </div>
         <div className= "flex mb-5">
-         <div className="ml-14">
+         <div className="ml-10">
             <a href="/" > <img src={logo} alt="logo" className="w-32 pr-0"  /></a>
          </div>
 
         <div className="flex mt-9">
-            <div className="ml-3 mr-96">
-                <a href="/">Home</a>
-                <a href="/"> Link 1</a>
-                <a href="/"> Link 2</a>
-                <a href="/"> Contact us</a>
+            <div className="ml-3 mr-64">
+                <Link  to="/" className="ml-5 font-semibold">Home</Link>
+                <a href="/" className="ml-10 font-semibold"> Link 1</a>
+                <a href="/" className="ml-10 font-semibold"> Link 2</a>
+                <Link to="/contactus" className="ml-10 font-semibold"> Contact us</Link>
             </div>
 
-            <div className="flex ml-96">
+            <div className="flex ml-72">
                 <CiFacebook />
                 <CiTwitter />
                 <FaInstagram />
             </div>
           </div>
         </div>
-        <hr className="m mx-14"/>
-        <div className="ml-14 mt-6" >
-         <p>Copywright  2023 Your Company. All Rights Reserved</p>
+        <hr className="ml-10 mr-0"/>
+        <div className="ml-10 mt-6" >
+         <p className="font font-thin">Copywright  2023 Your Company. All Rights Reserved</p>
         </div>
       </div>
     </div>
