@@ -1,5 +1,5 @@
 import NavBar from "../Navbar"
-import FrequentlyAsked from "../frequentlyask"
+import FrequentlyAsked from "../../components/frequentlyask"
 import Footer from "../footer"
 import ContactUsForm from "./contactform"
 
