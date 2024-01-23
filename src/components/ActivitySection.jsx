@@ -1,5 +1,5 @@
 import React from 'react'
-import activitiesdata from '../../Data';
+import activitiesdata from '../Data';
 import { HiOutlineChevronRight } from "react-icons/hi2";
 
 const ActivitySection = () => {

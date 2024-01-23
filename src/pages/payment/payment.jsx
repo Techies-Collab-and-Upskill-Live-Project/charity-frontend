@@ -1,5 +1,5 @@
-import NavBar from '../Navbar'
-import Footer from '../footer'
+import NavBar from '../../components/common/Navbar'
+import Footer from '../../components/common/footer'
 import PaymentPage from './paymentpage'
 
 const Payment = () =>{

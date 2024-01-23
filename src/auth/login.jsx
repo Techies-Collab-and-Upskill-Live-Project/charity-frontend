@@ -1,8 +1,6 @@
 /** @format */
 
-import facebookicon from "../../assets/icons/facebookicon.png";
-import googleicon from "../../assets/icons/googleicon.png";
-import Navber from "../Navbar";
+//import Navber from "../components/common/Navbar";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,6 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { Circles } from "react-loader-spinner";
 import { useState } from "react";
 import axios from "axios";
+import NavBar from "../components/common/Navbar";
+import { FaFacebook } from "react-icons/fa6";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -54,7 +54,7 @@ const Login = () => {
   });
   return (
     <div>
-      <Navber />
+      <NavBar/>
 
       <div className="flex flex-col pl-96 mb-28 max-sm:pl-0">
         <h3 className="mt-28 ml-40 mb-10 font-medium text-3xl max-sm:text-teal-500 max-sm:ml-24 ">
@@ -71,11 +71,9 @@ const Login = () => {
               style={{ width: "100%" }}
             >
               <img
-                src={googleicon}
+                src="/assets/Social icon.jpg"
                 alt=""
-                style={{ display: "inline" }}
-                width={20}
-                className="mr-1"
+                className="mr-1 inline-flex w-12 h-12"
               />{" "}
               Sign in with Google
             </button>
@@ -83,13 +81,7 @@ const Login = () => {
               className="bg-blue-500 border rounded-md text-sm h-11 font-medium text-white"
               style={{ width: "100%" }}
             >
-              <img
-                src={facebookicon}
-                alt=""
-                style={{ display: "inline" }}
-                width={20}
-                className="mr-1"
-              />{" "}
+              <FaFacebook className="mr-1 inline-flex h-12 w-12" />{" "}
               Sign in with Facebook
             </button>
           </div>

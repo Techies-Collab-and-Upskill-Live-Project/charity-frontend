@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import NavBar from "../Navbar";
+import NavBar from "../../components/common/Navbar";
 import CategoryList from "./categorycauses";
 import StartaCampaign from "../../components/startacampaign";
-import Footer from "../footer";
+import Footer from "../../components/common/footer";
 
 const DicoverPage = () =>{
     return(

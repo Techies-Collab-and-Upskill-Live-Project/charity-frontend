@@ -1,6 +1,6 @@
-import NavBar from "../Navbar"
+import NavBar from "../../components/common/Navbar"
 import FrequentlyAsked from "../../components/frequentlyask"
-import Footer from "../footer"
+import Footer from "../../components/common/footer"
 import ContactUsForm from "./contactform"
 
 

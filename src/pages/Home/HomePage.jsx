@@ -1,16 +1,16 @@
 import React from 'react'
 //import NavBar from '../Navbar'
-import HeroSection from './HeroSection'
-import ActivitySection from './ActivitySection'
-import TrendingSection from './TrendingSection'
-import Cta from './CtaSection'
-import DonationProcessSection from './DonationProcessSection'
+import HeroSection from '../../components/HeroSection'
+import ActivitySection from '../../components/ActivitySection'
+import TrendingSection from '../../components/TrendingSection'
+import Cta from '../../components/CtaSection'
+import DonationProcessSection from '../../components/DonationProcessSection'
 
 
 
-import NavBar from '../Navbar'
-import FrequentlyAsked from '../frequentlyask'
-import Footer from '../footer'
+import NavBar from '../../components/common/Navbar'
+import FrequentlyAsked from '../../components/frequentlyask'
+import Footer from '../../components/common/footer'
 const HomePage = () => {
   return (
       <div>

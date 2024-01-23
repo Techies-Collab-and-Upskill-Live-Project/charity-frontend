@@ -1,11 +1,66 @@
 import React, { useState } from "react";
 import { HiBars3 } from "react-icons/hi2";
 import { AiOutlineClose } from "react-icons/ai";
+import { FaChevronDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import DropdownMenu from "../dropdown";
 
 
 function NavBar() {
-const [navbarOpen, setNavBarOpen] = useState(false);
+  const [navbarOpen, setNavBarOpen] = useState(false);
+
+  const [isExploreDropdownOpen, setExploreDropdownOpen] = useState(false);
+  const [isOtherDropdownOpen, setOtherDropdownOpen] = useState(false);
+
+  const toggleExploreDropdown = () => {
+    setExploreDropdownOpen(!isExploreDropdownOpen);
+    // Close other dropdown when Explore dropdown is toggled
+    setOtherDropdownOpen(false);
+  };
+
+  const toggleOtherDropdown = () => {
+    setOtherDropdownOpen(!isOtherDropdownOpen);
+    // Close Explore dropdown when Other dropdown is toggled
+    setExploreDropdownOpen(false);
+  };
+
+  const closeDropdowns = () => {
+    setExploreDropdownOpen(false);
+    setOtherDropdownOpen(false);
+  };
+
+
+  // explore options
+  
+  const exploreOptions = [
+    {
+      id: 1,
+      label: 'Option 1',
+      
+    },
+    {
+      id: 2,
+      label: 'Option 2',
+     
+    },
+  ];
+
+  // otheer link options
+  const otherOptions = [
+    {
+      id: 1,
+      label: 'Option1',
+      
+    },
+    {
+      id: 2,
+      label: 'Option2',
+      
+    },
+  ];
+
+
+
   return (
 
     <div className=" bg-white fixed inset-x-0 z-50">
@@ -32,18 +87,49 @@ const [navbarOpen, setNavBarOpen] = useState(false);
             (navbarOpen ? " flex" : " hidden")
           }
         >
-          <div className="flex flex-col items-center justify-center lg:flex-row lg:ml-auto">
-            <Link to="/discover" className="nav-link">Explore</Link>
-            <Link href="/" className="nav-link">Link 2  </Link>
-            <Link to="/contactus">Contact Us</Link>
+            <nav className="flex flex-col items-center justify-around lg:flex-row lg:ml-auto">
+              <div className=" flex items-center">
+                <Link to="/discover" className="nav-link">Explore</Link>
+                <div className="relative">
+                  <FaChevronDown 
+                    className="text-gray-600 w-2 h-2  focus:outline-none"
+                   onClick={toggleExploreDropdown}
+                  />
+                  
+                  <DropdownMenu
+                     isOpen={isExploreDropdownOpen}
+                    closeDropdown={closeDropdowns}
+                    options={exploreOptions}
+                  />
+                </div>
+              </div>
+               <div className=" flex items-center ">
+                 <Link href="/" className="nav-link">Link 2</Link>
+                <div className="relative">
+                  <FaChevronDown 
+                    className="text-gray-600 w-2 h-2 focus:outline-none"
+                    onClick={toggleOtherDropdown}
 
-            <div className="flex flex-row items-center justify-center py-6 lg:py-0 lg:ml-60">
-            <Link to="/login"><button className="border border-[#04A38A] rounded-md mr-1 py-3 text-[#04A38A] px-5 font-medium">Login</button></Link>
-            <button className="bg-[#04A38A] border-2 border-[#04A38A] rounded-md min-w-max ml-5 p-3 px-5 font-medium text-white text-base">Start a Campaign</button>
-          </div>
+                  />
+                  
+                  <DropdownMenu
+                     isOpen={isOtherDropdownOpen}
+                    closeDropdown={closeDropdowns}
+                    options={otherOptions} 
+                    
+                  />
+                </div>
+              </div>
+              
+             
+              <Link to="/contactus" className="nav-link">Contact Us</Link>
+              <div className="flex flex-row items-center justify-center py-6 lg:py-0 lg:ml-60">
+                <Link to="/login"><button className="border border-[#04A38A] rounded-md mr-1 py-3 text-[#04A38A] px-5 font-medium">Login</button></Link>
+                <button className="bg-[#04A38A] border-2 border-[#04A38A] rounded-md min-w-max ml-5 p-3 px-5 font-medium text-white text-base">Start a Campaign</button>
+              </div>
+            </nav>
           </div>
         </div>
-      </div>
      
 
 

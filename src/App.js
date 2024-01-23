@@ -1,6 +1,6 @@
-import NavBar from './components/Navbar';
-import Footer from './components/footer'
-import ContactUs from './components/contactus/Contactuspage';
+//import NavBar from './components/common/Navbar.jsx';
+//import Footer from './components/common/footer.jsx'
+import ContactUs from './pages/contactus/Contactuspage.jsx';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -10,14 +10,14 @@ import {
 } from "react-router-dom";
 
 import "./style.css";
-import HomePage from './components/Home/HomePage';
-import Login from './components/auth/login';
-import Signup from './components/auth/signup';
-import Forgotpassword from './components/auth/forgotpassword';
-import DicoverPage from './components/dicover/dicover';
-import ExploreCategory from "./components/explore category/main"
-import DonatePage from "./components/donate/main.jsx"
-import Payment from './components/payment/payment.jsx';
+import HomePage from './pages/Home/HomePage.jsx'
+import Login from './auth/login.jsx'
+import Signup from './auth/signup';
+import Forgotpassword from './auth/forgotpassword';
+import DicoverPage from './pages/dicover/page.jsx';
+import ExploreCategory from "./pages/explore category/main.jsx"
+import DonatePage from "./pages/donate/page.jsx"
+import Payment from './pages/payment/payment.jsx';
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {

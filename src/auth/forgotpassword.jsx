@@ -1,7 +1,7 @@
 /** @format */
 
 import { Link, useNavigate } from "react-router-dom";
-import NavBar from "../Navbar";
+import NavBar from "../components/common/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Circles } from "react-loader-spinner";

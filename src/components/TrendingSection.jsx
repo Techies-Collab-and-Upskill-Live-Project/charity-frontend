@@ -1,5 +1,5 @@
 import React from 'react'
-import { trendingdata } from '../../Data'
+import { trendingdata } from '../Data'
 
 const TrendingSection = () => {
     return (
