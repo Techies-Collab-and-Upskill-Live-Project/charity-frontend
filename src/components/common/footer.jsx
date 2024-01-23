@@ -15,7 +15,7 @@ function Footer() {
         <div className="py-16 lg:py-20 mx-auto">
           <hr className="mb-16" />
           <div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center">
               <h3 className=" text-center  mb-3">Subscribe to our newsletter</h3>
               <p className="text-center text-xs font-thin mb-5">Lorem ipsum dolor sit amet consectectur. Nunc ultrices in</p>
               <div className="flex justify-center max-sm:flex-col">
@@ -23,18 +23,19 @@ function Footer() {
                 <button className="bg-teal-500 rounded-md ml-4 px-3 text-sm text-white max-sm:ml-0 max-sm:mt-5 max-sm:w-32 max-sm:py-2">Subscribe</button>
               </div>
             </div>
-            <div className="flex items-center mt-6 mb-5  space-x-5">
+            <div className=" flex items-center sm:flex-row flex-col mt-6 mb-5  space-x-5">
               <div className="">
-                <a href="/" > <img src="/assets/logo.png" alt="logo" className="w-10 h-10 pr-0 max-sm:w-20 max-sm:mt-5" /></a>
+                <a href="/" > <img src="/assets/logo.png" alt="logo" className=" items-center md:justify-start justify-center w-10 h-10 pr-0 max-sm:w-20 max-sm:mt-5" /></a>
               </div>
-              <div className="flex flex-col md:flex-row ">
-                <div className="flex flex-row space-x-5">
+              <div className=" ">
+                <div className="flex flex-row ">
                   <Link to="/" className="nav-link">Home</Link>
                   <a href="/" className="nav-link"> Explore</a>
                   <a href="/" className="nav-link"> Link 2</a>
                   <Link to="/contactus" className="nav-link"> Contact us</Link>
                 </div>
-                <div className="flex space-x-5  ">
+              </div>
+               <div className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start space-x-4">
                   <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#E7F8F0]">
                     <FaFacebook className="w-6 h-6 text-[#04A38A]"/>
                   </div>
@@ -45,7 +46,6 @@ function Footer() {
                     <AiFillInstagram className=" w-6 h-6 text-[#04A38A]"/>
                   </div>
                 </div>
-              </div>
             </div>
             <hr className="ml-10 mr-0 max-sm:ml-0" />
             <div className="ml-10 mt-6 max-sm:ml-0" >

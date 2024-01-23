@@ -11,6 +11,8 @@ import DonationProcessSection from '../../components/DonationProcessSection'
 import NavBar from '../../components/common/Navbar'
 import FrequentlyAsked from '../../components/frequentlyask'
 import Footer from '../../components/common/footer'
+//import ImpactStories from '../explore category/inpactstories'
+import ImpactStorySection from '../../components/ImpactStorySection'
 const HomePage = () => {
   return (
       <div>
@@ -19,7 +21,8 @@ const HomePage = () => {
       <ActivitySection />
       <TrendingSection />
       <Cta />
-      <DonationProcessSection/>
+      <DonationProcessSection />
+      <ImpactStorySection/>
       <FrequentlyAsked />
       <Footer />
     </div>

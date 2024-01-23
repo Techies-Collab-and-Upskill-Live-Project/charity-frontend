@@ -5,8 +5,8 @@ function FrequentlyAsked() {
   return (
     <div className=" bg-white w-full">
       <div className=" container mx-auto w-full">
-      <div className="py-16 lg:py-20 mx-auto">
-         <div className="mt-0 max-sm:mt-96 max-sm:pt-52">
+      <div className="py-6 lg:py-12 mx-auto">
+         <div className="">
          <div className="text-center">
              <h3>Frequently Asked Questions</h3>
              <p className="ga font-thin mt-3 mb-3">Have a question that is not answered? You can contact us at</p>

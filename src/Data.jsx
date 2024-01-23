@@ -232,3 +232,33 @@ export const discoverpagesdata = [
     },
 ];
 
+export const testimionalData = [
+    {
+        id: 1,
+        text: "Grateful for the website's support that funded my medical treatment, restoring both my health and faith in humanity.",
+        CoverImg: "/assets/img1",
+        authorName: "Jennifer Nwachukwu",
+        authorRole:"Community Health Advocate"
+    },
+     {
+        id: 2,
+        text: "Thanks to the website, my dream of education is now a reality. Generous  donors have anchored my aspirations.",
+        CoverImg: "/assets/img2",
+        authorName: "Bayo Mohammed",
+        authorRole:"Student Scholar"
+    },
+      {
+        id: 3,
+        text: "Grateful for the website's support that funded my medical treatment, restoring both my health and faith in humanity.",
+        CoverImg: "/assets/img3",
+        authorName: "Jennifer Nwachukwu",
+        authorRole:"Community Health Advocate"
+    },
+       {
+        id: 4,
+        text: "Thanks to the website, my dream of education is now a reality. Generous  donors have anchored my aspirations.",
+        CoverImg: "/assets/img4.jpg",
+        authorName: "Adeola Favor",
+        authorRole:"Community Health Advocate"
+    },
+]
