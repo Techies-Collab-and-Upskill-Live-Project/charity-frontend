@@ -16,25 +16,26 @@ function Footer() {
           <hr className="mb-16" />
           <div>
             <div className="flex flex-col items-center">
-              <h3 className=" text-center  mb-3">Subscribe to our newsletter</h3>
-              <p className="text-center text-xs font-thin mb-5">Lorem ipsum dolor sit amet consectectur. Nunc ultrices in</p>
+              <h4 className=" text-center  mb-3">Subscribe to our newsletter</h4>
+              <p className="text-center text-[#7B7B7B] text-xs font-thin mb-5">Lorem ipsum dolor sit amet consectectur. Nunc ultrices in</p>
               <div className="flex justify-center max-sm:flex-col">
-                <input type="text" placeholder="olivia@untitledui.com" class="block rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring  ring-gray-200 placeholder:text-gray-400 focus:outline-none focus:ring focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6" />
+                <input type="text" placeholder="olivia@untitledui.com" class="block rounded-md border py-1.5 pl-3 pr-20 text-gray-900   border-gray-200 placeholder:text-gray-400 focus:outline-none focus:border-teal-500 sm:text-sm sm:leading-6" />
                 <button className="bg-teal-500 rounded-md ml-4 px-3 text-sm text-white max-sm:ml-0 max-sm:mt-5 max-sm:w-32 max-sm:py-2">Subscribe</button>
               </div>
             </div>
-            <div className=" flex items-center sm:flex-row flex-col mt-6 mb-5  space-x-5">
-              <div className="">
+            <div className=" flex items-center sm:flex-row flex-col justify-between mt-6 mb-5  space-x-5">
+              <div className=" flex flex-col sm:flex-row items-center">
                 <a href="/" > <img src="/assets/logo.png" alt="logo" className=" items-center md:justify-start justify-center w-10 h-10 pr-0 max-sm:w-20 max-sm:mt-5" /></a>
-              </div>
-              <div className=" ">
-                <div className="flex flex-row ">
+                 <div className="flex flex-row ">
                   <Link to="/" className="nav-link">Home</Link>
                   <a href="/" className="nav-link"> Explore</a>
                   <a href="/" className="nav-link"> Link 2</a>
                   <Link to="/contactus" className="nav-link"> Contact us</Link>
                 </div>
               </div>
+              
+               
+             
                <div className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start space-x-4">
                   <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#E7F8F0]">
                     <FaFacebook className="w-6 h-6 text-[#04A38A]"/>
@@ -47,8 +48,8 @@ function Footer() {
                   </div>
                 </div>
             </div>
-            <hr className="ml-10 mr-0 max-sm:ml-0" />
-            <div className="ml-10 mt-6 max-sm:ml-0" >
+            <hr  />
+            <div className=" mt-2" >
               <p className="font font-thin max-sm:font-normal">Copywright  2023 Your Company. All Rights Reserved</p>
             </div>
           </div>

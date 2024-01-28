@@ -12,13 +12,16 @@ import {
 import "./style.css";
 import HomePage from './pages/Home/HomePage.jsx'
 import LoginPage from './auth/login/page.jsx';
-import SignupPage from './auth/signup/page.jsx';
-import Forgotpassword from './auth/forgotpassword';
+import Signup from './auth/signup.jsx';
+import Forgotpassword from './auth/forgotpassword.jsx';
 import DicoverPage from './pages/dicover/page.jsx';
-import ExploreCategory from "./pages/explore category/main.jsx"
+import ExploreCategory from "./pages/explore category/page.jsx"
 import DonatePage from "./pages/donate/page.jsx"
 import Payment from './pages/payment/payment.jsx';
-// import "bootstrap/dist/css/bootstrap.min.css";
+import ResetPassword from './auth/resetpassword.jsx';
+import VerifyMail from './auth/verifymail.jsx';
+import SuccessMessage from './auth/success.jsx';
+
 
 function App() {
   return (
@@ -32,9 +35,12 @@ function App() {
 
           <Route path="/login" element={<LoginPage />}/>
 
-          <Route path="/signup" element={<SignupPage />}/>
+          <Route path="/signup" element={<Signup />}/>
 
-          <Route path="forgotpassword" element={<Forgotpassword/>}/>
+        <Route path="forgotpassword" element={<Forgotpassword />} />
+        <Route path="resetpassword" element={<ResetPassword />} />
+        <Route path="verifyemail" element={<VerifyMail />} />
+        <Route path="successmessage" element={<SuccessMessage/>}/>
 
           <Route path="/discover" element={<DicoverPage/>}/>
 

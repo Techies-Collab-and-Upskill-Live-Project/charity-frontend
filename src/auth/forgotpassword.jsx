@@ -1,7 +1,7 @@
 /** @format */
 
-import { Link, useNavigate } from "react-router-dom";
-import NavBar from "../components/common/Navbar";
+import {  useNavigate } from "react-router-dom";
+//import NavBar from "../../components/common/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Circles } from "react-loader-spinner";
@@ -9,6 +9,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { HiOutlineMail } from "react-icons/hi";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -32,7 +33,8 @@ const Forgotpassword = () => {
       try {
         const response = await axios.post(
           "https://donation-trace.onrender.com/api/v1/auth/password-reset/",
-          values
+          values,
+          navigate.push("/resetpassword")
         );
         toast.success("code sent successfully!");
       } catch (error) {
@@ -49,69 +51,73 @@ const Forgotpassword = () => {
   });
 
   return (
-    <div>
-      <NavBar />
-      <div className="flex flex-col pl-96 mb-28 max-sm:pl-0">
-        <h3 className="mt-28 ml-32 mb-5 font-medium text-3xl max-sm:text-teal-500 max-sm:ml-16 ">
-          Forgot Password?
-        </h3>
-        <p className="text-sm font-medium text-gray-500 ml-1 max-sm:text-center">
-          Enter the email address associated with your account to get a code?
-        </p>
+    <div className=" container mx-auto w-full">
+      <div className="py-6 md:py-12">
+        <div className="max-w-md w-full mx-auto mt-10">
+          <h3 className="text-center ">
+            Forgot Password?
+          </h3>
+          <p className="text-sm font-medium text-gray-500  max-sm:text-center">
+            Enter the email address associated with your account to get a code?
+          </p>
 
         <form
           onSubmit={formik.handleSubmit}
-          className="pr-80 mt-5 mr-7 max-sm:pr-0 max-sm:mr-6 max-sm:ml-6"
+          className="space-y-4 md:space-y-6"
         >
-          <div>
+          <div className=" space-y-2">
             <div>
-              <label htmlFor="email" className="mb-10">
+              <label htmlFor="email" className=" block text-sm">
                 Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                className={`block rounded-md border-2 py-1.5 pl-3 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 ${
-                  formik.touched.email && formik.errors.email
-                    ? "border-red-500"
-                    : ""
-                }`}
-                style={{ width: "100%", height: "50px" }}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.email}
-              />
-              {formik.touched.email && formik.errors.email && (
-                <div className="text-red-500 text-sm">
-                  {formik.errors.email}
+                </label>
+                <div className=" relative">
+                  <span className="pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                    <HiOutlineMail className="h-4 w-4" />
+                  </span>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="olivia@untitledui.com"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
+                    className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
+                  />
+                  {formik.touched.email && formik.errors.email ?
+                    (
+                      <div className="text-red-500 text-xs">
+                        {formik.errors.email}
+                      </div>
+                    ) : null
+                  }
                 </div>
-              )}
             </div>
-
             <button
               type="submit"
-              className="bg-teal-500 rounded-md px-3 text-sm text-white mt-5 w-96 h-10 flex items-center justify-center"
-              style={{ width: "100%" }}
+              className="w-full bg-teal-500 rounded-md px-4 text-sm text-white mt-5  py-3 flex items-center justify-center"
             >
-              {loading ? (
-                <Circles
-                  height="80"
-                  width="80"
-                  color="#4fa94d"
-                  ariaLabel="circles-loading"
-                  wrapperStyle={{}}
-                  wrapperClass=""
-                  visible={true}
-                />
-              ) : (
-                "Send code "
-              )}
+              {loading ?
+                (
+                  <Circles
+                    height="80"
+                    width="80"
+                    color="#4fa94d"
+                    ariaLabel="circles-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                  />
+                ) :
+                  (
+                    "Send code "
+                  )
+              }
             </button>
           </div>
         </form>
         <ToastContainer/>
+        </div>
       </div>
     </div>
   );

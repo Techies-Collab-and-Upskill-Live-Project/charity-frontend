@@ -68,7 +68,7 @@ const Signup = () => {
   return (
     <div className=" container mx-auto w-full">
       <div className="py-6 md:py-12">
-        <div className="max-w-md w-full mx-auto  ">
+        <div className="max-w-md w-full mx-auto mt-10">
           <h3 className="text-center">
             Sign Up
           </h3>
@@ -76,25 +76,24 @@ const Signup = () => {
             onSubmit={formik.handleSubmit}
             className="space-y-4 md:space-y-6"
           >
-            <div className="space-y-4">
-              <button
-                className="bg-white flex items-center justify-center w-full p-2 space-x-6 border rounded-md"
-              >
-              <img
-                src="/assets/Social icon.jpg"
-                alt=""
-                className="w-8 h-8"
-              />{" "}
-              Sign in with Google
-            </button>
-            <button
-              className="bg-blue-500 flex items-center justify-center w-full p-2 space-x-6 border rounded-md text-white"
-             
-              >
-                <FaFacebook className=" h-8 w-8" />{" "}
-                Sign in with Facebook
-              </button>
-            </div>
+           <div className=" space-y-4">
+                <button
+                  className="bg-white flex items-center justify-center w-full p-2 space-x-4 border rounded-md"
+                >
+                  <img
+                    src="/assets/Social icon.jpg"
+                    alt=""
+                    className=" w-6 h-6"
+                  />{" "}
+                  <span>Sign in with Google</span>
+                </button>
+                <button
+                  className="bg-blue-500 flex items-center justify-center w-full p-2 space-x-4 border rounded-md text-white"
+                >
+                  <FaFacebook className=" h-6 w-6  " />{" "}
+                  <span>Sign in with Facebook</span>
+                </button>
+              </div>
             <div className="flex items-center w-full my-4">
               <hr className="w-full text-gray-400 h-1" />
               <p className="px-3 text-gray-400">OR</p>

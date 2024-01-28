@@ -6,7 +6,7 @@ const CategoryList = () => {
         <div className="container w-full mx-auto">
             <div className="py-16 lg:py-20 mx-auto">
                 <div>
-                  <label htmlFor="selctcategory" className="mr-5 font-medium">Enquiry type:</label>
+                  <label htmlFor="selctcategory" className="mr-5 font-medium">Category:</label>
                   <select name="selctcategory" id="" className=" rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96 max-sm:w-80" >
                     <option value="Technical Support">Technical Support</option>
                   </select>

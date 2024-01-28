@@ -58,7 +58,7 @@ const Login = () => {
     <div>
       <div className=" container mx-auto w-full">
         <div className="py-6 md:py-12">
-          <div className=" max-w-md w-full  mx-auto ">
+          <div className=" max-w-md w-full mx-auto mt-10 ">
             <h3 className=" text-center ">
               Welcome Back
             </h3>
@@ -73,7 +73,7 @@ const Login = () => {
                   <img
                     src="/assets/Social icon.jpg"
                     alt=""
-                    className=" w-8 h-8"
+                    className=" w-6 h-6"
                   />{" "}
                   <span>Sign in with Google</span>
                 </button>
