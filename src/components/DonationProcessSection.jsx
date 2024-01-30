@@ -12,7 +12,7 @@ const DonationProcessSection = () => {
                           <p className=" text-neutral-600 text-base font-normal max-w-lg ">Empower Positive Change in a Few Simple Steps. Discover the Seamless Process of Donating on Donation Trace.</p>
                       </div>
                       <div className=' mt-6 sm:mt-0'>
-                          <img src='/assets/donate_image.jpg' className="object-cover w-full h-56 rounded shadow-lg sm:h-50" />
+                          <img src='/assets/donate_image.jpg' alt='donation_img' className="object-cover w-full h-56 rounded shadow-lg sm:h-50" />
                       </div>
                   </div>
                   <div className="self-stretch h-[340px] flex-col justify-start items-start gap-12 flex">
