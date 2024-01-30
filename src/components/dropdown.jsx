@@ -1,6 +1,6 @@
 // DropdownMenu.js
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const DropdownMenu = ({ isOpen, closeDropdown, options }) => {
   return (
     <div
@@ -9,7 +9,7 @@ const DropdownMenu = ({ isOpen, closeDropdown, options }) => {
       }`}
     >
       {options.map((option) => (
-        <button
+        <Link
           key={option.id}
           className="block px-4 py-2 text-sm text-gray-700 "
           onClick={() => {
@@ -19,7 +19,7 @@ const DropdownMenu = ({ isOpen, closeDropdown, options }) => {
           }}
         >
           {option.label}
-        </button>
+        </Link>
       ))}
     </div>
   );

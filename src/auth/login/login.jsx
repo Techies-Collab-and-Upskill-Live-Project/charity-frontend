@@ -13,6 +13,7 @@ import axios from "axios";
 import { FaFacebook } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { AiOutlineApple } from "react-icons/ai";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -83,6 +84,12 @@ const Login = () => {
                   <FaFacebook className=" h-6 w-6  " />{" "}
                   <span>Sign in with Facebook</span>
                 </button>
+                <button
+                  className=" md:hidden bg-black flex items-center justify-center w-full p-2 space-x-4 border rounded-md text-white"
+                >
+                  <AiOutlineApple className=" h-6 w-6  " />{" "}
+                  <span>Sign in with Apple</span>
+                </button>
               </div>
               <div className="flex items-center w-full my-4">
                 <hr className="w-full text-gray-400 h-1" />
@@ -94,7 +101,7 @@ const Login = () => {
                 Email
                 </label>
                 <div className="relative">
-                   <span className="pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                   <span className="pointer-events-none inline-flex items-center justify-center absolute inset-y-0 start-0  ps-3.5  left-0 top-0 h-full w-10 text-gray-400">
                     <HiOutlineMail className="h-4 w-4" />
                   </span>
                   <input
@@ -123,7 +130,7 @@ const Login = () => {
                 <div className="space-y-2">
                   <label htmlFor="password">Password</label>
                   <div className=" relative">
-                    <span className="pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                    <span className="pointer-events-none inline-flex items-center justify-center absolute  inset-y-0 start-0  ps-3.5 left-0 top-0 h-full w-10 text-gray-400">
                       <RiLockPasswordLine className="h-4 w-4" />
                     </span>
                     <input
@@ -187,9 +194,9 @@ const Login = () => {
                     )
                   }
                 </button>
-                <p className="text-center mt-12">
+                <p className="text-center font-medium text-[16px] mt-12">
                   Not A User Yet?
-                  <Link to="/signup" className="text-teal-500">
+                  <Link to="/signup" className="text-teal-500 pl-2">
                     Signup
                   </Link>
                 </p>

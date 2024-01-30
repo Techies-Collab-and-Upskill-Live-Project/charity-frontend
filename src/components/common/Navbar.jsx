@@ -12,7 +12,7 @@ function NavBar() {
   const [isExploreDropdownOpen, setExploreDropdownOpen] = useState(false);
   const [isOtherDropdownOpen, setOtherDropdownOpen] = useState(false);
 
-  const toggleExploreDropdown = () => {
+ const toggleExploreDropdown = () => {
     setExploreDropdownOpen(!isExploreDropdownOpen);
     // Close other dropdown when Explore dropdown is toggled
     setOtherDropdownOpen(false);
@@ -29,33 +29,31 @@ function NavBar() {
     setOtherDropdownOpen(false);
   };
 
-
   // explore options
-  
   const exploreOptions = [
     {
       id: 1,
       label: 'Option 1',
-      
+      to: '/discover', // Specify the path you want for Option 1
     },
     {
       id: 2,
       label: 'Option 2',
-     
+      to: '/explorecategory', // Specify the path you want for Option 2
     },
   ];
 
-  // otheer link options
+  // other link options
   const otherOptions = [
     {
       id: 1,
       label: 'Option1',
-      
+      to: '/otherOption1', // Specify the path you want for Other Option 1
     },
     {
       id: 2,
       label: 'Option2',
-      
+      to: '/otherOption2', // Specify the path you want for Other Option 2
     },
   ];
 
@@ -130,10 +128,7 @@ function NavBar() {
             </nav>
           </div>
         </div>
-     
-
-
-    </div>
+      </div>
     </div>
 
   );

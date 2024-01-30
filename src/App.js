@@ -21,6 +21,7 @@ import Payment from './pages/payment/payment.jsx';
 import ResetPassword from './auth/resetpassword.jsx';
 import VerifyMail from './auth/verifymail.jsx';
 import SuccessMessage from './auth/success.jsx';
+import VerificationCode from './auth/verificationcode.jsx';
 
 
 function App() {
@@ -40,7 +41,8 @@ function App() {
         <Route path="forgotpassword" element={<Forgotpassword />} />
         <Route path="resetpassword" element={<ResetPassword />} />
         <Route path="verifyemail" element={<VerifyMail />} />
-        <Route path="successmessage" element={<SuccessMessage/>}/>
+        <Route path="successmessage" element={<SuccessMessage />} />
+        <Route path="verificationcode" element={<VerificationCode/>}/>
 
           <Route path="/discover" element={<DicoverPage/>}/>
 
