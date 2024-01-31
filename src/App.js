@@ -12,16 +12,17 @@ import {
 import "./style.css";
 import HomePage from './pages/Home/HomePage.jsx'
 import LoginPage from './auth/login/page.jsx';
-import Signup from './auth/signup.jsx';
-import Forgotpassword from './auth/forgotpassword.jsx';
 import DicoverPage from './pages/dicover/page.jsx';
 import ExploreCategory from "./pages/explore category/page.jsx"
 import DonatePage from "./pages/donate/page.jsx"
-import Payment from './pages/payment/payment.jsx';
-import ResetPassword from './auth/resetpassword.jsx';
-import VerifyMail from './auth/verifymail.jsx';
-import SuccessMessage from './auth/success.jsx';
-import VerificationCode from './auth/verificationcode.jsx';
+import Payment from './pages/payment/payment.jsx';;
+import SignupPage from './auth/signup/page.jsx';
+import ForgotpasswordPage from './auth/forgestpassword/page.jsx';
+import PaymentSuccessfullPage from './pages/payment/paymentsuccessfullpage.jsx';
+import ResetPasswordPage from './auth/resetpassword/page.jsx';
+import VerifyMailPage from './auth/verifiyemail/page.jsx';
+import VerificationCodePage from './auth/verifiycode/page.jsx';
+import SuccessMessagePage from './auth/successfullmessage/page.jsx';
 
 
 function App() {
@@ -34,22 +35,21 @@ function App() {
 
           <Route path="/contactus" element={<ContactUs />}/>
 
-          <Route path="/login" element={<LoginPage />}/>
-
-          <Route path="/signup" element={<Signup />}/>
-
-        <Route path="forgotpassword" element={<Forgotpassword />} />
-        <Route path="resetpassword" element={<ResetPassword />} />
-        <Route path="verifyemail" element={<VerifyMail />} />
-        <Route path="successmessage" element={<SuccessMessage />} />
-        <Route path="verificationcode" element={<VerificationCode/>}/>
+        <Route path="/login" element={<LoginPage />}/>
+        <Route path="/signup" element={<SignupPage />}/>
+        <Route path="forgotpassword" element={<ForgotpasswordPage />} />
+        <Route path="resetpassword" element={<ResetPasswordPage />} />
+        <Route path="verifyemail" element={<VerifyMailPage />} />
+        <Route path="successmessage" element={<SuccessMessagePage />} />
+        <Route path="verificationcode" element={<VerificationCodePage/>}/>
 
           <Route path="/discover" element={<DicoverPage/>}/>
 
           <Route path="/explorecategory" element={<ExploreCategory/>}/>
           <Route path="/donate-page" element={<DonatePage/>}/>
 
-          <Route path="/paymentpage" element={<Payment/>}/>
+        <Route path="/paymentpage" element={<Payment />} />
+         <Route path="/paymentsuccessfull" element={<PaymentSuccessfullPage/>}/>
         </Routes>
 
     </Router>
