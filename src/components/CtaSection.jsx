@@ -16,7 +16,7 @@ const Cta = () => {
                                     <div className="self-stretch h-12 relative">
                                         <div className="w-[326px] lg:w-[368px] h-2 left-0 top-[40px] absolute">
                                             <div className="w-[326px] lg:w-[368px] h-2 left-0 top-0 absolute bg-zinc-400 rounded-lg" />
-                                            <div className="  w-[170.30px] lg:w-[192.24px] h-2 left-0 top-0 absolute  bg-neutral-200   rounded-lg" />
+                                            <div className="  w-[150.30px] lg:w-[192.24px] h-2 left-0 top-0 absolute  bg-neutral-200   rounded-lg" />
                                         </div>
                                         <div className="w-[66px] h-9 left-[140.85px] lg:left-[160px] top-0 absolute">
                                             <div className="w-[66px] h-7 px-2 py-1 left-0 top-0 absolute bg-emerald-50 rounded-lg justify-center items-center inline-flex">

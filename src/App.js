@@ -22,7 +22,10 @@ import LoginPage from './auth/login/page.jsx';
 import DicoverPage from './pages/dicover/page.jsx';
 import ExploreCategory from "./pages/explore category/page.jsx"
 import DonatePage from "./pages/donate/page.jsx"
-import Payment from './pages/payment/payment.jsx';;
+import Payment from './pages/payment/payment.jsx';import DashboardSidebar from './pages/dashboard/dashboardsiderbar.jsx';
+import DashboardNav from './pages/dashboard/dashboardnav.jsx';
+import Dashboard from './pages/dashboard/page.jsx';
+;
 
 
 
@@ -51,6 +54,13 @@ function App() {
 
         <Route path="/paymentpage" element={<Payment />} />
          <Route path="/paymentsuccessfull" element={<PaymentSuccessfullPage/>}/>
+
+        
+        <Route path="/dashboard" element={<Dashboard />} />
+        
+
+
+        
         </Routes>
 
     </Router>

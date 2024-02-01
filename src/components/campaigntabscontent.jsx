@@ -105,43 +105,41 @@ export const DonationContent = () => {
           <div className="mt-10 max-w-md w-full">
               <div className='grid grid-cols-1 divide-y'>
                   <div className="flex justify-between">
-                  <div className=' flex space-x-4'>
-                      <div className=' flex items-center justify-center rounded-full bg-[#EBEBEB] w-8 h-8'>
-                          <FaRegUser className=' text-[#7B7B7B] w-4 h-4' />
+                      <div className=' flex space-x-4'>
+                          <div className=' flex items-center justify-center rounded-full bg-[#EBEBEB] w-8 h-8'>
+                              <FaRegUser className=' text-[#7B7B7B] w-4 h-4' />
+                          </div>
+                          <div>
+                              <h5 className="text text-lg">Tafawa Balewa</h5>
+                              <p className="text text-gray-500">1 day ago</p>
+                          </div>
                       </div>
-                      <div className="">
-                          <h5 className="text text-lg">Tafawa Balewa</h5>
-                          <p className="text text-gray-500">1 day ago</p>
-                      </div>
+                      <p className="">$ 5</p>
                   </div>
-                  <p className="">$ 5</p>
-              </div>
-              
-              <div className="flex justify-between">
-                  <div className=' flex space-x-4'>
-                      <div className=' flex items-center justify-center rounded-full bg-[#EBEBEB] w-8 h-8'>
-                          <FaRegUser className=' text-[#7B7B7B] w-4 h-4' />
+                  <div className="flex justify-between">
+                      <div className=' flex space-x-4'>
+                          <div className=' flex items-center justify-center rounded-full bg-[#EBEBEB] w-8 h-8'>
+                              <FaRegUser className=' text-[#7B7B7B] w-4 h-4' />
+                          </div>
+                          <div>
+                              <h5 className="text text-lg">Tafawa Balewa</h5>
+                              <p className="text text-gray-500">1 month ago</p>
+                          </div>
                       </div>
-                      <div className="">
-                          <h5 className="text text-lg">Tafawa Balewa</h5>
-                          <p className="text text-gray-500">1 month ago</p>
-                      </div>
+                      <p className="">$ 5</p>
                   </div>
-                  <p className="">$ 5</p>
-              </div>
-             
-              <div className="flex justify-between">
-                  <div className=' flex space-x-4'>
-                      <div className=' flex items-center justify-center rounded-full bg-[#EBEBEB] w-8 h-8'>
-                          <FaRegUser className=' text-[#7B7B7B] w-4 h-4' />
+                  <div className="flex justify-between">
+                      <div className=' flex space-x-4'>
+                          <div className=' flex items-center justify-center rounded-full bg-[#EBEBEB] w-8 h-8'>
+                              <FaRegUser className=' text-[#7B7B7B] w-4 h-4' />
+                          </div>
+                          <div>
+                              <h5 className="text text-lg">Tafawa Balewa</h5>
+                              <p className="text text-gray-500">2 months ago</p>
+                          </div>
                       </div>
-                      <div className="">
-                          <h5 className="text text-lg">Tafawa Balewa</h5>
-                          <p className="text text-gray-500">2 months ago</p>
-                      </div>
+                      <p className="">$ 5</p>
                   </div>
-                  <p className="">$ 5</p>
-              </div>
               </div>
              
           </div>
