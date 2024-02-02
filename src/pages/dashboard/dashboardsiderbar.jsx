@@ -105,7 +105,7 @@ const DashboardSidebar = () => {
                           </div>
                       </li>
                   </ul>
-                  <ul className='mt-32 space-y-5'>
+                  <ul className='mt-52 space-y-5 '>
                       <li>
                           <div className="flex items-center  group ">
                               <RiSettingsLine className='flex-shrink-0 w-5 h-5 text-[#98D9CF] transition duration-75' />

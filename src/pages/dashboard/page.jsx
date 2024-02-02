@@ -2,6 +2,7 @@ import React from 'react'
 import DashboardSidebar from './dashboardsiderbar'
 import DashboardNav from './dashboardnav'
 import DashboardContent from './dashboardcontent'
+import DashboardSta from './dashboardsta'
 
 const Dashboard = () => {
   return (
@@ -11,6 +12,7 @@ const Dashboard = () => {
               <div className=''>
                   <DashboardNav/>
                   <DashboardContent/>
+                  <DashboardSta/>
               </div>
           </div>
       
