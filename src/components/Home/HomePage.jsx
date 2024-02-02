@@ -8,12 +8,12 @@ import DonationProcessSection from './DonationProcessSection'
 
 
 
-import NavBar from '../Navbar'
+import NavBar from '../Navbar' 
 import FrequentlyAsked from '../frequentlyask'
 import Footer from '../footer'
 const HomePage = () => {
   return (
-      <div>
+      <di>
       <NavBar />
       <HeroSection />
       <ActivitySection />

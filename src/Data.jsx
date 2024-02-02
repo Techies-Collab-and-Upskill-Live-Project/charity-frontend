@@ -2,16 +2,19 @@ export const activitiesdata = [
     {
         id: 1,
         CoverImg: '/assets/edu_img.jpg',
+        logo: "",
         text: "Education"
     },
     {
         id: 2,
         CoverImg: "/assets/health_img.jpg",
+        logo: "",
         text: "Health Aid"
     },
     {
         id: 3,
         CoverImg: '/assets/poverty_image.jpg',
+        logo: "",
         text: "Poverty Relief"
     },
     {

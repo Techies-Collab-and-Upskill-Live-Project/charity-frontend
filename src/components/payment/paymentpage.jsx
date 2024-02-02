@@ -122,7 +122,7 @@ const PaymentPage = () => {
                 )}
             </div>
 
-            <h3 className="text-lg mt-10">Fruad policy</h3>
+            <h3 className="text-lg mt-10 m">Fruad policy</h3>
             <p className="mt-3 text-gray-500">Lorem ipsum dolor sit amet consectetur. Diam mattis sit risus ultrices vivamus. Leo velit ut arcu et scelerisque netus varius. Cursus a facilisi turpis urna elementum velit fringilla risus scelerisque. Fringilla justo egestas sociis sem diam ante platea. Faucibus </p>
           </div>
 

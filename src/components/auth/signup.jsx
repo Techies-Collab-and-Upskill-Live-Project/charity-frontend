@@ -66,7 +66,7 @@ const Signup = () => {
   return (
     <div>
       <Navber />
-      <div className="flex flex-col pl-96 mb-28 max-sm:pl-0">
+      <div className="flex flex-col pl-96 mb-28 max-sm:pl-0 ">
 
         <h3 className="mt-28 ml-52 mb-10 font-medium text-3xl max-sm:text-teal-500 max-sm:ml-32">
           Sign Up
