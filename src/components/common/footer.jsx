@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaFacebook, FaTwitter  } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
@@ -7,8 +7,13 @@ import { Link } from "react-router-dom";
 
 
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
+  const [date, setDate] = useState();
+
+  const getYear = () => setDate(new Date().getFullYear());
+
+  useEffect(() => {
+    getYear();
+  }, []);
   return (
     <div className="bg-white w-full mx-auto">
        <div className="container mx-auto  w-full">
@@ -50,7 +55,7 @@ function Footer() {
             </div>
             <hr  />
             <div className=" mt-2" >
-              <p className="font font-thin max-sm:font-normal">Copywright  2023 Your Company. All Rights Reserved</p>
+              <p className="font font-thin max-sm:font-normal">Copywright   &copy; {date} Your Company. All Rights Reserved</p>
             </div>
           </div>
         </div>
