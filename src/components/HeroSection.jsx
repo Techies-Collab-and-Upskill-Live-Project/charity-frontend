@@ -9,7 +9,7 @@ const HeroSection = () => {
               <div className=' container mx-auto w-full'>
                 <div className=''>
                   <div className=" mt-10 lg:mt-20">
-                    <h1 className=" text-white ">
+                    <h1 className=" text-white max-w-5xl ">
                       Transform Lives through the Power of Giving
                     </h1>
                     <p className="max-w-2xl font-sans font-bold leading-none  text-white sm:text-sm lg:text-md my-2">

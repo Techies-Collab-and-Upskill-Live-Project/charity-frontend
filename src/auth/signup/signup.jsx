@@ -105,46 +105,17 @@ const Signup = () => {
             <div className="flex items-center w-full my-4">
               <hr className="w-full text-gray-400 h-1" />
               <p className="px-3 text-gray-400">OR</p>
-              <hr className="w-full dark:text-gray-400 h-1" />
+              <hr className="w-full text-gray-400 h-1" />
             </div>
-            <div className="">
-              <div className="max-sm:flex hidden">
-                <div className="space-y-2">
-                  <label htmlFor="firstName" className="block text-sm">
-                    Full Name
-                  </label>
-                  <div className=" relative ">
-                    <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
-                      <FaRegUser className=" h-4 w-4" />
-                    </span>
-                    <input
-                      type="text"
-                      name="full_name"
-                      id="full_name"
-                      placeholder="olivia@untitledui.com"
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={formik.values.full_name}
-                      className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6"
-                    />
-                    {formik.touched.full_name && formik.errors.full_name ?
-                      (
-                        <div className="text-red-500 text-xs">
-                          {formik.errors.full_name}
-                        </div>
-                      ) : null
-                    }
-                  </div>
-                </div>
-                
-              </div>
-              <div className="flex max-sm:hidden">
+            <div>
+             
+              <div className="md:flex hidden">
                 <div className="space-y-2">
                   <label htmlFor="firstName" className="block text-sm">
                     First Name
                   </label>
                   <div className=" relative ">
-                    <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                    <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-10 w-10 text-gray-400">
                       <FaRegUser className=" h-4 w-4" />
                     </span>
                     <input
@@ -193,6 +164,37 @@ const Signup = () => {
                     }
                   </div>
                 </div> 
+              </div>
+              
+               <div className="flex md:hidden">
+                <div className="space-y-2">
+                  <label htmlFor="firstName" className="block text-sm">
+                    Full Name
+                  </label>
+                  <div className=" relative ">
+                    <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                      <FaRegUser className=" h-4 w-4" />
+                    </span>
+                    <input
+                      type="text"
+                      name="full_name"
+                      id="full_name"
+                      placeholder="olivia@untitledui.com"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.full_name}
+                      className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
+                    />
+                    {formik.touched.full_name && formik.errors.full_name ?
+                      (
+                        <div className="text-red-500 text-xs">
+                          {formik.errors.full_name}
+                        </div>
+                      ) : null
+                    }
+                  </div>
+                </div>
+                
               </div>
               <div className=" space-y-2">
                 <label htmlFor="email" className="block text-sm">

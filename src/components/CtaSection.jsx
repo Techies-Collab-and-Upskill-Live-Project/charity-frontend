@@ -33,10 +33,10 @@ const Cta = () => {
 
                                <div className="flex-col justify-start items-start gap-3 flex pt-4">
                                     <div className="justify-start items-start inline-flex">
-                                      <div className="justify-start items-start flex">
+                                      <div className="justify-start items-start flex -mr-4">
                                           <img className="w-10 h-10 rounded-full border border-white" src="https://via.placeholder.com/40x40" alt='activeUser' />
                                           <img className="w-10 h-10 -ml-2 rounded-full border border-white" src="https://via.placeholder.com/40x40" alt='activeUser' />
-                                          <img className="w-10 h-10 -ml-2 rounded-full border border-white" src="https://via.placeholder.com/40x40" alt='activeUser' />
+                                          <img className="w-10 h-10 -ml-2  rounded-full border border-white" src="https://via.placeholder.com/40x40" alt='activeUser' />
                                         </div>
                                       <div className="w-[220px] px-4 py-2.5 bg-white rounded-[25px] justify-center items-center flex">
                                           <span className="text-emerald-800 leading-normal">+26 People are donating</span>

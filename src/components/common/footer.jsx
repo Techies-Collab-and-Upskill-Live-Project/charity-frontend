@@ -20,7 +20,7 @@ function Footer() {
               <p className="text-center text-[#7B7B7B] text-xs font-thin mb-5">Lorem ipsum dolor sit amet consectectur. Nunc ultrices in</p>
               <div className="flex justify-center max-sm:flex-col">
                 <input type="text" placeholder="olivia@untitledui.com" class="block rounded-md border py-1.5 pl-3 pr-20 text-gray-900   border-gray-200 placeholder:text-gray-400 focus:outline-none focus:border-teal-500 sm:text-sm sm:leading-6" />
-                <button className="bg-teal-500 rounded-md ml-4 px-3 text-sm text-white max-sm:ml-0 max-sm:mt-5 max-sm:w-32 max-sm:py-2">Subscribe</button>
+                <button className="bg-teal-500 rounded-md ml-4 px-4 py-3 text-sm text-white max-sm:ml-0 max-sm:mt-5 ">Subscribe</button>
               </div>
             </div>
             <div className=" flex items-center sm:flex-row flex-col justify-between mt-6 mb-5  space-x-5">
