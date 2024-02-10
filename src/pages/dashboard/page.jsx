@@ -1,8 +1,9 @@
 import React from 'react'
-import DashboardSidebar from './dashboardsiderbar'
-import DashboardNav from './dashboardnav'
+import DashboardSidebar from './components/dashboardsiderbar'
+import DashboardNav from './components/dashboardnav'
 import DashboardContent from './dashboardcontent'
 import DashboardSta from './dashboardsta'
+import ActiveCampaign from './components/activecampaign'
 
 const Dashboard = () => {
   return (
@@ -12,7 +13,8 @@ const Dashboard = () => {
               <div className=''>
                   <DashboardNav/>
                   <DashboardContent/>
-                  <DashboardSta/>
+          <DashboardSta />
+         <ActiveCampaign/>
               </div>
           </div>
       

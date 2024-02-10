@@ -840,3 +840,66 @@ export const categories = [
 
   }
 ];
+
+export const events = [
+    {
+        id: 1,
+        calendarIcon: "/assets/svg/calendar.svg",
+        date: "20/12/2023",
+        googleIcon: "/assets/svg/Social icon.svg",
+        desc: "Google Meet",
+        user: "/assets/img1",
+        userName:"Iman Akbar"
+
+    },
+     {
+        id: 2,
+        calendarIcon: "/assets/svg/calendar.svg",
+        date: "20/12/2023",
+        googleIcon: "/assets/svg/Social icon.svg",
+        desc: "Google Meet",
+        user: "/assets/img1",
+        userName:"Iman Akbar"
+
+    },
+      {
+        id: 3,
+        calendarIcon: "/assets/svg/calendar.svg",
+        date: "20/12/2023",
+        googleIcon: "/assets/svg/Social icon.svg",
+        desc: "Google Meet",
+        user: "/assets/img1",
+        userName:"Iman Akbar"
+
+    },
+       {
+        id: 4,
+        calendarIcon: "/assets/svg/calendar.svg",
+        date: "20/12/2023",
+        googleIcon: "/assets/svg/Social icon.svg",
+        desc: "Google Meet",
+        user: "/assets/img1",
+        userName:"Iman Akbar"
+
+    },
+        {
+        id: 5,
+        calendarIcon: "/assets/svg/calendar.svg",
+        date: "20/12/2023",
+        googleIcon: "/assets/svg/Social icon.svg",
+        desc: "Google Meet",
+        user: "/assets/img1",
+        userName:"Iman Akbar"
+
+    },
+         {
+        id: 6,
+        calendarIcon: "/assets/svg/calendar.svg",
+        date: "20/12/2023",
+        googleIcon: "/assets/svg/Social icon.svg",
+        desc: "Google Meet",
+        user: "/assets/img1",
+        userName:"Iman Akbar"
+
+    },
+]
