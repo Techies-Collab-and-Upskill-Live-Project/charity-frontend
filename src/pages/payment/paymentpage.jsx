@@ -124,7 +124,7 @@ const PaymentPage = () => {
                           </div>
                         </div>
                         <div className='hidden lg:block'>
-                          <input type="checkbox" name="checkbox" />
+                          <input type="checkbox" name="checkbox " className='checked:bg-teal-500'  />
                           <label htmlFor="checkbox" className="text-xs pl-2">I have read, understood and I agree to Donation Trace’s
                             <a href="/" className="text-blue-500"> terms of service </a>
                             and

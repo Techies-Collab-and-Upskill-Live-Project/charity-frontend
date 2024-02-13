@@ -27,6 +27,7 @@ import Dashboard from './pages/dashboard/page.jsx';
 import DonationPage from './pages/dashboard/donations/page.jsx';
 import EventsPage from './pages/dashboard/events/page.jsx';
 import CampaignPage from './pages/dashboard/campaign/page.jsx';
+import AccountSettingPage from './pages/dashboard/account/page.jsx';
 ;
 
 
@@ -62,6 +63,8 @@ function App() {
         <Route path="/donationpage" element={<DonationPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/campaign" element={<CampaignPage />} />
+        <Route path="/account" element={<AccountSettingPage />} />
+
         
 
 

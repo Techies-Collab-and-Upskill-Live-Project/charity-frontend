@@ -109,7 +109,7 @@ const DashboardSidebar = () => {
                       <li>
                           <div className="flex items-center  group ">
                               <RiSettingsLine className='flex-shrink-0 w-5 h-5 text-[#98D9CF] transition duration-75' />
-                              <Link to="/dashboard" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF]">Setting</Link>
+                              <Link to="/account" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF]">Setting</Link>
                           </div>
                       </li>
                       <li>
