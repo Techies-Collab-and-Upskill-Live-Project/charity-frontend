@@ -19,7 +19,6 @@ const Signup = () => {
   const validationSchema = Yup.object({
     first_name: Yup.string().required("First Name is required"),
     last_name: Yup.string().required("Second Name is required"),
-    full_name:Yup.string().required("Full Name Name is required"),
     email: Yup.string()
       .email("Invalid email address")
       .required("Email is required"),
@@ -43,7 +42,6 @@ const Signup = () => {
     onSubmit: async (values) => {
       setLoading(true);
       try {
-        // yufyujhjhvhh
         const response = await axios.post(
           "https://donation-trace.onrender.com/api/v1/auth/register/",
           values
@@ -110,7 +108,8 @@ const Signup = () => {
             <div>
              
               <div className="md:flex hidden">
-                <div className="space-y-2">
+                <div>
+                                  <div className="space-y-2">
                   <label htmlFor="firstName" className="block text-sm">
                     First Name
                   </label>
@@ -136,6 +135,8 @@ const Signup = () => {
                       ) : null
                     }
                   </div>
+                  </div>
+
                 </div>
                 <div className=" space-y-2">
                   <label htmlFor="lastName" className="block text-sm">
@@ -169,7 +170,7 @@ const Signup = () => {
                <div className="flex md:hidden">
                 <div className="space-y-2">
                   <label htmlFor="firstName" className="block text-sm">
-                    Full Name
+                    First Name
                   </label>
                   <div className=" relative ">
                     <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
@@ -177,25 +178,54 @@ const Signup = () => {
                     </span>
                     <input
                       type="text"
-                      name="full_name"
-                      id="full_name"
-                      placeholder="olivia@untitledui.com"
+                      name="first_name"
+                      id="first_name"
+                      placeholder="First name"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      value={formik.values.full_name}
+                      value={formik.values.last_name}
                       className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
                     />
-                    {formik.touched.full_name && formik.errors.full_name ?
+                    {formik.touched.first_name && formik.errors.first_name ?
                       (
                         <div className="text-red-500 text-xs">
-                          {formik.errors.full_name}
+                          {formik.errors.first_name}
                         </div>
                       ) : null
                     }
                   </div>
                 </div>
+
+                
                 
               </div>
+              <div className="space-y-2">
+                  <label htmlFor="lastName" className="block text-sm">
+                    Last Name
+                  </label>
+                  <div className=" relative ">
+                    <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                      <FaRegUser className=" h-4 w-4" />
+                    </span>
+                    <input
+                      type="text"
+                      name="last_name"
+                      id="last_name"
+                      placeholder="First name"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.last_name}
+                      className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
+                    />
+                    {formik.touched.last_name && formik.errors.last_name ?
+                      (
+                        <div className="text-red-500 text-xs">
+                          {formik.errors.last_name}
+                        </div>
+                      ) : null
+                    }
+                  </div>
+                </div>
               <div className=" space-y-2">
                 <label htmlFor="email" className="block text-sm">
                   Email
