@@ -1,14 +1,12 @@
 import React from 'react'
 import {  useNavigate } from "react-router-dom";
-//import NavBar from "../../components/common/Navbar";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Circles } from "react-loader-spinner";
 import { useState } from "react";
-import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { showToast } from '../../components/toastr';
+import { resetPassword } from '../../config/api';
 
 const validationSchema = Yup.object().shape({
     password: Yup.string().required("Password is required"),
@@ -30,18 +28,12 @@ const ResetPassword = () => {
     onSubmit: async (values) => {
       setLoading(true);
       try {
-        const response = await axios.post(
-          "https://donation-trace.onrender.com/api/v1/auth/password-reset/",
-          values
-        );
-        toast.success("Password has been changed successfully ");
+       const response = await resetPassword(values); 
+        showToast( response.message, "Password has been changed successfully");
+         navigate("/login");
       } catch (error) {
-        if (error.response) {
-          toast.error("login failed. Please try again.");
-        } else {
-          console.error("login failed:", error.message);
-          toast.error("login failed. Please check your network connection.");
-        }
+            console.error("password reset failed:", error.message);
+         showToast("password reset failed. Please check your network connection.");
       } finally {
         setLoading(false);
       }

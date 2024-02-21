@@ -3,17 +3,15 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Circles } from "react-loader-spinner";
-//import NavBar from "../../components/common/Navbar";
 import { FaFacebook } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaRegUser } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { AiOutlineApple } from "react-icons/ai";
+import { showToast } from "../../components/toastr";
+import { resgisterUser } from "../../config/api";
 
 const Signup = () => {
   const validationSchema = Yup.object({
@@ -42,23 +40,12 @@ const Signup = () => {
     onSubmit: async (values) => {
       setLoading(true);
       try {
-        const response = await axios.post(
-          "https://donation-trace.onrender.com/api/v1/auth/register/",
-          values
-        );
-        console.log("Registration successful:", response.data);
-        toast.success("Registration successful!");
+       const response = await resgisterUser(values); 
+        showToast(response.message, "success");
         navigate("/donate-page");
       } catch (error) {
-        if (error.response) {
-          console.error("Registration failed:", error.response.data);
-          toast.error("Registration failed. Please try again.", error.response.data);
-        } else {
-          console.error("Registration failed:", error.message);
-          toast.error(
-            error.message
-          );
-        }
+        console.error("Registration failed:", error.message);
+        showToast("Registration failed. Please try again.", "error"); // Show error message to the user
       } finally {
         setLoading(false);
       }
@@ -322,7 +309,6 @@ const Signup = () => {
               </div>
             </div>
           </form>
-          <ToastContainer />
         </div>
       </div>
     </div>

@@ -1,13 +1,11 @@
 import {  useNavigate } from "react-router-dom";
-//import NavBar from "../../components/common/Navbar";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Circles } from "react-loader-spinner";
 import { useState } from "react";
-import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
+import { showToast } from "../../components/toastr";
+import { verifyCode } from "../../config/api";
 
 
 const validationSchema = Yup.object().shape({
@@ -28,19 +26,13 @@ const VerificationCode = () => {
     onSubmit: async (values) => {
       setLoading(true);
       try {
-        const response = await axios.post(
-          "https://donation-trace.onrender.com/api/v1/auth/password-reset/",
-          values,
-          navigate.push("/resetpassword")
-        );
-        toast.success("code verify successfully!");
+        const response = await verifyCode(values); 
+        showToast( response.message, "code verify successfully!");
+         navigate("/login");
       } catch (error) {
-        if (error.response) {
-          toast.error("verification failed. Please try again.");
-        } else {
           console.error("verify failed:", error.message);
-          toast.error("verification failed. Please check your network connection.");
-        }
+         showToast("verification failed. Please check your network connection.");
+      
       } finally {
         setLoading(false);
       }
@@ -224,7 +216,6 @@ const VerificationCode = () => {
                           </Link>
                       </p>
                     </form>
-                    
                 </div>
             </div>
         </div>

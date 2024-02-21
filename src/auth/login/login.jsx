@@ -4,16 +4,14 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { showToast } from "../../components/toastr";
 import { Circles } from "react-loader-spinner";
 import { useState } from "react";
-import axios from "axios";
-//import NavBar from "../../components/common/Navbar";
 import { FaFacebook } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { AiOutlineApple } from "react-icons/ai";
+import { loginUser } from "../../config/api";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -36,20 +34,13 @@ const Login = () => {
     onSubmit: async (values) => {
       setLoading(true);
       try {
-        const response = await axios.post(
-          "https://donation-trace.onrender.com/api/v1/auth/login/",
-          values
-        );
-        toast.success("login successful!");
+        const response = await loginUser(values); // Pass values directly to loginUser function
+        showToast( response.message, "success");
         navigate("/donate-page");
+
       } catch (error) {
-        if (error.response) {
-          console.error("login failed:", error.response.data);
-          toast.error("login failed. Please try again.");
-        } else {
-          console.error("login failed:", error.message);
-          toast.error("login failed. Please check your network connection.");
-        }
+        console.error("Login failed:", error.message);
+        showToast("Login failed. Please try again.", "error");
       } finally {
         setLoading(false);
       }
@@ -202,7 +193,7 @@ const Login = () => {
                 </p>
               </div>
             </form>
-            <ToastContainer />
+          
           </div>
         </div>
       </div>
