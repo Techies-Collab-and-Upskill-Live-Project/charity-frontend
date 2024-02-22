@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { RiLockPasswordLine } from "react-icons/ri";
-import { showToast } from '../../components/toastr';
+import { showToast } from '../../components/toaster';
 import { resetPassword } from '../../config/api';
 
 const validationSchema = Yup.object().shape({

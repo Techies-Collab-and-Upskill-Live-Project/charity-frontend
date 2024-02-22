@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
-import { showToast } from "../../components/toastr";
+import { showToast } from "../../components/toaster";
 import { verifyCode } from "../../config/api";
 
 

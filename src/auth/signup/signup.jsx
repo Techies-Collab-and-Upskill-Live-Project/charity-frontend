@@ -10,7 +10,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FaRegUser } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { AiOutlineApple } from "react-icons/ai";
-import { showToast } from "../../components/toastr";
+import { showToast } from "../../components/toaster";
 import { resgisterUser } from "../../config/api";
 
 const Signup = () => {

@@ -38,10 +38,8 @@ function App() {
     <Router>
 
         <Routes>
-           <Route path="/" element={ <HomePage />} />
-
-          <Route path="/contactus" element={<ContactUs />}/>
-
+        <Route path="/" element={ <HomePage />} />
+        <Route path="/contactus" element={<ContactUs />}/>
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/signup" element={<SignupPage />}/>
         <Route path="forgotpassword" element={<ForgotpasswordPage />} />
@@ -50,13 +48,11 @@ function App() {
         <Route path="successmessage" element={<SuccessMessagePage />} />
         <Route path="verificationcode" element={<VerificationCodePage/>}/>
 
-          <Route path="/discover" element={<DicoverPage/>}/>
-
-          <Route path="/explorecategory" element={<ExploreCategory/>}/>
-          <Route path="/donate-page" element={<DonatePage/>}/>
-
+        <Route path="/discover" element={<DicoverPage/>}/>
+        <Route path="/explorecategory" element={<ExploreCategory/>}/>
+        <Route path="/donate-page" element={<DonatePage/>}/>
         <Route path="/paymentpage" element={<Payment />} />
-         <Route path="/paymentsuccessfull" element={<PaymentSuccessfullPage/>}/>
+        <Route path="/paymentsuccessfull" element={<PaymentSuccessfullPage/>}/>
 
         
         <Route path="/dashboard" element={<Dashboard />} />

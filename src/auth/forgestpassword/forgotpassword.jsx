@@ -2,7 +2,7 @@
 import {  useNavigate } from "react-router-dom";
 import { Circles } from "react-loader-spinner";
 import { useState } from "react";
-import { showToast } from "../../components/toastr";
+import { showToast } from "../../components/toaster";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { HiOutlineMail } from "react-icons/hi";

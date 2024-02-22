@@ -4,7 +4,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
-import { showToast } from "../../components/toastr";
+import { showToast } from "../../components/toaster";
 import { Circles } from "react-loader-spinner";
 import { useState } from "react";
 import { FaFacebook } from "react-icons/fa6";
