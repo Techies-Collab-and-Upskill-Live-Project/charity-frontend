@@ -41,7 +41,7 @@ const Login = () => {
           values
         );
         toast.success("login successful!");
-        navigate("//donate-page");
+        navigate("/donate-page");
       } catch (error) {
         if (error.response) {
           console.error("login failed:", error.response.data);

@@ -4,7 +4,7 @@ const DashboardNav = () => {
   return (
       <div>
           <div className='p-3'>
-              <nav className="bg-white   py-2.5 ">
+              <nav className="bg-white  py-2.5 ">
                   <div className="flex flex-wrap justify-between items-center">
                       <div className='flex justify-start items-center'>
                           <form action="#" method="GET" className="hidden lg:block lg:pl-2">

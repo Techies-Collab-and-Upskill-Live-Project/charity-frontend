@@ -22,9 +22,12 @@ import LoginPage from './auth/login/page.jsx';
 import DicoverPage from './pages/dicover/page.jsx';
 import ExploreCategory from "./pages/explore category/page.jsx"
 import DonatePage from "./pages/donate/page.jsx"
-import Payment from './pages/payment/payment.jsx';import DashboardSidebar from './pages/dashboard/dashboardsiderbar.jsx';
-import DashboardNav from './pages/dashboard/dashboardnav.jsx';
+import Payment from './pages/payment/payment.jsx';      
 import Dashboard from './pages/dashboard/page.jsx';
+import DonationPage from './pages/dashboard/donations/page.jsx';
+import EventsPage from './pages/dashboard/events/page.jsx';
+import CampaignPage from './pages/dashboard/campaign/page.jsx';
+import AccountSettingPage from './pages/dashboard/account/page.jsx';
 ;
 
 
@@ -57,6 +60,11 @@ function App() {
 
         
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/donationpage" element={<DonationPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/campaign" element={<CampaignPage />} />
+        <Route path="/account" element={<AccountSettingPage />} />
+
         
 
 

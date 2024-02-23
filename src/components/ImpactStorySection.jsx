@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { testimionalData } from '../Data';
-import { RiDoubleQuotesL } from "react-icons/ri";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+//import { RiDoubleQuotesL } from "react-icons/ri";
+import { HiArrowLongRight, HiArrowLongLeft   } from "react-icons/hi2";
 
 
 
@@ -53,7 +53,7 @@ const ImpactStorySection = () => {
                       {testimionalData.map((testimonial) => (
                           <SwiperSlide key={testimonial.id}>
                               <div className="h-full bg-[#FAF4ED] p-8 rounded ">
-                                  <RiDoubleQuotesL className='block w-8 h-8 bg-clip-text bg-transparent   gradient-100  mb-4'/>
+                                  <img src='/assets/svg/fluent_text-quote-24-filled (1).svg' alt='' className='block w-8 h-8 bg-clip-text bg-transparent   gradient-100  mb-4'/>
                                   <p className="leading-relaxed mb-6">{testimonial.text}</p>
                                   <div className="flex items-center">
                                       <img alt="testimonial" src={testimonial.CoverImg} className="w-24 h-24 rounded-full flex-shrink-0 border-4 bg-clip-border border-transparent gradient-100 object-cover object-center" />
@@ -71,10 +71,10 @@ const ImpactStorySection = () => {
                   </Swiper>
                    <div className='flex items-center justify-center space-x-2 mt-5'>
                           <button onClick={goPrev} className=' bg-[#FAF4ED] rounded-full w-8 h-8 flex items-center justify-center'>
-                              <FaArrowLeft className=' text-[#026354] w-4 h-4' />
+                              <HiArrowLongLeft   className=' text-[#026354] w-4 h-4' />
                           </button>
                           <button onClick={goNext} className='prevEl bg-[#FAF4ED] rounded-full w-8 h-8 flex items-center justify-center'>
-                              <FaArrowRight className=' text-[#026354] w-4 h-4' />
+                              <HiArrowLongRight className=' text-[#026354] w-4 h-4' />
                           </button>
                         </div>
               </div>

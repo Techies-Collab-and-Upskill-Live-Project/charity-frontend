@@ -50,9 +50,9 @@ const PaymentPage = () => {
             </div>
             <div className="border-2 rounded-lg px-4 py-14 w-full ">
               <div className=' space-y-3'>
-                <div className="flex mb-5">
+                <div className="flex space-x-2 items-center mb-5">
                   <p className=" text-gray-400">You're donating to </p>
-                  <h5 className="tex text-xl"> - Donation title/Name</h5>
+                  <h5 className="text-[0.90rem] md:text-xl"> - Donation title/Name</h5>
                 </div>
                 <h5 className="">Donation Amount</h5>
                 <p className=" text-gray-400">Choose or Enter donation amount</p>
@@ -84,18 +84,18 @@ const PaymentPage = () => {
                   <label for="name" className="flex font-bold">Name
                     <p className="f text-gray-500 font-normal ml-1">(optional)</p>
                   </label>
-                  <input type="text" name="name" placeholder="Enter Your Full-Name" className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 my-4" />
+                  <input type="text" name="name" placeholder="Enter Your Full-Name" className="w-full px-3 py-2  border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6 my-4" />
                   <label htmlFor="paymetmethod" className="font-bold my-4">Payment Method</label>
                   <p className="text-gray-500 text-xs my-4">Choose your preferable payment option, in order to proceed with your donation</p>
-                  <select name="paymetmethod" id="" onChange={handlePaymentMethodChange} value={selectedPaymentMethod} className=" w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6">
-                    <option value="--select">--select</option>
-                    <option value="Credit-Card" >
+                  <select name="paymetmethod" id="" onChange={handlePaymentMethodChange} value={selectedPaymentMethod} className=" w-full px-3 py-2  border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6">
+                    <option value="--select" className=' text-[0.67rem]'>--select</option>
+                    <option value="Credit-Card" className=' text-[0.67rem]' >
                       
                       Credit card / Debit card / Bank transfer
                     </option>
                    
                       
-                      <option value="Cryptocurrency" >
+                      <option value="Cryptocurrency" className=' text-[0.67rem]' >
                      
                       Cryptocurrency
                     </option>
@@ -124,7 +124,7 @@ const PaymentPage = () => {
                           </div>
                         </div>
                         <div className='hidden lg:block'>
-                          <input type="checkbox" name="checkbox" />
+                          <input type="checkbox" name="checkbox " className='checked:bg-teal-500'  />
                           <label htmlFor="checkbox" className="text-xs pl-2">I have read, understood and I agree to Donation Trace’s
                             <a href="/" className="text-blue-500"> terms of service </a>
                             and

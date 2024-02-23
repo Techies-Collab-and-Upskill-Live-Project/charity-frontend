@@ -85,7 +85,7 @@ const DashboardSidebar = () => {
                           <div className=' flex items-center justify-between'>
                               <div className="flex items-center group">
                                   <FaCalendarAlt className='flex-shrink-0 w-5 h-5 text-[#98D9CF] transition duration-75' />
-                                  <Link to="/createblog" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF] ">Events</Link>
+                                  <Link to="/events" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF] ">Events</Link>
                               </div>
                               <div className=' flex items-center justify-center w-8 h-6 bg-[#98D9CF] rounded-full'>
                                   <span className=' text-[#E6F6F3] text-sm'>10</span>
@@ -95,13 +95,13 @@ const DashboardSidebar = () => {
                        <li>
                           <div className="flex items-center  group ">
                               <FaDiceD6 className='flex-shrink-0 w-5 h-5 text-[#98D9CF] transition duration-75' />
-                              <Link to="/dashboard" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF]">Campaign</Link>
+                              <Link to="/campaign" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF]">Campaign</Link>
                           </div>
                       </li>
                        <li>
                           <div className="flex items-center  group ">
                               <IoDocumentOutline className='flex-shrink-0 w-5 h-5 text-[#98D9CF] transition duration-75' />
-                              <Link to="/dashboard" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF]">Documents</Link>
+                              <Link to="/" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF]">Documents</Link>
                           </div>
                       </li>
                   </ul>
@@ -109,7 +109,7 @@ const DashboardSidebar = () => {
                       <li>
                           <div className="flex items-center  group ">
                               <RiSettingsLine className='flex-shrink-0 w-5 h-5 text-[#98D9CF] transition duration-75' />
-                              <Link to="/dashboard" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF]">Setting</Link>
+                              <Link to="/account" className="flex-1 ms-3 text-base font-medium leading-normal text-[#98D9CF]">Setting</Link>
                           </div>
                       </li>
                       <li>
