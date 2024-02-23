@@ -182,11 +182,7 @@ const Signup = () => {
                     }
                   </div>
                 </div>
-
-                
-                
-              </div>
-              <div className="space-y-2">
+                 <div className="space-y-2">
                   <label htmlFor="lastName" className="block text-sm">
                     Last Name
                   </label>
@@ -213,6 +209,11 @@ const Signup = () => {
                     }
                   </div>
                 </div>
+
+                
+                
+              </div>
+             
               <div className=" space-y-2">
                 <label htmlFor="email" className="block text-sm">
                   Email
