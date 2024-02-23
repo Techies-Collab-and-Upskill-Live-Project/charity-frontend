@@ -48,7 +48,7 @@ const Signup = () => {
         );
         console.log("Registration successful:", response.data);
         toast.success("Registration successful!");
-        navigate("/donate-page");
+        navigate("/dashboard");
       } catch (error) {
         if (error.response) {
           console.error("Registration failed:", error.response.data);
