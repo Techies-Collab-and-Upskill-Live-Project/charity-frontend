@@ -1,24 +1,33 @@
-import NavBar from './components/Navbar';
-import Footer from './components/footer'
-import ContactUs from './components/contactus/Contactuspage';
+//import NavBar from './components/common/Navbar.jsx';
+//import Footer from './components/common/footer.jsx'
+import ContactUs from './pages/contactus/Contactuspage.jsx';
 import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate
+  
 } from "react-router-dom";
 
 import "./style.css";
-import HomePage from './components/Home/HomePage';
-import Login from './components/auth/login';
-import Signup from './components/auth/signup';
-import Forgotpassword from './components/auth/forgotpassword';
-import DicoverPage from './components/dicover/dicover';
-import ExploreCategory from "./components/explore category/main"
-import DonatePage from "./components/donate/main.jsx"
-import Payment from './components/payment/payment.jsx';
-// import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from './pages/Home/HomePage.jsx'
+import SignupPage from './auth/signup/page.jsx';
+import ForgotpasswordPage from './auth/forgestpassword/page.jsx';
+import PaymentSuccessfullPage from './pages/payment/paymentsuccessfullpage.jsx';
+import ResetPasswordPage from './auth/resetpassword/page.jsx';
+import VerifyMailPage from './auth/verifiyemail/page.jsx';
+import VerificationCodePage from './auth/verifiycode/page.jsx';
+import SuccessMessagePage from './auth/successfullmessage/page.jsx';
+import LoginPage from './auth/login/page.jsx';
+import DicoverPage from './pages/dicover/page.jsx';
+import ExploreCategory from "./pages/explore category/page.jsx"
+import DonatePage from "./pages/donate/page.jsx"
+import Payment from './pages/payment/payment.jsx';import DashboardSidebar from './pages/dashboard/dashboardsiderbar.jsx';
+import DashboardNav from './pages/dashboard/dashboardnav.jsx';
+import Dashboard from './pages/dashboard/page.jsx';
+;
+
+
 
 function App() {
   return (
@@ -30,18 +39,28 @@ function App() {
 
           <Route path="/contactus" element={<ContactUs />}/>
 
-          <Route path="/login" element={<Login />}/>
-
-          <Route path="/signup" element={<Signup />}/>
-
-          <Route path="forgotpassword" element={<Forgotpassword/>}/>
+        <Route path="/login" element={<LoginPage />}/>
+        <Route path="/signup" element={<SignupPage />}/>
+        <Route path="forgotpassword" element={<ForgotpasswordPage />} />
+        <Route path="resetpassword" element={<ResetPasswordPage />} />
+        <Route path="verifyemail" element={<VerifyMailPage />} />
+        <Route path="successmessage" element={<SuccessMessagePage />} />
+        <Route path="verificationcode" element={<VerificationCodePage/>}/>
 
           <Route path="/discover" element={<DicoverPage/>}/>
 
           <Route path="/explorecategory" element={<ExploreCategory/>}/>
           <Route path="/donate-page" element={<DonatePage/>}/>
 
-          <Route path="/paymentpage" element={<Payment/>}/>
+        <Route path="/paymentpage" element={<Payment />} />
+         <Route path="/paymentsuccessfull" element={<PaymentSuccessfullPage/>}/>
+
+        
+        <Route path="/dashboard" element={<Dashboard />} />
+        
+
+
+        
         </Routes>
 
     </Router>

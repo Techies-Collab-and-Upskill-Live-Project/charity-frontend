@@ -32,6 +32,9 @@
 .nav-link {
   @apply px-3 py-2 flex items-center leading-snug text-[#5D5D5D];
 }
+.gradient-100 {
+  @apply bg-gradient-to-r from-[#04A38A80] via-[#D18D4A] to-[#D18D4A80];
+}
 
 .fgfgfgfg:focus{
   border: 0px !important;
