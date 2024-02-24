@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { CiGrid41 } from "react-icons/ci";
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
 import { FaCalendarAlt } from "react-icons/fa";
@@ -7,8 +7,10 @@ import { IoDocumentOutline } from "react-icons/io5";
 import { RiSettingsLine } from "react-icons/ri";
 import { MdOutlineLiveHelp } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 const DashboardSidebar = () => {
+    const [user, setUser] = useState({});
   
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -19,6 +21,42 @@ const DashboardSidebar = () => {
   const handleSidebarClose = () => {
     setIsSidebarOpen(false);
   };
+
+
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        // Retrieve the authentication token from localStorage or wherever it's stored
+        const authToken = localStorage.getItem("access");
+
+        // Check if authToken exists
+        if (authToken) {
+          const config = {
+            headers: {
+              Authorization: `Bearer ${authToken}`,
+            },
+          };
+
+          const response = await axios.get(
+            "https://donation-trace.onrender.com/api/v1/auth/user-profile",
+            config
+          );
+
+          setUser(response.data);
+        } else {
+          // Handle case where authToken doesn't exist
+          console.error("Authentication token not found.");
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
+  console.log(user)
 
    
   return (
@@ -59,8 +97,8 @@ const DashboardSidebar = () => {
                           <img src="/assets/img2" alt="" className="w-12 h-12 border rounded-full  border-white " />
                       </div>
                       <div className="">
-                          <p className="text-base leading-normal text-[#E6F6F3]">Alison Eyo</p>
-                          <p className="text-sm leading-normal text-[#E6F6F3]">alison.e@rayna.ui</p>
+                          <p className="text-base leading-normal text-[#E6F6F3]">{user.first_name} {user.last_name}</p>
+                          <p className="text-sm leading-normal text-[#E6F6F3]">{user.email}</p>
                       </div>
                   </div>
                   <ul className="space-y-5  mt-8">

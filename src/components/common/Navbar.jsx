@@ -123,7 +123,7 @@ function NavBar() {
               <Link to="/contactus" className="nav-link">Contact Us</Link>
               <div className="flex flex-row items-center justify-center py-6 lg:py-0 lg:ml-60">
                 <Link to="/login"><button className="border border-[#04A38A] rounded-md mr-1 py-3 text-[#04A38A] px-5 font-medium">Login</button></Link>
-                <button className="bg-[#04A38A] border-2 border-[#04A38A] rounded-md min-w-max ml-5 p-3 px-5 font-medium text-white text-base">Start a Campaign</button>
+                <Link to="/signup"><button className="bg-[#04A38A] border-2 border-[#04A38A] rounded-md min-w-max ml-5 p-3 px-5 font-medium text-white text-base">Start a Campaign</button></Link>
               </div>
             </nav>
           </div>
