@@ -34,10 +34,12 @@ const ContactUsForm = () => {
       setLoading(true);
       try {
         const response = await contactUs(values);
-        showToast(
-          "Yes! We got your message. We'll get back to you shortly.",
-          "success"
-        );
+        if (response) {
+          showToast(
+            "Yes! We got your message. We'll get back to you shortly.",
+            "success"
+          );
+        }
         formik.resetForm();
       } catch (error) {
         console.error("Contact us failed:", error.message);
@@ -57,8 +59,10 @@ const ContactUsForm = () => {
                 Need More Info? <br /> Contact Us
               </h3>
               <p className="mt-10">
-                Lorem ipsum dolor sit amet consectetur. Ac mauris porttitor dui
-                nibh arcu <br /> urna consequat malesuada.
+                Got questions or feedback? <br />
+                Our team is ready to assist you with any inquiries or support
+                you need. <br /> <br />
+                Reach out today!
               </p>
               <img
                 src={contactusfram}
