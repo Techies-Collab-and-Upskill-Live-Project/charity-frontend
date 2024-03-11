@@ -58,3 +58,17 @@ export const contactUs = async (userData) => {
     throw new Error("contact us failed: " + error.message);
   }
 };
+
+// subscribe to newsletter
+export const subscribeToNewsletter = async (emailObject) => {
+  try {
+    const response = await apiService.post("/subscribe/" + emailObject.email);
+    return response.data;
+  } catch (error) {
+    throw new Error(
+      "subscribe failed: " + error.response.data.detail[0].msg
+        ? error.response.data.detail[0].msg
+        : error.message
+    );
+  }
+};
