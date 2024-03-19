@@ -72,3 +72,23 @@ export const subscribeToNewsletter = async (emailObject) => {
     );
   }
 };
+
+// get trending campaigns
+export const getTrendingCampaigns = async () => {
+  try {
+    const response = await apiService.get("/campaign/trending/");
+    return response.data.data;
+  } catch (error) {
+    throw new Error("Failed to fetch trending campaigns: " + error.message);
+  }
+};
+
+// get featured campaign
+export const getFeaturedCampaign = async () => {
+  try {
+    const response = await apiService.get("/campaign/featured/");
+    return response.data.data;
+  } catch (error) {
+    throw new Error("Failed to fetch featured campaign: " + error.message);
+  }
+};
