@@ -103,7 +103,7 @@ function Footer() {
             </div>
             <div className=" flex items-center sm:flex-row flex-col justify-between mt-6 mb-5  space-x-5">
               <div className=" flex flex-col sm:flex-row items-center">
-                <a href="/">
+                <a href="/home">
                   {" "}
                   <img
                     src="/assets/logo.png"
@@ -112,14 +112,14 @@ function Footer() {
                   />
                 </a>
                 <div className="flex flex-row ">
-                  <Link to="/" className="nav-link">
+                  <Link to="/home" className="nav-link">
                     Home
                   </Link>
-                  <a href="/" className="nav-link">
+                  <a href="/home" className="nav-link">
                     {" "}
                     Explore
                   </a>
-                  <a href="/" className="nav-link">
+                  <a href="/home" className="nav-link">
                     {" "}
                     Link 2
                   </a>
