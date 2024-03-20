@@ -126,9 +126,9 @@ const PaymentPage = () => {
                         <div className='hidden lg:block'>
                           <input type="checkbox" name="checkbox " className='checked:bg-teal-500'  />
                           <label htmlFor="checkbox" className="text-xs pl-2">I have read, understood and I agree to Donation Trace’s
-                            <a href="/" className="text-blue-500"> terms of service </a>
+                            <a href="/home" className="text-blue-500"> terms of service </a>
                             and
-                            <a href="/" className="text-blue-500"> privacy </a>
+                            <a href="/home" className="text-blue-500"> privacy </a>
                             statement
                           </label>
                         </div>
@@ -137,9 +137,9 @@ const PaymentPage = () => {
                         <div className='lg:hidden block'>
                           <input type="checkbox" name="checkbox" />
                           <label htmlFor="checkbox" className="text-xs pl-2">I have read, understood and I agree to Donation Trace’s
-                            <a href="/" className="text-blue-500"> terms of service </a>
+                            <a href="/home" className="text-blue-500"> terms of service </a>
                             and
-                            <a href="/" className="text-blue-500"> privacy </a>
+                            <a href="/home" className="text-blue-500"> privacy </a>
                             statement
                           </label>
                         </div>
@@ -169,9 +169,9 @@ const PaymentPage = () => {
                         <div className=' lg:block hidden'>
                           <input type="checkbox" name="checkbox" className=' ' />
                           <label htmlFor="checkbox" className="text-xs pl-2">I have read, understood and I agree to Donation Trace’s
-                            <a href="/" className="text-blue-500"> terms of service </a>
+                            <a href="/home" className="text-blue-500"> terms of service </a>
                             and
-                            <a href="/" className="text-blue-500"> privacy </a>
+                            <a href="/home" className="text-blue-500"> privacy </a>
                             statement
                           </label>
                         </div>
@@ -179,9 +179,9 @@ const PaymentPage = () => {
                         <div className=' block lg:hidden'>
                           <input type="checkbox" name="checkbox" className=' ' />
                           <label htmlFor="checkbox" className="text-xs pl-2">I have read, understood and I agree to Donation Trace’s
-                            <a href="/" className="text-blue-500"> terms of service </a>
+                            <a href="/home" className="text-blue-500"> terms of service </a>
                             and
-                            <a href="/" className="text-blue-500"> privacy </a>
+                            <a href="/home" className="text-blue-500"> privacy </a>
                             statement
                           </label>
                         </div>

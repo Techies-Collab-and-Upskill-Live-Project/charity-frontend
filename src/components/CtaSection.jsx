@@ -31,7 +31,7 @@ const Cta = () => {
                   featuredCampaign.images && featuredCampaign.images[0].image
                 }
               />
-              <div class=" self-stretch">
+              <div className=" self-stretch">
                 <h4 className="  text-white leading-loose">
                   {featuredCampaign.title}
                 </h4>

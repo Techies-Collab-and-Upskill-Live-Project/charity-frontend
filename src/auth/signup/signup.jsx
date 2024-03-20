@@ -40,7 +40,7 @@ const Signup = () => {
     onSubmit: async (values) => {
       setLoading(true);
       try {
-       const response = await resgisterUser(values); 
+        const response = await resgisterUser(values);
         showToast(response.message, "success");
         navigate("/donate-page");
       } catch (error) {
@@ -56,74 +56,62 @@ const Signup = () => {
     <div className=" container mx-auto w-full">
       <div className="py-6 md:py-12">
         <div className="max-w-md w-full mx-auto mt-10">
-          <h3 className="text-center">
-            Sign Up
-          </h3>
+          <h3 className="text-center">Sign Up</h3>
           <form
             onSubmit={formik.handleSubmit}
             className="space-y-4 md:space-y-6"
           >
-           <div className=" space-y-4">
-                <button
-                  className="bg-white flex items-center justify-center w-full p-2 space-x-4 border rounded-md"
-                >
-                  <img
-                    src="/assets/Social icon.jpg"
-                    alt=""
-                    className=" w-6 h-6"
-                  />{" "}
-                  <span>Sign in with Google</span>
-                </button>
-                <button
-                  className="bg-blue-500 flex items-center justify-center w-full p-2 space-x-4 border rounded-md text-white"
-                >
-                  <FaFacebook className=" h-6 w-6  " />{" "}
-                  <span>Sign in with Facebook</span>
+            <div className=" space-y-4">
+              <button className="bg-white flex items-center justify-center w-full p-2 space-x-4 border rounded-md">
+                <img
+                  src="/assets/Social icon.jpg"
+                  alt=""
+                  className=" w-6 h-6"
+                />{" "}
+                <span>Sign in with Google</span>
               </button>
-              <button
-                  className=" md:hidden bg-black flex items-center justify-center w-full p-2 space-x-4 border rounded-md text-white"
-                >
-                  <AiOutlineApple className=" h-6 w-6  " />{" "}
-                  <span>Sign in with Apple</span>
-                </button>
-              </div>
+              <button className="bg-blue-500 flex items-center justify-center w-full p-2 space-x-4 border rounded-md text-white">
+                <FaFacebook className=" h-6 w-6  " />{" "}
+                <span>Sign in with Facebook</span>
+              </button>
+              <button className=" md:hidden bg-black flex items-center justify-center w-full p-2 space-x-4 border rounded-md text-white">
+                <AiOutlineApple className=" h-6 w-6  " />{" "}
+                <span>Sign in with Apple</span>
+              </button>
+            </div>
             <div className="flex items-center w-full my-4">
               <hr className="w-full text-gray-400 h-1" />
               <p className="px-3 text-gray-400">OR</p>
               <hr className="w-full text-gray-400 h-1" />
             </div>
             <div>
-             
               <div className="md:flex hidden">
                 <div>
-                                  <div className="space-y-2">
-                  <label htmlFor="firstName" className="block text-sm">
-                    First Name
-                  </label>
-                  <div className=" relative ">
-                    <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-10 w-10 text-gray-400">
-                      <FaRegUser className=" h-4 w-4" />
-                    </span>
-                    <input
-                      type="text"
-                      name="first_name"
-                      id="first_name"
-                      placeholder="olivia@untitledui.com"
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={formik.values.first_name}
-                      className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6"
-                    />
-                    {formik.touched.first_name && formik.errors.first_name ?
-                      (
+                  <div className="space-y-2">
+                    <label htmlFor="firstName" className="block text-sm">
+                      First Name
+                    </label>
+                    <div className=" relative ">
+                      <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-10 w-10 text-gray-400">
+                        <FaRegUser className=" h-4 w-4" />
+                      </span>
+                      <input
+                        type="text"
+                        name="first_name"
+                        id="first_name"
+                        placeholder="olivia@untitledui.com"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.first_name}
+                        className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6"
+                      />
+                      {formik.touched.first_name && formik.errors.first_name ? (
                         <div className="text-red-500 text-xs">
                           {formik.errors.first_name}
                         </div>
-                      ) : null
-                    }
+                      ) : null}
+                    </div>
                   </div>
-                  </div>
-
                 </div>
                 <div className=" space-y-2">
                   <label htmlFor="lastName" className="block text-sm">
@@ -141,20 +129,18 @@ const Signup = () => {
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.last_name}
-                      className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"  
+                      className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
                     />
-                    {formik.touched.last_name && formik.errors.last_name ?
-                      (
-                        <div className="text-red-500 text-xs">
-                          {formik.errors.last_name}
-                        </div>
-                      ) : null
-                    }
+                    {formik.touched.last_name && formik.errors.last_name ? (
+                      <div className="text-red-500 text-xs">
+                        {formik.errors.last_name}
+                      </div>
+                    ) : null}
                   </div>
-                </div> 
+                </div>
               </div>
-              
-               <div className="flex md:hidden">
+
+              <div className="flex md:hidden">
                 <div className="space-y-2">
                   <label htmlFor="firstName" className="block text-sm">
                     First Name
@@ -173,16 +159,14 @@ const Signup = () => {
                       value={formik.values.last_name}
                       className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
                     />
-                    {formik.touched.first_name && formik.errors.first_name ?
-                      (
-                        <div className="text-red-500 text-xs">
-                          {formik.errors.first_name}
-                        </div>
-                      ) : null
-                    }
+                    {formik.touched.first_name && formik.errors.first_name ? (
+                      <div className="text-red-500 text-xs">
+                        {formik.errors.first_name}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
-                 <div className="space-y-2">
+                <div className="space-y-2">
                   <label htmlFor="lastName" className="block text-sm">
                     Last Name
                   </label>
@@ -200,26 +184,21 @@ const Signup = () => {
                       value={formik.values.last_name}
                       className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
                     />
-                    {formik.touched.last_name && formik.errors.last_name ?
-                      (
-                        <div className="text-red-500 text-xs">
-                          {formik.errors.last_name}
-                        </div>
-                      ) : null
-                    }
+                    {formik.touched.last_name && formik.errors.last_name ? (
+                      <div className="text-red-500 text-xs">
+                        {formik.errors.last_name}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
-
-                
-                
               </div>
-             
+
               <div className=" space-y-2">
                 <label htmlFor="email" className="block text-sm">
                   Email
                 </label>
                 <div className=" relative">
-                   <span className="pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                  <span className="pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
                     <HiOutlineMail className="h-4 w-4" />
                   </span>
                   <input
@@ -232,69 +211,65 @@ const Signup = () => {
                     value={formik.values.email}
                     className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
                   />
-                  {formik.touched.email && formik.errors.email ?
-                    (
-                      <div className="text-red-500 text-xs">
-                        {formik.errors.email}
-                      </div>
-                    ) : null
-                  }
+                  {formik.touched.email && formik.errors.email ? (
+                    <div className="text-red-500 text-xs">
+                      {formik.errors.email}
+                    </div>
+                  ) : null}
                 </div>
               </div>
               <div className=" space-y-2">
-                <label htmlFor="password" className="block text-sm">Password</label>
+                <label htmlFor="password" className="block text-sm">
+                  Password
+                </label>
                 <div className=" relative">
                   <span className="pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
-                      <RiLockPasswordLine className="h-4 w-4" />
+                    <RiLockPasswordLine className="h-4 w-4" />
                   </span>
                   <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="***************"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.password}
-                  className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
-                />
-                {formik.touched.password && formik.errors.password ?
-                  (
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="***************"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.password}
+                    className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
+                  />
+                  {formik.touched.password && formik.errors.password ? (
                     <div className="text-red-500 text-xs">
                       {formik.errors.password}
                     </div>
-                  ) : null
-                }
+                  ) : null}
                 </div>
               </div>
               <button
                 type="submit"
                 className="w-full bg-teal-500 rounded-md px-4 text-sm text-white mt-5  py-3 flex items-center justify-center"
               >
-                {loading ?
-                  (
-                    <Circles
-                      height="30"
-                      width="30"
-                      color="#4fa94d"
-                      ariaLabel="circles-loading"
-                      wrapperStyle={{}}
-                      wrapperClass=""
-                      visible={true}
-                    />
-                  ) : (
-                    "Sign up"
-                  )
-                }
+                {loading ? (
+                  <Circles
+                    height="30"
+                    width="30"
+                    color="#4fa94d"
+                    ariaLabel="circles-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                  />
+                ) : (
+                  "Sign up"
+                )}
               </button>
               <div className="">
                 <p className="font-m font-medium text-gray-500 mt-4 text-xs">
                   By signing up, you confirm that you’ve read and accepted our
-                  <a href="/" className="text text-blue-500">
+                  <a href="/home" className="text text-blue-500">
                     {" "}
                     Terms of Service{" "}
                   </a>
                   and
-                  <a href="/" className="text text-blue-500">
+                  <a href="/home" className="text text-blue-500">
                     {" "}
                     Privacy Policy{" "}
                   </a>
