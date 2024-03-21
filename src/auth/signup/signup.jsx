@@ -99,7 +99,7 @@ const Signup = () => {
                         type="text"
                         name="first_name"
                         id="first_name"
-                        placeholder="olivia@untitledui.com"
+                        placeholder="John"
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.first_name}
@@ -124,61 +124,8 @@ const Signup = () => {
                     <input
                       type="text"
                       name="last_name"
-                      id="lastName"
-                      placeholder="olivia@untitledui.com"
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={formik.values.last_name}
-                      className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
-                    />
-                    {formik.touched.last_name && formik.errors.last_name ? (
-                      <div className="text-red-500 text-xs">
-                        {formik.errors.last_name}
-                      </div>
-                    ) : null}
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex md:hidden">
-                <div className="space-y-2">
-                  <label htmlFor="firstName" className="block text-sm">
-                    First Name
-                  </label>
-                  <div className=" relative ">
-                    <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
-                      <FaRegUser className=" h-4 w-4" />
-                    </span>
-                    <input
-                      type="text"
-                      name="first_name"
-                      id="first_name"
-                      placeholder="First name"
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={formik.values.last_name}
-                      className="w-full px-3 py-2 pl-10 pr-4 border rounded-md text-black ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6"
-                    />
-                    {formik.touched.first_name && formik.errors.first_name ? (
-                      <div className="text-red-500 text-xs">
-                        {formik.errors.first_name}
-                      </div>
-                    ) : null}
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="lastName" className="block text-sm">
-                    Last Name
-                  </label>
-                  <div className=" relative ">
-                    <span className=" pointer-events-none inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
-                      <FaRegUser className=" h-4 w-4" />
-                    </span>
-                    <input
-                      type="text"
-                      name="last_name"
                       id="last_name"
-                      placeholder="First name"
+                      placeholder="Doe"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.last_name}
@@ -192,7 +139,6 @@ const Signup = () => {
                   </div>
                 </div>
               </div>
-
               <div className=" space-y-2">
                 <label htmlFor="email" className="block text-sm">
                   Email

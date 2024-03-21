@@ -2,8 +2,9 @@
 //import Footer from './components/common/footer.jsx'
 import ContactUs from "./pages/contactus/Contactuspage.jsx";
 import "./App.css";
+import React, { useContext } from "react";
 import {
-  BrowserRouter as Router,
+  //   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
@@ -28,38 +29,64 @@ import DonationPage from "./pages/dashboard/donations/page.jsx";
 import EventsPage from "./pages/dashboard/events/page.jsx";
 import CampaignPage from "./pages/dashboard/campaign/page.jsx";
 import AccountSettingPage from "./pages/dashboard/account/page.jsx";
+import PrivateRoute from "./auth/utils/PrivateRoute";
+// import { AuthProvider } from "./auth/context/AuthContext";
+import AuthContext from "./auth/context/AuthContext";
 function App() {
+  const { user } = useContext(AuthContext);
   return (
-    <Router>
-      <Routes>
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
+    //     <Router>
+    <Routes>
+      <Route path="/home" element={<HomePage />} />
+      <Route path="/" element={<Navigate replace to="/home" />} />
+      <Route path="/contactus" element={<ContactUs />} />
+      <Route
+        path="/login"
+        element={user ? <Navigate replace to="/discover" /> : <LoginPage />}
+      />
+      <Route
+        path="/signup"
+        element={user ? <Navigate replace to="/discover" /> : <SignupPage />}
+      />
 
-        <Route path="forgotpassword" element={<ForgotpasswordPage />} />
-        <Route path="resetpassword" element={<ResetPasswordPage />} />
-        <Route path="verifyemail" element={<VerifyMailPage />} />
-        <Route path="successmessage" element={<SuccessMessagePage />} />
-        <Route path="verificationcode" element={<VerificationCodePage />} />
+      {/* <Route path="/signup" element={<SignupPage />} /> */}
 
-        <Route path="/discover" element={<DicoverPage />} />
-        <Route path="/explorecategory" element={<ExploreCategory />} />
-        <Route path="/donate-page" element={<DonatePage />} />
-        <Route path="/paymentpage" element={<Payment />} />
-        <Route
-          path="/paymentsuccessfull"
-          element={<PaymentSuccessfullPage />}
-        />
+      <Route path="forgotpassword" element={<ForgotpasswordPage />} />
+      <Route path="resetpassword" element={<ResetPasswordPage />} />
+      <Route path="verifyemail" element={<VerifyMailPage />} />
+      <Route path="successmessage" element={<SuccessMessagePage />} />
+      <Route path="verificationcode" element={<VerificationCodePage />} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/donationpage" element={<DonationPage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/campaign" element={<CampaignPage />} />
-        <Route path="/account" element={<AccountSettingPage />} />
-      </Routes>
-    </Router>
+      <Route
+        path="/discover"
+        element={
+          <PrivateRoute>
+            <DicoverPage />{" "}
+          </PrivateRoute>
+        }
+      />
+      <Route path="/explorecategory" element={<ExploreCategory />} />
+
+      {/*  PrivateRoute */}
+      <Route
+        path="/donate-page"
+        element={
+          <PrivateRoute>
+            <DonatePage />
+          </PrivateRoute>
+        }
+      />
+      {/* <Route path="/donate-page" element={<DonatePage />} /> */}
+      <Route path="/paymentpage" element={<Payment />} />
+      <Route path="/paymentsuccessfull" element={<PaymentSuccessfullPage />} />
+
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/donationpage" element={<DonationPage />} />
+      <Route path="/events" element={<EventsPage />} />
+      <Route path="/campaign" element={<CampaignPage />} />
+      <Route path="/account" element={<AccountSettingPage />} />
+    </Routes>
+    //     </Router>
   );
 }
 
