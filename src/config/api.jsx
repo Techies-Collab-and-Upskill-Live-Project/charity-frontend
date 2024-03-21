@@ -1,13 +1,17 @@
 import apiService from "../services/apiService";
 
-export const loginUser = async (userData) => {
-  try {
-    const response = await apiService.post("/auth/login", userData);
-    return response.data;
-  } catch (error) {
-    throw new Error("Login failed: " + error.message);
-  }
-};
+// export const loginUser = async (userData) => {
+//   try {
+//     const response = await apiService.post("/auth/login", userData);
+//     setAuthTokens(reponse);
+//     setUser(jwtDecode(response.data.access));
+//     localStorage.setItem("authTokens", JSON.stringify(response));
+//     navigate("/");
+//     return response.data;
+//   } catch (error) {
+//     throw new Error("Login failed: " + error.message);
+//   }
+// };
 
 // forget password  api
 export const forgetPassword = async (userData) => {

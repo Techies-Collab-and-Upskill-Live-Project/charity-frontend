@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { HiBars3 } from "react-icons/hi2";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaChevronDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import DropdownMenu from "../dropdown";
+import AuthContext from "../../auth/context/AuthContext";
 
 function NavBar() {
+  const { user, logoutUser } = useContext(AuthContext);
   const [navbarOpen, setNavBarOpen] = useState(false);
 
   const [isExploreDropdownOpen, setExploreDropdownOpen] = useState(false);
@@ -122,14 +124,25 @@ function NavBar() {
                 Contact Us
               </Link>
               <div className="flex flex-row items-center justify-center py-6 lg:py-0 lg:ml-60">
-                <Link to="/login">
-                  <button className="border border-[#04A38A] rounded-md mr-1 py-3 text-[#04A38A] px-5 font-medium">
-                    Login
+                {!user ? (
+                  <Link to="/login">
+                    <button className="border border-[#04A38A] rounded-md mr-1 py-3 text-[#04A38A] px-5 font-medium">
+                      Login
+                    </button>
+                  </Link>
+                ) : (
+                  <button
+                    onClick={logoutUser}
+                    className="border border-[#04A38A] rounded-md mr-1 py-3 text-[#04A38A] px-5 font-medium"
+                  >
+                    Logout
+                  </button>
+                )}
+                <Link to="/signup">
+                  <button className="bg-[#04A38A] border-2 border-[#04A38A] rounded-md min-w-max ml-5 p-3 px-5 font-medium text-white text-base">
+                    Start a Campaign
                   </button>
                 </Link>
-                <button className="bg-[#04A38A] border-2 border-[#04A38A] rounded-md min-w-max ml-5 p-3 px-5 font-medium text-white text-base">
-                  Start a Campaign
-                </button>
               </div>
             </nav>
           </div>
