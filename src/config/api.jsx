@@ -96,3 +96,14 @@ export const getFeaturedCampaign = async () => {
     throw new Error("Failed to fetch featured campaign: " + error.message);
   }
 };
+
+// get categories
+export const getCampaignCategories = async () => {
+  try {
+    const response = await apiService.get("/campaign_category/list/");
+    console.log(response.data.campaign_categories);
+    return response.data.campaign_categories;
+  } catch (error) {
+    throw new Error("Failed to fetch categories: " + error.message);
+  }
+};

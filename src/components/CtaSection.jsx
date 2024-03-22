@@ -14,9 +14,9 @@ const Cta = () => {
     fetchFeaturedCampaign();
   }, []);
 
-  if (!featuredCampaign) {
-    return <div>Loading...</div>;
-  }
+  //   if (!featuredCampaign) {
+  //     return <div>Loading...</div>;
+  //   }
   return (
     <div className=" bg-white mx-auto w-full">
       <div className=" container mx-auto w-full">
@@ -111,7 +111,7 @@ const Cta = () => {
 
                 <button className="mt-8 bg-white text-[12px] px-4 py-3 rounded-lg shadow border border-white">
                   <span className="   text-[#04A38A]  flex items-center justify-center space-x-5">
-                    <Link to={`/campaigns/${featuredCampaign.id}`}>
+                    <Link to={`/donate-page/${featuredCampaign.id}`}>
                       Learn More
                     </Link>
                     <HiOutlineChevronRight size={15} />
