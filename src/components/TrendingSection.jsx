@@ -13,6 +13,10 @@ const TrendingSection = () => {
       setLoading(true);
       try {
         const data = await getTrendingCampaigns();
+        // if data is null
+        if (!data) {
+          throw new Error("Failed to fetch trending campaigns");
+        }
         setTrendingCampaigns(data);
       } catch (error) {
         setError(error.message);
