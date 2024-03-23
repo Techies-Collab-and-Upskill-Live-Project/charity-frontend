@@ -17,6 +17,8 @@ const CategoryList = () => {
 
   return (
     <div className=" bg-[#FEFEFE] w-full">
+      <br></br>
+      <br></br>
       <div className="container mx-auto w-full">
         <div className="py-6 md:py-12">
           <div className="flex flex-col items-center sm:max-auto">

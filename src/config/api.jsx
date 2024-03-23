@@ -76,9 +76,6 @@ export const subscribeToNewsletter = async (emailObject) => {
 export const getTrendingCampaigns = async () => {
   try {
     const response = await apiService.get("/campaign/trending/");
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
     return response.data.data;
   } catch (error) {
     console.error("Failed to fetch featured campaign:", error);
@@ -90,9 +87,6 @@ export const getTrendingCampaigns = async () => {
 export const getFeaturedCampaign = async () => {
   try {
     const response = await apiService.get("/campaign/featured/");
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
     return response.data.data;
   } catch (error) {
     console.error("Failed to fetch featured campaign:", error);
@@ -104,9 +98,6 @@ export const getFeaturedCampaign = async () => {
 export const getCampaignCategories = async () => {
   try {
     const response = await apiService.get("/campaign_category/list/");
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
     return response.data.campaign_categories;
   } catch (error) {
     console.error("Failed to fetch featured campaign:", error);

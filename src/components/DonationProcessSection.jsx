@@ -1,5 +1,6 @@
 import React from "react";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { Link } from "react-router-dom";
 const DonationProcessSection = () => {
   return (
     <div className="bg-white mx-auto w-full ">
@@ -90,9 +91,11 @@ const DonationProcessSection = () => {
             </div>
             <div className="w-40 rounded-lg justify-start items-start inline-flex ">
               <div className="grow shrink basis-0 px-4 py-3 bg-teal-600 rounded-lg shadow border border-teal-600 justify-center items-center gap-2 flex">
-                <button className="text-white text-base font-bold font-['Nunito'] leading-normal">
-                  Donate Now
-                </button>
+                <Link to="/discover">
+                  <button className="text-white text-base font-bold font-['Nunito'] leading-normal">
+                    Donate Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
