@@ -37,8 +37,8 @@ const Login = () => {
     onSubmit: async (values) => {
       setLoading(true);
       try {
-        const response = await loginUser(values); // Pass values directly to loginUser function
-        showToast(response.message, "success");
+        await loginUser(values); // Pass values directly to loginUser function
+        showToast("Successfully logged in. Welcome ", "success");
         navigate("/discover");
       } catch (error) {
         console.error("Login failed:", error.message);
