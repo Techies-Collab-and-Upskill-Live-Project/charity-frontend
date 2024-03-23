@@ -14,9 +14,9 @@ const Cta = () => {
     fetchFeaturedCampaign();
   }, []);
 
-  //   if (!featuredCampaign) {
-  //     return <div>Loading...</div>;
-  //   }
+  if (!featuredCampaign) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className=" bg-white mx-auto w-full">
       <div className=" container mx-auto w-full">

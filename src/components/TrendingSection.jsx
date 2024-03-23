@@ -13,6 +13,10 @@ const TrendingSection = () => {
       setLoading(true);
       try {
         const data = await getTrendingCampaigns();
+        // if data is null
+        if (!data) {
+          throw new Error("Failed to fetch trending campaigns");
+        }
         setTrendingCampaigns(data);
       } catch (error) {
         setError(error.message);
@@ -43,7 +47,7 @@ const TrendingSection = () => {
           </div>
           <div className="grid gap-5 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:max-w-full sm:mx-auto xl:max-w-full mt-10 lg:mt-16">
             {trendingCampaigns.map((campaign) => (
-              <Link to={`/donate-page/${campaign.id}`}>
+              <Link key={campaign.id} to={`/donate-page/${campaign.id}`}>
                 <div
                   key={campaign.id}
                   className="overflow-hidden transition-shadow duration-300 bg-white rounded-md"

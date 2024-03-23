@@ -20,9 +20,11 @@ const HeroSection = () => {
                       Be a hero today – make a difference with every heartfelt
                       donation.
                     </p>
-                    <button className=" bg-[#04A38A] text-[#FEFEFE] px-4 py-3 rounded-md font-bold text-[12px] md:text-[14px]">
-                      <Link to="/discover">Start a Campaign</Link>
-                    </button>
+                    <Link to="/discover">
+                      <button className=" bg-[#04A38A] text-[#FEFEFE] px-4 py-3 rounded-md font-bold text-[12px] md:text-[14px]">
+                        Start a Campaign
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

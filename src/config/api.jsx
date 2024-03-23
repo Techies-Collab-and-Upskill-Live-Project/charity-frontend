@@ -1,17 +1,12 @@
+// import apiService from "../services/apiService";
 import apiService from "../services/apiService";
 
-// export const loginUser = async (userData) => {
-//   try {
-//     const response = await apiService.post("/auth/login", userData);
-//     setAuthTokens(reponse);
-//     setUser(jwtDecode(response.data.access));
-//     localStorage.setItem("authTokens", JSON.stringify(response));
-//     navigate("/");
-//     return response.data;
-//   } catch (error) {
-//     throw new Error("Login failed: " + error.message);
-//   }
-// };
+// get access token from local storage
+export const getAccessToken = () => {
+  return localStorage.getItem("authTokens")
+    ? JSON.parse(localStorage.getItem("authTokens")).access
+    : null;
+};
 
 // forget password  api
 export const forgetPassword = async (userData) => {
@@ -83,7 +78,8 @@ export const getTrendingCampaigns = async () => {
     const response = await apiService.get("/campaign/trending/");
     return response.data.data;
   } catch (error) {
-    throw new Error("Failed to fetch trending campaigns: " + error.message);
+    console.error("Failed to fetch featured campaign:", error);
+    return null;
   }
 };
 
@@ -93,7 +89,8 @@ export const getFeaturedCampaign = async () => {
     const response = await apiService.get("/campaign/featured/");
     return response.data.data;
   } catch (error) {
-    throw new Error("Failed to fetch featured campaign: " + error.message);
+    console.error("Failed to fetch featured campaign:", error);
+    return null;
   }
 };
 
@@ -101,9 +98,9 @@ export const getFeaturedCampaign = async () => {
 export const getCampaignCategories = async () => {
   try {
     const response = await apiService.get("/campaign_category/list/");
-    console.log(response.data.campaign_categories);
     return response.data.campaign_categories;
   } catch (error) {
-    throw new Error("Failed to fetch categories: " + error.message);
+    console.error("Failed to fetch featured campaign:", error);
+    return null;
   }
 };

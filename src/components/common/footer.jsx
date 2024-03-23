@@ -115,7 +115,7 @@ function Footer() {
                   <Link to="/home" className="nav-link">
                     Home
                   </Link>
-                  <a href="/home" className="nav-link">
+                  <a href="/discover" className="nav-link">
                     {" "}
                     Explore
                   </a>
