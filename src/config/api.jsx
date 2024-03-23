@@ -21,10 +21,21 @@ export const forgetPassword = async (userData) => {
 /// resgisterUser
 export const resgisterUser = async (userData) => {
   try {
-    const response = await apiService.post("/auth/register", userData);
+    const response = await apiService.post("/auth/register/", userData);
     return response.data;
   } catch (error) {
-    throw new Error("register failed: " + error.message);
+    // Use a more defensive approach to avoid accessing undefined properties
+    const detailError = error.response?.data?.detail?.[0]?.msg;
+    const nonFieldError = error.response?.data?.non_field_errors?.[0];
+
+    if (detailError) {
+      throw new Error(detailError);
+    } else if (nonFieldError) {
+      throw new Error(nonFieldError);
+    } else {
+      // Fall back to a more generic error message
+      throw new Error("Registration failed: " + error.message);
+    }
   }
 };
 

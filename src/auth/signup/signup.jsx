@@ -21,7 +21,7 @@ const Signup = () => {
       .email("Invalid email address")
       .required("Email is required"),
     password: Yup.string()
-      .min(6, "Password must be at least 6 characters")
+      .min(8, "Password must be at least 8 characters")
       .required("Password is required"),
   });
 
@@ -40,12 +40,15 @@ const Signup = () => {
     onSubmit: async (values) => {
       setLoading(true);
       try {
-        const response = await resgisterUser(values);
-        showToast(response.message, "success");
-        navigate("/donate-page");
+        await resgisterUser(values);
+        showToast(
+          "Registration successful. Please login to continue.",
+          "success"
+        );
+        navigate("/login");
       } catch (error) {
         console.error("Registration failed:", error.message);
-        showToast("Registration failed. Please try again.", "error"); // Show error message to the user
+        showToast("Registration failed. " + error.message, "error"); // Show error message to the user
       } finally {
         setLoading(false);
       }
