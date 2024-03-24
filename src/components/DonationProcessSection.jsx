@@ -32,14 +32,14 @@ const DonationProcessSection = () => {
               <div className="grow shrink basis-0 flex-col justify-start items-start gap-6 ">
                 <div className="self-stretch justify-start items-center inline-flex">
                   <div className=" rounded-lg justify-center items-center gap-4 flex">
-                    <div className="grow shrink basis-0 self-stretch px-5 py-2 rounded-lg border border-teal-600 justify-center items-center gap-2 flex">
-                      <p className="text-teal-600 text-base font-bold">
+                    <div className="grow shrink basis-0 self-stretch px-4 py-2 rounded-lg border border-teal-600 justify-center items-center gap-2 flex">
+                      <p className="text-teal-600 md:text-base font-bold text-[10px]">
                         Step 1
                       </p>
                     </div>
                   </div>
-                  <div className="w-[274.10px] h-px pl-[259.40px] pr-[0.20px] bg-teal-600 justify-end items-center flex">
-                    <MdOutlineArrowForwardIos className="w-[20px] h-[29px] text-teal-600 relative flex-col justify-start items-start flex" />
+                  <div className="w-[180.10px] h-px pl-[170px]  bg-teal-600 justify-end items-center flex">
+                    <MdOutlineArrowForwardIos className="w-[20px] h-[20px] text-teal-600 relative flex-col justify-start items-start flex" />
                   </div>
                 </div>
                 <h4 className=" text-neutral-800 pb-5">
@@ -54,14 +54,14 @@ const DonationProcessSection = () => {
               <div className="grow shrink basis-0 flex-col justify-start items-start gap-6 ">
                 <div className="self-stretch justify-start items-center inline-flex">
                   <div className=" rounded-lg justify-center items-center gap-4 flex">
-                    <div className=" grow shrink basis-0 self-stretch px-5 py-2 rounded-lg border border-teal-600 justify-center items-center gap-2 flex">
-                      <p className="text-teal-600 text-base font-bold">
+                    <div className=" grow shrink basis-0 self-stretch px-4 py-2 rounded-lg border border-teal-600 justify-center items-center gap-2 flex">
+                      <p className="text-teal-600 md:text-base font-bold text-[10px]">
                         Step 2
                       </p>
                     </div>
                   </div>
-                  <div className="w-[274.10px] h-px pl-[259.40px] pr-[0.20px] bg-teal-600 justify-end items-center flex">
-                    <MdOutlineArrowForwardIos className="w-[20px] h-[29px] text-teal-600 relative flex-col justify-start items-start flex" />
+                  <div className="w-[180.10px] h-px pl-[170px]  bg-teal-600 justify-end items-center flex">
+                    <MdOutlineArrowForwardIos className="w-[20px] h-[20px] text-teal-600 relative flex-col justify-start items-start flex" />
                   </div>
                 </div>
                 <h4 className=" text-neutral-700 pb-5">
@@ -74,7 +74,7 @@ const DonationProcessSection = () => {
               </div>
               <div className="  flex-col justify-start items-start inline-flex">
                 <div className=" px-5 py-2 rounded-lg border border-teal-600 justify-center items-center  flex">
-                  <p className="text-teal-600 text-base font-bold">
+                  <p className="text-teal-600 md:text-base font-bold text-[10px]">
                     Final Step
                   </p>
                 </div>
