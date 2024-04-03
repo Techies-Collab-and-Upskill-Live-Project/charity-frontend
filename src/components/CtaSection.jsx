@@ -42,7 +42,7 @@ const Cta = () => {
                 <p className=" text-white text-base font-medium leading-normal pb-6">
                   {featuredCampaign.description}
                 </p>
-                <div className="w-[326px] lg:w-[368px] h-[72px] flex-col justify-start items-start gap-1 inline-flex">
+                <div className="w-[300px] lg:w-[368px] h-[72px] flex-col justify-start items-start gap-1 inline-flex">
                   <div className="self-stretch h-12 relative">
                     <div className="w-full h-2 left-0 top-[40px] absolute">
                       <div className="w-full h-2 left-0 top-0 absolute bg-zinc-400 rounded-lg" />

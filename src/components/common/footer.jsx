@@ -65,7 +65,7 @@ function Footer() {
                 inbox. Join our newsletter now!
               </p>
               <div className="flex justify-center max-sm:flex-col">
-                <form onSubmit={formik.handleSubmit} className="flex">
+                <form onSubmit={formik.handleSubmit} className="flex flex-col md:flex-row space-x-4">
                   <input
                     type="text"
                     name="email"

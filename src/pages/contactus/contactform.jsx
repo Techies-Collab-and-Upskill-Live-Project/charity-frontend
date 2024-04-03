@@ -53,7 +53,7 @@ const ContactUsForm = () => {
     <div className="bg-white w-full">
       <div className=" container mx-auto w-full">
         <div className="py-16 lg:py-20 mx-auto">
-          <div className="grid grid-cols gap-8  lg:grid-cols-2 md:px-12 px-8 lg:px-16 xl:px-32 ">
+          <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 ">
             <div className="mt-28 mr-28">
               <h3>
                 Need More Info? <br /> Contact Us
@@ -87,7 +87,7 @@ const ContactUsForm = () => {
                     onBlur={formik.handleBlur}
                     value={formik.values.full_name}
                     placeholder=" John Mark"
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
                   />
                   {formik.touched.full_name && formik.errors.full_name && (
                     <p className="text-red-500">{formik.errors.full_name}</p>
@@ -103,7 +103,7 @@ const ContactUsForm = () => {
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                     placeholder="olivia@untitledui.com"
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
                   />
                   {formik.touched.email && formik.errors.email && (
                     <p className="text-red-500">{formik.errors.email}</p>
@@ -117,7 +117,7 @@ const ContactUsForm = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.enquiry_type}
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
                   >
                     <option value="">Select Enquiry Type</option>
                     <option value="Technical Support">Technical Support</option>
@@ -142,7 +142,7 @@ const ContactUsForm = () => {
                     onBlur={formik.handleBlur}
                     value={formik.values.subject}
                     placeholder="Enter subject"
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
                   />
                   {formik.touched.subject && formik.errors.subject && (
                     <p className="text-red-500">{formik.errors.subject}</p>
@@ -159,7 +159,7 @@ const ContactUsForm = () => {
                     value={formik.values.message}
                     cols="30"
                     rows="10"
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
                   ></textarea>
                   {formik.touched.message && formik.errors.message && (
                     <p className="text-red-500">{formik.errors.message}</p>
@@ -168,7 +168,7 @@ const ContactUsForm = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-teal-500 rounded-md px-4 py-3 text-sm text-white mt-5 "
+                  className="w-96 bg-teal-500 rounded-md px-4 text-sm text-white mt-5  py-3 flex items-center justify-center "
                 >
                   {loading ? (
                     <Circles
@@ -187,27 +187,23 @@ const ContactUsForm = () => {
               </form>
             </div>
           </div>
-          <div className="bg-yellow-50 flex h-72 mx-12 justify-around pt-20 text-center my-28">
-            <div>
-              <img
-                src={emailicon}
-                alt=""
-                className="ml-20 mb-5 mt-5"
-                loading="lazy"
-              />
-              <h5 className="text-yellow-600 font-medium">Mail Us</h5>
-              <p>ouremail@donationtrace.com</p>
+          <div className="bg-yellow-50   py-6 text-center my-28">
+            <div className=" grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 ">
+              <div className=" flex flex-col justify-center items-center space-y-2">
+              <img src={emailicon} alt="" className="w-10 h-10" loading="lazy" />
+                <div>
+                <h5 className="text-yellow-600 font-medium">Mail Us</h5>
+                <p>ouremail@donationtrace.com</p>
+              </div>
             </div>
-            <div>
-              <img
-                src={phoneicon}
-                alt=""
-                className="ml-10 mb-5 mt-5"
-                loading="lazy"
-              />
-              <h5 className="text-yellow-600 font-medium">Call US</h5>
+            <div className=" flex flex-col justify-center items-center space-y-2 ">
+              <img src={phoneicon} alt="" className="w-10 h-10" />
+                <div className="">
+                <h5 className="text-yellow-600 font-medium">Call US</h5>
               <p>+233 12 355 6789</p>
+              </div>
             </div>
+           </div>
           </div>
         </div>
       </div>
