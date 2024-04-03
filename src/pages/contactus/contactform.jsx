@@ -70,6 +70,7 @@ const ContactUsForm = () => {
                 width={566}
                 height={458.98}
                 className="mt-5"
+                loading="lazy"
               />
             </div>
             <div className="mt-28">
@@ -188,12 +189,22 @@ const ContactUsForm = () => {
           </div>
           <div className="bg-yellow-50 flex h-72 mx-12 justify-around pt-20 text-center my-28">
             <div>
-              <img src={emailicon} alt="" className="ml-20 mb-5 mt-5" />
+              <img
+                src={emailicon}
+                alt=""
+                className="ml-20 mb-5 mt-5"
+                loading="lazy"
+              />
               <h5 className="text-yellow-600 font-medium">Mail Us</h5>
               <p>ouremail@donationtrace.com</p>
             </div>
             <div>
-              <img src={phoneicon} alt="" className="ml-10 mb-5 mt-5" />
+              <img
+                src={phoneicon}
+                alt=""
+                className="ml-10 mb-5 mt-5"
+                loading="lazy"
+              />
               <h5 className="text-yellow-600 font-medium">Call US</h5>
               <p>+233 12 355 6789</p>
             </div>

@@ -9,6 +9,9 @@ const Cta = () => {
   useEffect(() => {
     const fetchFeaturedCampaign = async () => {
       const data = await getFeaturedCampaign();
+      if (!data) {
+        return;
+      }
       setFeaturedCampaign(data);
     };
     fetchFeaturedCampaign();
@@ -30,6 +33,7 @@ const Cta = () => {
                 src={
                   featuredCampaign.images && featuredCampaign.images[0].image
                 }
+                loading="lazy"
               />
               <div className=" self-stretch">
                 <h4 className="  text-white leading-loose">
@@ -79,6 +83,7 @@ const Cta = () => {
                           className="w-10 h-10 rounded-full border border-white"
                           src="/assets/image1.jpg" // Assuming different images for each donor
                           alt="activeUser1"
+                          loading="lazy"
                         />
                       )}
                       {featuredCampaign.donor_count >= 2 && (
@@ -86,6 +91,7 @@ const Cta = () => {
                           className="w-10 h-10 -ml-2 rounded-full border border-white"
                           src="/assets/image2.jpg"
                           alt="activeUser2"
+                          loading="lazy"
                         />
                       )}
                       {featuredCampaign.donor_count >= 3 && (
@@ -93,6 +99,7 @@ const Cta = () => {
                           className="w-10 h-10 -ml-2 rounded-full border border-white"
                           src="/assets/image3.jpg"
                           alt="activeUser3"
+                          loading="lazy"
                         />
                       )}
                     </div>

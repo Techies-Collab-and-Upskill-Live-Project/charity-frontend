@@ -22,6 +22,7 @@ const StartaCampaign = () => {
               <img
                 src={donantiontrace}
                 alt=""
+                loading="lazy"
                 className="lg:w-[200px] w-[150px] h-auto"
               />
             </div>

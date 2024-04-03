@@ -77,6 +77,7 @@ function FrequentlyAsked() {
                     src={expandedItem === index ? MinusIcon : PlusIcon}
                     alt="Icon"
                     className="w-5 h-5 cursor-pointer"
+                    loading="lazy"
                   />
                 </div>
                 {expandedItem === index && (

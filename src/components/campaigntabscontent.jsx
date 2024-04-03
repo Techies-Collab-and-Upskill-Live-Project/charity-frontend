@@ -93,7 +93,7 @@ export const UpdateContent = () => {
                   Hope—because transformation begins with compassion, and change starts with us.
               </p>
           </div>
-           <img src="/assets/image1.jpg" alt="donate_img" className=" w-[600px] h-auto  rounded-xl" />
+           <img src="/assets/image1.jpg" alt="donate_img" className=" w-[600px] h-auto  rounded-xl" loading="lazy"/>
       {/* Your updateContent JSX */}
     </div>
   );

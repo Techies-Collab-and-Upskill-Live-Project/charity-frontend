@@ -15,7 +15,7 @@ const TrendingSection = () => {
         const data = await getTrendingCampaigns();
         // if data is null
         if (!data) {
-          throw new Error("Failed to fetch trending campaigns");
+          return;
         }
         setTrendingCampaigns(data);
       } catch (error) {
@@ -56,6 +56,7 @@ const TrendingSection = () => {
                     src={campaign.images[0]?.image}
                     className="object-cover w-full h-64 rounded-md"
                     alt="trending_image"
+                    loading="lazy"
                   />
                   <div className="p-2">
                     <h5 className="text-[#161616]">{campaign.title}</h5>
@@ -104,16 +105,19 @@ const TrendingSection = () => {
                           className="w-8 h-8 rounded-full border border-white"
                           alt="trending1"
                           src="/assets/image3.jpg"
+                          loading="lazy"
                         />
                         <img
                           className="w-8 h-8 -ml-2 rounded-full border border-white"
                           alt="trending3"
                           src="/assets/image3.jpg"
+                          loading="lazy"
                         />
                         <img
                           className="w-8 h-8 -ml-2 rounded-full border border-white"
                           alt="trending2"
                           src="/assets/image3.jpg"
+                          loading="lazy"
                         />
                       </div>
                       <div className="w-[190px] px-4 py-2 bg-orange-50 rounded-[20px] justify-center items-center flex">

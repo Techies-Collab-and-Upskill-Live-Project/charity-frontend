@@ -1,5 +1,4 @@
-// import apiService from "../services/apiService";
-import apiService from "../services/apiService";
+import apiService from "../services/apiServicesNoAuth";
 
 // get access token from local storage
 export const getAccessToken = () => {
@@ -104,6 +103,17 @@ export const getFeaturedCampaign = async () => {
     return null;
   }
 };
+
+// a sample request that needs authentication
+// export const getCampaignCategories = async (apiService) => {
+//   try {
+//     const response = await apiService.get("/campaign_category/list/");
+//     return response.data.campaign_categories;
+//   } catch (error) {
+//     console.error("Failed to fetch featured campaign:", error);
+//     return null;
+//   }
+// };
 
 // get categories
 export const getCampaignCategories = async () => {
