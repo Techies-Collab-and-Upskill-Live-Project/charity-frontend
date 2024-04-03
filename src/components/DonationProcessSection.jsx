@@ -24,6 +24,7 @@ const DonationProcessSection = () => {
                 src="/assets/donate_image.jpg"
                 alt="donation_img"
                 className="object-cover w-full h-56 rounded shadow-lg sm:h-50"
+                loading="lazy"
               />
             </div>
           </div>

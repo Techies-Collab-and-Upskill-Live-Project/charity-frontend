@@ -55,6 +55,7 @@ const ImpactStorySection = () => {
                   <img
                     src="/assets/svg/fluent_text-quote-24-filled (1).svg"
                     alt=""
+                    loading="lazy"
                     className="block w-8 h-8 bg-clip-text bg-transparent   gradient-100  mb-4"
                   />
                   <p className="leading-relaxed mb-6">{testimonial.text}</p>
@@ -62,6 +63,7 @@ const ImpactStorySection = () => {
                     <img
                       alt="testimonial"
                       src={testimonial.CoverImg}
+                      loading="lazy"
                       className="w-24 h-24 rounded-full flex-shrink-0 border-4 bg-clip-border border-transparent gradient-100 object-cover object-center"
                     />
                     <span className="flex-grow flex flex-col pl-4">
@@ -81,12 +83,14 @@ const ImpactStorySection = () => {
             <button
               onClick={goPrev}
               className=" bg-[#FAF4ED] rounded-full w-8 h-8 flex items-center justify-center"
+              arial-label="previous testimonial"
             >
               <HiArrowLongLeft className=" text-[#026354] w-4 h-4" />
             </button>
             <button
               onClick={goNext}
               className="prevEl bg-[#FAF4ED] rounded-full w-8 h-8 flex items-center justify-center"
+              arial-label="next testimonial"
             >
               <HiArrowLongRight className=" text-[#026354] w-4 h-4" />
             </button>

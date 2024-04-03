@@ -40,7 +40,7 @@ const PaymentPage = () => {
           <div className='grid gap-10 lg:grid-cols-2 mt-10 lg:mt-20'>
             <div className='block lg:hidden'>
               <h4 className=" mb-5 mt-1">Donation Title/Name</h4>
-              <img src="/assets/image1.jpg" alt="" className=" rounded-lg" />
+              <img src="/assets/image1.jpg" alt="" className=" rounded-lg" loading="lazy"/>
               <div className="flex items-center mt-3">
                 <span className=' flex items-center justify-center rounded-full w-10 h-10 bg-[#FAF4ED]'>
                   <FaHandHoldingHeart className=' w-5 h-5 text-[#D18D4A]' />
@@ -106,7 +106,7 @@ const PaymentPage = () => {
                     {selectedPaymentMethod === 'Credit-Card' &&
                       (
                       <div>
-                        <img src='/assets/paymenticon.png' alt='paymenticon' className='h-auto w-auto my-6 hidden lg:block' />
+                        <img src='/assets/paymenticon.png' alt='paymenticon' className='h-auto w-auto my-6 hidden lg:block' loading="lazy" />
                         <div className='block lg:hidden'>
                           <h5 className=" mt-3 ">Donation Summary</h5>
                           <div className="flex justify-between mt-3">
@@ -206,7 +206,7 @@ const PaymentPage = () => {
 
             <div className="border-2 px-4 py-3 rounded-lg shadow-md mt-8 lg:mt-0 h-auto lg:h-[700px] hidden lg:block">
               <h4 className=" mb-5 mt-1">Donation Title/Name</h4>
-              <img src="/assets/image1.jpg" alt="" className=" rounded-lg" />
+              <img src="/assets/image1.jpg" alt="" className=" rounded-lg" loading="lazy" />
               <div className="flex items-center mt-3">
                 <span className=' flex items-center justify-center rounded-full w-10 h-10 bg-[#FAF4ED]'>
                   <FaHandHoldingHeart className=' w-5 h-5 text-[#D18D4A]' />

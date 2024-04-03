@@ -70,6 +70,7 @@ const ContactUsForm = () => {
                 width={566}
                 height={458.98}
                 className="mt-5"
+                loading="lazy"
               />
             </div>
             <div className="mt-28">
@@ -189,7 +190,7 @@ const ContactUsForm = () => {
           <div className="bg-yellow-50   py-6 text-center my-28">
             <div className=" grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 ">
               <div className=" flex flex-col justify-center items-center space-y-2">
-              <img src={emailicon} alt="" className="w-10 h-10" />
+              <img src={emailicon} alt="" className="w-10 h-10" loading="lazy" />
                 <div>
                 <h5 className="text-yellow-600 font-medium">Mail Us</h5>
                 <p>ouremail@donationtrace.com</p>

@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-import apiService from "../../services/apiService";
+import apiService from "../../services/apiServicesNoAuth";
 import { showToast } from "../../components/toaster";
 
 const AuthContext = createContext();
@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
       showToast(response.data.message, "success");
       return response.data;
     } catch (error) {
-      throw new Error("Login failed: " + error.message);
+      throw new Error("Login failed: " + error?.response?.data?.detail);
     }
   };
 

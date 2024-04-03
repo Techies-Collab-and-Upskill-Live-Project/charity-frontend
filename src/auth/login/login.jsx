@@ -42,7 +42,7 @@ const Login = () => {
         navigate("/discover");
       } catch (error) {
         console.error("Login failed:", error.message);
-        showToast("Login failed. Please try again.", "error");
+        showToast(error.message, "error");
       } finally {
         setLoading(false);
       }

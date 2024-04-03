@@ -28,7 +28,7 @@ const DonateLine = () => {
                     <div className="">
                         <div className='grid gap-10 lg:grid-cols-2 mt-10 lg:mt-20'>
                             <div>
-                                <img src="/assets/image1.jpg" alt="donate_img" className=" w-[600px] h-auto  rounded-xl" />
+                                <img src="/assets/image1.jpg" alt="donate_img" className=" w-[600px] h-auto  rounded-xl" loading="lazy"/>
                                 <div className="flex items-center  space-x-4 mt-5">
                                     <div className=' flex items-center justify-center rounded-full bg-[#EBEBEB] w-8 h-8'>
                                         <FaRegUser className=' text-[#7B7B7B] w-4 h-4' />

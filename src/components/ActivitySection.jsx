@@ -10,6 +10,9 @@ const ActivitySection = () => {
   useEffect(() => {
     const fetchCampaignCategories = async () => {
       const data = await getCampaignCategories();
+      if (!data) {
+        return;
+      }
       // Shuffle the array and then slice it to keep only 6 items
       const shuffled = data.sort(() => 0.5 - Math.random());
       const selected = shuffled.slice(0, 6);
@@ -18,9 +21,9 @@ const ActivitySection = () => {
     fetchCampaignCategories();
   }, []);
 
-  //   if (!campaignCategories) {
-  //     return <div>Loading...</div>;
-  //   }
+  if (!campaignCategories) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className=" bg-[#FEFEFE] w-full">
       <div className="container mx-auto w-full">
@@ -48,6 +51,7 @@ const ActivitySection = () => {
                       src={category.featured_campaign.images[0].image}
                       className="object-cover w-full h-64"
                       alt={category.name}
+                      loading="lazy"
                     />
                     <div className=" absolute mt-6 left-4 top-0 rounded-md bg-[#0A0A0AA3]">
                       <p className=" px-4 py-3 bg-transparent text-white font-normal text-[12px]">

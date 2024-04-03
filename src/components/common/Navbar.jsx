@@ -64,12 +64,20 @@ function NavBar() {
         <div className="container w-full mx-auto px-4 flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link to="/" className="inline-block mr-4 py-2">
-              <img className="w-10 h-10" src="/assets/logo.png" alt="logo" />
+              <img
+                className="w-10 h-10"
+                src="/assets/logo.png"
+                alt="logo"
+                loading="lazy"
+              />
             </Link>
             <button
               className="text-[#00050F] cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden  outline-none focus:outline-none"
               type="button"
               onClick={() => setNavBarOpen(!navbarOpen)}
+              aria-label={
+                navbarOpen ? "Close navigation menu" : "Open navigation menu"
+              }
             >
               {navbarOpen ? (
                 <AiOutlineClose size={25} />

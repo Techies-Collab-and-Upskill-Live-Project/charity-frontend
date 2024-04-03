@@ -95,6 +95,7 @@ const CategoryList = () => {
                           src={category.CoverImg}
                           className="0bject-cover w-full h-64 rounded-md"
                           alt="trending_inage"
+                          loading="lazy"
                         />
                       </Link>
                       <div className="p-2">
@@ -135,16 +136,19 @@ const CategoryList = () => {
                               className="w-8 h-8 rounded-full border border-white"
                               alt="trending1"
                               src={category.donatingImg}
+                              loading="lazy"
                             />
                             <img
                               className="w-8 h-8 -ml-2 rounded-full border border-white"
                               alt="trending3"
                               src={category.donatingImg2}
+                              loading="lazy"
                             />
                             <img
                               className="w-8 h-8 -ml-2 rounded-full border border-white"
                               alt="trending2"
                               src={category.donatingImg3}
+                              loading="lazy"
                             />
                           </div>
                           <div className="w-[190px] px-4 py-2 bg-orange-50 rounded-[20px] justify-center items-center flex">
