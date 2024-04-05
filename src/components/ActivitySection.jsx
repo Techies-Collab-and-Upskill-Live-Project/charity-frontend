@@ -22,7 +22,7 @@ const ActivitySection = () => {
   }, []);
 
   if (!campaignCategories) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
   return (
     <div className=" bg-[#FEFEFE] w-full">

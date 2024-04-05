@@ -55,7 +55,7 @@ const TrendingSection = () => {
                   <img
                     src={campaign.images[0]?.image}
                     className="object-cover w-full h-64 rounded-md"
-                    alt="trending_image"
+                    alt={campaign.title}
                     loading="lazy"
                   />
                   <div className="p-2">

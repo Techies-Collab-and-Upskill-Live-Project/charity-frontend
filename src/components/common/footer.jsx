@@ -65,7 +65,10 @@ function Footer() {
                 inbox. Join our newsletter now!
               </p>
               <div className="flex justify-center max-sm:flex-col">
-                <form onSubmit={formik.handleSubmit} className="flex flex-col md:flex-row space-x-4">
+                <form
+                  onSubmit={formik.handleSubmit}
+                  className="flex flex-col md:flex-row space-x-4"
+                >
                   <input
                     type="text"
                     name="email"
@@ -112,17 +115,17 @@ function Footer() {
                   />
                 </a>
                 <div className="flex flex-row ">
-                  <Link to="/home" className="nav-link">
+                  <Link to="/" className="nav-link">
                     Home
                   </Link>
-                  <a href="/discover" className="nav-link">
+                  <Link to="/discover" className="nav-link">
                     {" "}
                     Explore
-                  </a>
-                  <a href="/home" className="nav-link">
+                  </Link>
+                  <Link to="/" className="nav-link">
                     {" "}
                     Link 2
-                  </a>
+                  </Link>
                   <Link to="/contactus" className="nav-link">
                     {" "}
                     Contact us
@@ -132,13 +135,31 @@ function Footer() {
 
               <div className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start space-x-4">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#E7F8F0]">
-                  <FaFacebook className="w-6 h-6 text-[#04A38A]" />
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaFacebook className="w-6 h-6 text-[#04A38A]" />
+                  </a>
                 </div>
                 <div className="flex items-center justify-center w-10 h-10  rounded-full bg-[#E7F8F0]">
-                  <FaTwitter className=" w-6 h-6 text-[#04A38A]" />
+                  <a
+                    href="https://www.twitter.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaTwitter className=" w-6 h-6 text-[#04A38A]" />
+                  </a>
                 </div>
                 <div className="flex items-center justify-center w-10 h-10  rounded-full bg-[#E7F8F0]">
-                  <AiFillInstagram className=" w-6 h-6 text-[#04A38A]" />
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiFillInstagram className=" w-6 h-6 text-[#04A38A]" />
+                  </a>
                 </div>
               </div>
             </div>

@@ -12,7 +12,7 @@ const StartaCampaign = () => {
                 Ready to start a campaign? Join Donation Trace today
               </h3>
               <Link
-                to="/home"
+                to="/"
                 className="bg-white text-teal-500 rounded-md  px-4 py-3 text-sm font-normal"
               >
                 Start a Campaign

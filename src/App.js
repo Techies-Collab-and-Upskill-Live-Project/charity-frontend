@@ -18,13 +18,15 @@ import LoginPage from "./auth/login/page.jsx";
 import ExploreCategory from "./pages/explore category/page.jsx";
 import AuthContext from "./auth/context/AuthContext";
 import PrivateRoutesComponent from "./auth/utils/PrivateRoutesComponent";
+import DiscoverPage from "./pages/dicover/page.jsx";
+import DonatePage from "./pages/donate/page.jsx";
 
 function App() {
   const { user } = useContext(AuthContext);
   return (
     //     <Router>
     <Routes>
-      <Route path="/home" element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/" element={<Navigate replace to="/home" />} />
       <Route path="/contactus" element={<ContactUs />} />
       <Route
@@ -36,7 +38,13 @@ function App() {
         element={user ? <Navigate replace to="/discover" /> : <SignupPage />}
       />
 
-      <Route path="/explorecategory" element={<ExploreCategory />} />
+      <Route
+        path="/explorecategory/:categoryId"
+        element={<ExploreCategory />}
+      />
+
+      <Route path="/discover" element={<DiscoverPage />} />
+      <Route path="/donate-page/:campaignId" element={<DonatePage />} />
 
       <Route path="forgotpassword" element={<ForgotpasswordPage />} />
 
