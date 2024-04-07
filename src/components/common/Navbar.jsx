@@ -5,6 +5,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import DropdownMenu from "../dropdown";
 import AuthContext from "../../auth/context/AuthContext";
+import { useCurrency } from "../../context/CurrencyContext";
 
 function NavBar() {
   const { user, logoutUser } = useContext(AuthContext);
@@ -12,6 +13,13 @@ function NavBar() {
 
   const [isExploreDropdownOpen, setExploreDropdownOpen] = useState(false);
   const [isOtherDropdownOpen, setOtherDropdownOpen] = useState(false);
+
+  const { changeCurrency } = useCurrency(); // use the custom hook from CurrencyContext
+
+  const handleCurrencyChange = (currency) => {
+    changeCurrency(currency);
+    closeDropdowns(); // Close the dropdown after selection
+  };
 
   const toggleExploreDropdown = () => {
     setExploreDropdownOpen(!isExploreDropdownOpen);
@@ -46,16 +54,12 @@ function NavBar() {
 
   // other link options
   const otherOptions = [
-    {
-      id: 1,
-      label: "Option1",
-      to: "/otherOption1", // Specify the path you want for Other Option 1
-    },
-    {
-      id: 2,
-      label: "Option2",
-      to: "/otherOption2", // Specify the path you want for Other Option 2
-    },
+    { id: 1, label: "USD", onClick: () => handleCurrencyChange("USD") },
+    { id: 2, label: "EUR", onClick: () => handleCurrencyChange("EUR") },
+    { id: 3, label: "GBP", onClick: () => handleCurrencyChange("GBP") },
+    { id: 4, label: "NGN", onClick: () => handleCurrencyChange("NGN") },
+    { id: 5, label: "KES", onClick: () => handleCurrencyChange("KES") },
+    { id: 6, label: "GHS", onClick: () => handleCurrencyChange("GHS") },
   ];
 
   return (
@@ -111,8 +115,8 @@ function NavBar() {
                 </div>
               </div>
               <div className=" flex items-center ">
-                <Link to="/" className="nav-link">
-                  Link 2
+                <Link to="#" className="nav-link" onClick={toggleOtherDropdown}>
+                  Currency
                 </Link>
                 <div className="relative">
                   <FaChevronDown

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FaRegUser } from "react-icons/fa6";
 import { FaHandHoldingHeart, FaRegFlag, FaCalendarAlt } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
@@ -10,6 +10,8 @@ import {
 } from "../../components/campaigntabscontent";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { getCampaignDetails } from "../../config/api";
+import { formatCurrency } from "../../services/utils";
+import { CurrencyContext } from "../../context/CurrencyContext";
 // import { handleShare } from "../../services/shareService";
 // import { CardImgOverlay } from "react-bootstrap";
 
@@ -18,6 +20,7 @@ const DonateLine = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [campaign, setCampaign] = useState(null);
   const navigate = useNavigate();
+  const { currency } = useContext(CurrencyContext);
   //   const [isModalOpen, setIsModalOpen] = useState(false);
   //   const [reportReason, setReportReason] = useState("");
 
@@ -76,7 +79,8 @@ const DonateLine = () => {
       label: "About this campaign",
       content: (
         <AboutContent
-          name={campaign.background_description}
+          description={campaign.description}
+          background_description={campaign.background_description}
           what_campaign_will_do={campaign.what_campaign_will_do}
         />
       ),
@@ -128,10 +132,10 @@ const DonateLine = () => {
                 <div className="border-2 px-4 py-3 bg-white rounded-lg shadow-md  ">
                   <div className="flex mb-5 max-sm:mt-10">
                     <p className="font-medium text-2xl mr-1">
-                      {campaign.raised}
+                      {formatCurrency(campaign.raised, currency)}
                     </p>
                     <p className=" mt-2 font-normal text-gray-500">
-                      raised of {campaign.goal} target
+                      raised of {formatCurrency(campaign.goal, currency)} target
                     </p>
                   </div>
                   <div className="w-full h-[72px] flex-col justify-start items-start gap-1 inline-flex">
@@ -153,7 +157,7 @@ const DonateLine = () => {
                       >
                         <div className="w-full h-7 px-2 py-1 bg-emerald-50 rounded-lg justify-center items-center inline-flex">
                           <div className="text-center text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">
-                            {campaign.raised}
+                            {formatCurrency(campaign.raised, currency)}
                           </div>
                         </div>
                       </div>
@@ -161,7 +165,7 @@ const DonateLine = () => {
                     <div className="self-stretch justify-start items-start inline-flex">
                       <div className="grow shrink basis-0 h-5 justify-end items-center gap-2.5 flex">
                         <div className="grow shrink basis-0 text-right text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">
-                          {campaign.goal}
+                          {formatCurrency(campaign.goal, currency)}
                         </div>
                       </div>
                     </div>

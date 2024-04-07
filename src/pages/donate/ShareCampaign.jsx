@@ -3,8 +3,10 @@ import { useParams } from "react-router-dom";
 import {
   constructTwitterShareUrl,
   constructFacebookShareUrl,
+  constructLinkedInShareUrl,
+  constructWhatsAppShareUrl,
 } from "../../services/shareService";
-import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const ShareCampaign = () => {
   const { campaignId, campaignTitle } = useParams();
@@ -12,8 +14,8 @@ const ShareCampaign = () => {
   const shareUrls = {
     twitter: constructTwitterShareUrl(campaignTitle, campaignId),
     facebook: constructFacebookShareUrl(campaignId),
-    whatsapp: `https://wa.me/?text=${encodeURIComponent(campaignTitle + " " + window.location.href)}`, // Example WhatsApp share URL
-    // Instagram does not support direct sharing via URL like the other platforms.
+    whatsapp: constructWhatsAppShareUrl(campaignTitle, campaignId),
+    linkedin: constructLinkedInShareUrl(campaignTitle, campaignId),
   };
 
   const handlePlatformClick = (url) => window.open(url, "_blank");
@@ -33,6 +35,11 @@ const ShareCampaign = () => {
       name: "WhatsApp",
       icon: <FaWhatsapp className="w-6 h-6 text-[#04A38A]" />,
       url: shareUrls.whatsapp,
+    },
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedin className="w-6 h-6 text-[#04A38A]" />,
+      url: shareUrls.linkedin,
     },
   ];
 
