@@ -3,7 +3,7 @@
 //import Navber from "../components/common/Navbar";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import React, { useContext } from "react";
 import { showToast } from "../../components/toaster";
 import { Circles } from "react-loader-spinner";
@@ -27,6 +27,9 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/discover";
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -39,7 +42,7 @@ const Login = () => {
       try {
         await loginUser(values); // Pass values directly to loginUser function
         showToast("Successfully logged in. Welcome ", "success");
-        navigate("/discover");
+        navigate(from);
       } catch (error) {
         console.error("Login failed:", error.message);
         showToast(error.message, "error");

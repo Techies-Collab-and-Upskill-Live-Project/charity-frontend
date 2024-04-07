@@ -111,7 +111,7 @@ function NavBar() {
                 </div>
               </div>
               <div className=" flex items-center ">
-                <Link href="/home" className="nav-link">
+                <Link to="/" className="nav-link">
                   Link 2
                 </Link>
                 <div className="relative">

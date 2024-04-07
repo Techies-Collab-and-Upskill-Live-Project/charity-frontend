@@ -125,3 +125,40 @@ export const getCampaignCategories = async () => {
     return null;
   }
 };
+
+// get campaigns in a category
+export const getCampaignsForCategory = async (selectedcategory) => {
+  try {
+    const response = await apiService.get(
+      `/campaign/${selectedcategory}/list/`
+    );
+    return response.data.campaigns;
+  } catch (error) {
+    console.error("Failed to fetch campaigns:", error);
+    return null;
+  }
+};
+
+// get campaign details
+export const getCampaignDetails = async (campaignId) => {
+  try {
+    const response = await apiService.get(`/campaign/${campaignId}/`);
+    return response.data.campaign;
+  } catch (error) {
+    console.error("Failed to fetch campaign details:", error);
+    return null;
+  }
+};
+
+// report a campaign
+export const reportCampaign = async (campaignId, reportData) => {
+  try {
+    const response = await apiService.post(
+      `/campaign/${campaignId}/report/`,
+      reportData
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error("Report failed: " + error.message);
+  }
+};

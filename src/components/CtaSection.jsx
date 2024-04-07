@@ -118,7 +118,7 @@ const Cta = () => {
 
                 <button className="mt-8 bg-white text-[12px] px-4 py-3 rounded-lg shadow border border-white">
                   <span className="   text-[#04A38A]  flex items-center justify-center space-x-5">
-                    <Link to={`/donate-page/${featuredCampaign.id}`}>
+                    <Link to={`/campaign/${featuredCampaign.id}`}>
                       Learn More
                     </Link>
                     <HiOutlineChevronRight size={15} />
