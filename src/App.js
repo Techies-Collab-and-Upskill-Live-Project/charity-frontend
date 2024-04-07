@@ -20,6 +20,7 @@ import AuthContext from "./auth/context/AuthContext";
 import PrivateRoutesComponent from "./auth/utils/PrivateRoutesComponent";
 import DiscoverPage from "./pages/dicover/page.jsx";
 import DonatePage from "./pages/donate/page.jsx";
+import ShareCampaignPage from "./pages/donate/ShareCampaignPage.jsx";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -38,15 +39,16 @@ function App() {
         element={user ? <Navigate replace to="/discover" /> : <SignupPage />}
       />
 
-      <Route
-        path="/explorecategory/:categoryId"
-        element={<ExploreCategory />}
-      />
+      <Route path="/category/:categoryId" element={<ExploreCategory />} />
 
       <Route path="/discover" element={<DiscoverPage />} />
-      <Route path="/donate-page/:campaignId" element={<DonatePage />} />
+      <Route path="/campaign/:campaignId" element={<DonatePage />} />
 
       <Route path="forgotpassword" element={<ForgotpasswordPage />} />
+      <Route
+        path="/share-campaign/:campaignId/:campaignTitle"
+        element={<ShareCampaignPage />}
+      />
 
       {/*  PrivateRoutes */}
       <Route path="/*" element={<PrivateRoutesComponent />} />

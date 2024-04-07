@@ -41,7 +41,7 @@ const ActivitySection = () => {
           </div>
           <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-6 sm:grid-cols-2 mt-10 lg:mt-16">
             {campaignCategories.map((category) => (
-              <Link key={category.id} to={`/explorecategory/${category.id}`}>
+              <Link key={category.id} to={`/category/${category.id}`}>
                 <div
                   key={category.id}
                   className=" relative inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"

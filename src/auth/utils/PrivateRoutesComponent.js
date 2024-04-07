@@ -21,7 +21,7 @@ const PrivateRoutesComponent = () => {
         <Route path="/verifyemail" element={<VerifyMailPage />} />
         <Route path="/successmessage" element={<SuccessMessagePage />} />
         <Route path="/verificationcode" element={<VerificationCodePage />} />
-        <Route path="/paymentpage" element={<Payment />} />
+        <Route path="/pay/:campaignId" element={<Payment />} />
         <Route
           path="/paymentsuccessfull"
           element={<PaymentSuccessfullPage />}

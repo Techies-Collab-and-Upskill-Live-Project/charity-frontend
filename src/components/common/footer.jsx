@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 
 import { Link } from "react-router-dom";
@@ -159,6 +159,15 @@ function Footer() {
                     rel="noreferrer"
                   >
                     <AiFillInstagram className=" w-6 h-6 text-[#04A38A]" />
+                  </a>
+                </div>
+                <div className="flex items-center justify-center w-10 h-10  rounded-full bg-[#E7F8F0]">
+                  <a
+                    href="https://wa.me/qr/75NMRFJYIYX2I1"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaWhatsapp className=" w-6 h-6 text-[#04A38A]" />
                   </a>
                 </div>
               </div>

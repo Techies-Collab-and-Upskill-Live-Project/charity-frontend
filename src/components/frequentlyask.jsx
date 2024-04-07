@@ -60,7 +60,11 @@ function FrequentlyAsked() {
             <p className="ga font-thin mt-3 mb-3">
               Have a question that is not answered? You can contact us at
             </p>
-            <a href="/home" className="text-[#04A38A] font-semibold">
+            <a
+              href="mailto:support@donationtrace.com"
+              target="_blank"
+              className="text-[#04A38A] font-semibold"
+            >
               support@donationtrace.com
             </a>
           </div>

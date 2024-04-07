@@ -61,14 +61,14 @@ const CategoryList = () => {
             ))}
           </select>
         </div>
-        <div className="flex justify-center md:justify-start">
+        <div className="flex justify-center items-center sm:items-center md:justify-start">
           <ul
-            className="flex flex-row flex-wrap mb-0 list-none space-x-4 md:space-x-6 space-y-3 md:space-y-0 pt-3 pb-4"
+            className="flex flex-row items-center flex-wrap mb-0 list-none space-x-4 md:space-x-6 sm:text-xm space-y-3 md:space-y-0 pt-3 pb-4"
             role="tablist"
           >
             <li className="-mb-px list:mr-0">
               <button
-                className={`p-lg capitalize ${selectedCategory === "Trending" ? "rounded-md p-lg text-black bg-[#E6F6F3] px-2 md:px-4 py-2" : "rounded-md p-lg bg-transparent border border-grey-50 px-2 md:px-4 py-2"}`}
+                className={`p-lg capitalize ${selectedCategory === "Trending" ? "rounded-md p-lg text-black bg-[#E6F6F3] px-2 md:px-4 py-2 sm:mt-2 text-xm" : "rounded-md p-lg bg-transparent border border-grey-50 px-2 md:px-4 py-2"}`}
                 onClick={() => setSelectedCategory("Trending")}
                 role="tab"
               >
@@ -118,7 +118,7 @@ const CategoryList = () => {
             <div className="block">
               <div className="grid gap-5 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:max-w-full sm:mx-auto xl:max-w-full mt-10 lg:mt-16">
                 {campaigns.map((campaign) => (
-                  <Link key={campaign.id} to={`/donate-page/${campaign.id}`}>
+                  <Link key={campaign.id} to={`/campaign/${campaign.id}`}>
                     <div
                       key={campaign.id}
                       className="overflow-hidden transition-shadow duration-300 bg-white rounded-md"
@@ -154,7 +154,7 @@ const CategoryList = () => {
                             className="w-[66px] h-9 top-0 absolute"
                           >
                             <div className="w-full h-7 px-2 py-1 bg-emerald-50 rounded-lg justify-center items-center inline-flex">
-                              <div className="text-center text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">
+                              <div className="text-center text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight ml-6">
                                 {campaign.raised}
                               </div>
                             </div>

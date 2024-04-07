@@ -149,3 +149,16 @@ export const getCampaignDetails = async (campaignId) => {
     return null;
   }
 };
+
+// report a campaign
+export const reportCampaign = async (campaignId, reportData) => {
+  try {
+    const response = await apiService.post(
+      `/campaign/${campaignId}/report/`,
+      reportData
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error("Report failed: " + error.message);
+  }
+};
