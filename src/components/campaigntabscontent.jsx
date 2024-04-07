@@ -3,21 +3,22 @@ import React from "react";
 import { FaRegUser } from "react-icons/fa6";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
-export const AboutContent = ({ name, what_campaign_will_do }) => {
+export const AboutContent = ({
+  description,
+  background_description,
+  what_campaign_will_do,
+}) => {
   return (
     <div className="max-w-lg w-full">
       <div className="mt-7">
-        {/* <p >
-                  Step into a journey of compassion and change with our
-                  monumental campaign, "Hearts United for Hope." In the
-                  vast landscapes of Africa, where young hearts beat with
-                  dreams yet to unfold, we invite you to become a beacon
-                  of light and love. This initiative is more than a mere
-                  fundraiser; it's a movement to uplift, empower, and secure a
-                  brighter tomorrow for orphaned children.
-              </p> */}
-        <p className="mt-7">{name}</p>
-        <p className="mt-7">{what_campaign_will_do}</p>
+        <h2 className="text-lg font-semibold">Campaign Description</h2>
+        <p className="mb-7">{description}</p>
+        <h2 className="text-lg font-semibold">
+          Campaign Background Description
+        </h2>
+        <p className="mb-7">{background_description}</p>
+        <h2 className="text-lg font-semibold">What this campaign will do</h2>
+        <p className="mb-7">{what_campaign_will_do}</p>
       </div>
     </div>
   );

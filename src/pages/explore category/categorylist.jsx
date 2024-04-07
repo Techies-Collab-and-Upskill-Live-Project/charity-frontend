@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   getCampaignCategories,
   getCampaignsForCategory,
 } from "../../config/api";
+import { clampDescription, formatCurrency } from "../../services/utils";
+import { CurrencyContext } from "../../context/CurrencyContext";
 
 const CategoryList = () => {
   const { categoryId: defaultCategoryId } = useParams();
   const [selectedCategory, setSelectedCategory] = useState(defaultCategoryId);
   const [campaignCategories, setCampaignCategories] = useState([]);
   const [campaigns, setCampaigns] = useState([]);
+  const { currency } = useContext(CurrencyContext);
 
   useEffect(() => {
     const fetchCampaignCategories = async () => {
@@ -132,11 +135,11 @@ const CategoryList = () => {
                       <div className="p-2">
                         <h5 className="text-[#161616]">{campaign.title}</h5>
                         <p className="text-[12px] text-[#515151]">
-                          {campaign.description}
+                          {clampDescription(campaign.description)}
                         </p>
                       </div>
                       {/*--- prohress bar----*/}
-                      <div className="w-[326px] lg:w-[368px] h-[72px] flex-col justify-start items-start gap-1 inline-flex">
+                      <div className="w-full lg:w-full h-[72px] flex-col justify-start items-start gap-1 inline-flex">
                         <div className="self-stretch h-12 relative">
                           <div className="w-full h-2 left-0 top-[40px] absolute">
                             <div className="w-full h-2 left-0 top-0 absolute bg-neutral-200 rounded-lg" />
@@ -153,9 +156,9 @@ const CategoryList = () => {
                             }}
                             className="w-[66px] h-9 top-0 absolute"
                           >
-                            <div className="w-full h-7 px-2 py-1 bg-emerald-50 rounded-lg justify-center items-center inline-flex">
-                              <div className="text-center text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight ml-6">
-                                {campaign.raised}
+                            <div className="grow shrink basis-0 h-5 justify-end items-center gap-2.5 flex">
+                              <div className="grow shrink basis-0 text-right text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">
+                                {formatCurrency(campaign.raised, currency)}
                               </div>
                             </div>
                           </div>
@@ -163,33 +166,39 @@ const CategoryList = () => {
                         <div className="self-stretch justify-start items-start inline-flex">
                           <div className="grow shrink basis-0 h-5 justify-end items-center gap-2.5 flex">
                             <div className="grow shrink basis-0 text-right text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">
-                              {campaign.goal}
+                              {formatCurrency(campaign.goal, currency)}
                             </div>
                           </div>
                         </div>
                       </div>
                       {/*==============people donation======*/}
-                      <div className="flex-col justify-start items-start gap-3 flex">
+                      <div className="flex-col justify-start items-start gap-3 flex pt-4">
                         <div className="justify-start items-start inline-flex">
-                          <div className="justify-start items-start flex">
-                            <img
-                              className="w-8 h-8 rounded-full border border-white"
-                              alt="trending1"
-                              src="/assets/image3.jpg"
-                              loading="lazy"
-                            />
-                            <img
-                              className="w-8 h-8 -ml-2 rounded-full border border-white"
-                              alt="trending3"
-                              src="/assets/image3.jpg"
-                              loading="lazy"
-                            />
-                            <img
-                              className="w-8 h-8 -ml-2 rounded-full border border-white"
-                              alt="trending2"
-                              src="/assets/image3.jpg"
-                              loading="lazy"
-                            />
+                          <div className="justify-start items-start flex -mr-0">
+                            {campaign.donor_count >= 1 && (
+                              <img
+                                className="w-10 h-10 rounded-full border border-white"
+                                src="/assets/image1.jpg" // Assuming different images for each donor
+                                alt="activeUser1"
+                                loading="lazy"
+                              />
+                            )}
+                            {campaign.donor_count >= 2 && (
+                              <img
+                                className="w-10 h-10 -ml-2 rounded-full border border-white"
+                                src="/assets/image2.jpg"
+                                alt="activeUser2"
+                                loading="lazy"
+                              />
+                            )}
+                            {campaign.donor_count >= 3 && (
+                              <img
+                                className="w-10 h-10 -ml-2 rounded-full border border-white"
+                                src="/assets/image3.jpg"
+                                alt="activeUser3"
+                                loading="lazy"
+                              />
+                            )}
                           </div>
                           <div className="w-[190px] px-4 py-2 bg-orange-50 rounded-[20px] justify-center items-center flex">
                             <div className="text-yellow-800 text-sm font-semibold  leading-tight">

@@ -6,14 +6,17 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Toaster from "./components/toaster";
+import { CurrencyProvider } from "./context/CurrencyContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <AuthProvider>
-        <Toaster />
-        <App />
+        <CurrencyProvider>
+          <Toaster />
+          <App />
+        </CurrencyProvider>
       </AuthProvider>
     </Router>
   </React.StrictMode>

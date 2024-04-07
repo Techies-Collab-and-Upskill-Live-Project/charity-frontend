@@ -63,6 +63,7 @@ function FrequentlyAsked() {
             <a
               href="mailto:support@donationtrace.com"
               target="_blank"
+              rel="noreferrer"
               className="text-[#04A38A] font-semibold"
             >
               support@donationtrace.com

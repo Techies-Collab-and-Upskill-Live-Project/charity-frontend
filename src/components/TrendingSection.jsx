@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 // import { trendingdata } from "../Data";
 import { getTrendingCampaigns } from "../config/api";
 import { Link } from "react-router-dom";
+import { clampDescription } from "../services/utils";
+import { CurrencyContext } from "../context/CurrencyContext";
+import { formatCurrency } from "../services/utils";
 
 const TrendingSection = () => {
   const [trendingCampaigns, setTrendingCampaigns] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const { currency } = useContext(CurrencyContext);
 
   useEffect(() => {
     const fetchTrendingCampaigns = async () => {
@@ -28,6 +32,14 @@ const TrendingSection = () => {
     fetchTrendingCampaigns();
   }, []);
 
+  //   function clampDescription(description) {
+  //     const words = description.split(" "); // Split the description into words
+  //     if (words.length > 20) {
+  //       return words.slice(0, 25).join(" ") + "..."; // Take the first 20 words and append '...'
+  //     } else {
+  //       return description; // Return the original description if it's 20 words or less
+  //     }
+  //   }
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   return (
@@ -61,7 +73,7 @@ const TrendingSection = () => {
                   <div className="p-2">
                     <h5 className="text-[#161616]">{campaign.title}</h5>
                     <p className="text-[12px] text-[#515151]">
-                      {campaign.description}
+                      {clampDescription(campaign.description)}
                     </p>
                   </div>
                   {/*--- prohress bar----*/}
@@ -84,7 +96,7 @@ const TrendingSection = () => {
                       >
                         <div className="w-full h-7 px-2 py-1 bg-emerald-50 rounded-lg justify-center items-center inline-flex">
                           <div className="text-center text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">
-                            {campaign.raised}
+                            {formatCurrency(campaign.raised, currency)}
                           </div>
                         </div>
                       </div>
@@ -92,33 +104,39 @@ const TrendingSection = () => {
                     <div className="self-stretch justify-start items-start inline-flex">
                       <div className="grow shrink basis-0 h-5 justify-end items-center gap-2.5 flex">
                         <div className="grow shrink basis-0 text-right text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">
-                          {campaign.goal}
+                          {formatCurrency(campaign.goal, currency)}
                         </div>
                       </div>
                     </div>
                   </div>
                   {/*==============people donation======*/}
-                  <div className="flex-col justify-start items-start gap-3 flex">
+                  <div className="flex-col justify-start items-start gap-3 flex pt-4">
                     <div className="justify-start items-start inline-flex">
-                      <div className="justify-start items-start flex">
-                        <img
-                          className="w-8 h-8 rounded-full border border-white"
-                          alt="trending1"
-                          src="/assets/image3.jpg"
-                          loading="lazy"
-                        />
-                        <img
-                          className="w-8 h-8 -ml-2 rounded-full border border-white"
-                          alt="trending3"
-                          src="/assets/image3.jpg"
-                          loading="lazy"
-                        />
-                        <img
-                          className="w-8 h-8 -ml-2 rounded-full border border-white"
-                          alt="trending2"
-                          src="/assets/image3.jpg"
-                          loading="lazy"
-                        />
+                      <div className="justify-start items-start flex -mr-0">
+                        {campaign.donor_count >= 1 && (
+                          <img
+                            className="w-10 h-10 rounded-full border border-white"
+                            src="/assets/image1.jpg" // Assuming different images for each donor
+                            alt="activeUser1"
+                            loading="lazy"
+                          />
+                        )}
+                        {campaign.donor_count >= 2 && (
+                          <img
+                            className="w-10 h-10 -ml-2 rounded-full border border-white"
+                            src="/assets/image2.jpg"
+                            alt="activeUser2"
+                            loading="lazy"
+                          />
+                        )}
+                        {campaign.donor_count >= 3 && (
+                          <img
+                            className="w-10 h-10 -ml-2 rounded-full border border-white"
+                            src="/assets/image3.jpg"
+                            alt="activeUser3"
+                            loading="lazy"
+                          />
+                        )}
                       </div>
                       <div className="w-[190px] px-4 py-2 bg-orange-50 rounded-[20px] justify-center items-center flex">
                         <div className="text-yellow-800 text-sm font-semibold  leading-tight">

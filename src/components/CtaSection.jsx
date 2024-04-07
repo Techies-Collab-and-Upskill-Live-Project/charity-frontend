@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { HiOutlineChevronRight } from "react-icons/hi2";
 import { getFeaturedCampaign } from "../config/api";
 import { Link } from "react-router-dom";
+import { CurrencyContext } from "../context/CurrencyContext";
+import { formatCurrency } from "../services/utils";
 
 const Cta = () => {
   const [featuredCampaign, setFeaturedCampaign] = useState([]);
+  const { currency } = useContext(CurrencyContext);
 
   useEffect(() => {
     const fetchFeaturedCampaign = async () => {
@@ -61,7 +64,7 @@ const Cta = () => {
                     >
                       <div className="w-full h-7 px-2 py-1 bg-emerald-50 rounded-lg justify-center items-center inline-flex">
                         <div className="text-center text-emerald-700 text-sm font-bold font-['Nunito'] leading-tight">
-                          ${featuredCampaign.raised}
+                          {formatCurrency(featuredCampaign.raised, currency)}
                         </div>
                       </div>
                     </div>
@@ -69,12 +72,12 @@ const Cta = () => {
                   <div className="self-stretch justify-start items-start inline-flex">
                     <div className="grow shrink basis-0 h-5 justify-end items-center gap-2.5 flex">
                       <div className="grow shrink basis-0 text-right text-white text-sm font-bold font-['Nunito'] leading-tight">
-                        ${featuredCampaign.goal}
+                        {formatCurrency(featuredCampaign.goal, currency)}
                       </div>
                     </div>
                   </div>
                 </div>
-
+                {/*==============people donation======*/}
                 <div className="flex-col justify-start items-start gap-3 flex pt-4">
                   <div className="justify-start items-start inline-flex">
                     <div className="justify-start items-start flex -mr-0">

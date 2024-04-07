@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { HiChevronLeft } from "react-icons/hi2";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { CiLock } from "react-icons/ci";
+import { formatCurrency } from "../../services/utils";
+import { CurrencyContext } from "../../context/CurrencyContext";
 
 const PaymentPage = () => {
   const { campaignId } = useParams();
@@ -11,6 +13,7 @@ const PaymentPage = () => {
   const [selectedPaymentMethod, setSelectedPaymentMethod] =
     useState("--select");
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const { currency } = useContext(CurrencyContext);
 
   const handleButtonClick = (amount) => {
     const numericAmount = parseInt(amount.replace(/,/g, ""), 10);
@@ -217,19 +220,21 @@ const PaymentPage = () => {
                         <h5 className=" mt-3 ">Donation Summary</h5>
                         <div className="flex justify-between mt-3">
                           <p className=" text-gray-500">Your donation</p>
-                          <p className=" text-gray-500">${selectedAmount}</p>
+                          <p className=" text-gray-500">
+                            {formatCurrency(selectedAmount, currency)}
+                          </p>
                         </div>
                         <div className="flex justify-between mt-3">
                           <p className=" text-gray-500">Service fee (2%)</p>
                           <p className=" text-gray-500">
-                            ${serviceFee.toFixed(2)}
+                            {formatCurrency(serviceFee.toFixed(2), currency)}
                           </p>
                         </div>
                         <hr className="my-3" />
                         <div className="flex justify-between">
                           <h5 className="text-teal-500 text-lg">Total</h5>
                           <h5 className="text-teal-500 text-lg">
-                            ${total.toFixed(2)}
+                            {formatCurrency(total.toFixed(2), currency)}
                           </h5>
                         </div>
                       </div>
@@ -322,16 +327,22 @@ const PaymentPage = () => {
               <h5 className=" mt-3 ">Donation Summary</h5>
               <div className="flex justify-between mt-3">
                 <p className=" text-gray-500">Your donation</p>
-                <p className=" text-gray-500">${selectedAmount}</p>
+                <p className=" text-gray-500">
+                  {formatCurrency(selectedAmount, currency)}
+                </p>
               </div>
               <div className="flex justify-between mt-3">
                 <p className=" text-gray-500">Service fee (2%)</p>
-                <p className=" text-gray-500">${serviceFee.toFixed(2)}</p>
+                <p className=" text-gray-500">
+                  {formatCurrency(serviceFee.toFixed(2), currency)}
+                </p>
               </div>
               <hr className="my-3" />
               <div className="flex justify-between">
                 <h5 className="text-teal-500 text-lg">Total</h5>
-                <h5 className="text-teal-500 text-lg">${total.toFixed(2)}</h5>
+                <h5 className="text-teal-500 text-lg">
+                  {formatCurrency(total.toFixed(2), currency)}
+                </h5>
               </div>
             </div>
           </div>
