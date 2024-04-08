@@ -174,9 +174,9 @@ const DonateLine = () => {
                     <span className=" flex items-center justify-center rounded-full w-10 h-10 bg-[#FAF4ED]">
                       <FaHandHoldingHeart className=" w-5 h-5 text-[#D18D4A]" />
                     </span>
-                    <p className="mt-1 ml-3 font-bold text-[#D18D4A]">
+                    {/* <p className="mt-1 ml-3 font-bold text-[#D18D4A]">
                       5k people just donated
-                    </p>
+                    </p> */}
                   </div>
                   <div className="flex flex-col mt-2">
                     <Link
