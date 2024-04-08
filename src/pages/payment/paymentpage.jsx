@@ -94,9 +94,6 @@ const PaymentPage = () => {
                 <span className=" flex items-center justify-center rounded-full w-10 h-10 bg-[#FAF4ED]">
                   <FaHandHoldingHeart className=" w-5 h-5 text-[#D18D4A]" />
                 </span>
-                <p className="mt-1 ml-3 font-bold text-[#D18D4A]">
-                  5k people just donated
-                </p>
               </div>
             </div>
             <div className="border-2 rounded-lg px-4 py-14 w-full ">
@@ -320,9 +317,6 @@ const PaymentPage = () => {
                 <span className=" flex items-center justify-center rounded-full w-10 h-10 bg-[#FAF4ED]">
                   <FaHandHoldingHeart className=" w-5 h-5 text-[#D18D4A]" />
                 </span>
-                <p className="mt-1 ml-3 font-bold text-[#D18D4A]">
-                  5k people just donated
-                </p>
               </div>
               <h5 className=" mt-3 ">Donation Summary</h5>
               <div className="flex justify-between mt-3">
