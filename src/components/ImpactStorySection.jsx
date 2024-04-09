@@ -83,14 +83,14 @@ const ImpactStorySection = () => {
             <button
               onClick={goPrev}
               className=" bg-[#FAF4ED] rounded-full w-8 h-8 flex items-center justify-center"
-              arial-label="previous testimonial"
+              aria-label="previous testimonial"
             >
               <HiArrowLongLeft className=" text-[#026354] w-4 h-4" />
             </button>
             <button
               onClick={goNext}
               className="prevEl bg-[#FAF4ED] rounded-full w-8 h-8 flex items-center justify-center"
-              arial-label="next testimonial"
+              aria-label="next testimonial"
             >
               <HiArrowLongRight className=" text-[#026354] w-4 h-4" />
             </button>

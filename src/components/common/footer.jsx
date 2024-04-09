@@ -111,6 +111,7 @@ function Footer() {
                   <img
                     src="/assets/logo.png"
                     alt="logo"
+                    loading="lazy"
                     className=" items-center md:justify-start justify-center w-10 h-10 pr-0 max-sm:w-20 max-sm:mt-5"
                   />
                 </a>
@@ -139,6 +140,7 @@ function Footer() {
                     href="https://www.facebook.com/"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Visit our Facebook page"
                   >
                     <FaFacebook className="w-6 h-6 text-[#04A38A]" />
                   </a>
@@ -148,6 +150,7 @@ function Footer() {
                     href="https://www.twitter.com/"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Visit our Twitter profile"
                   >
                     <FaTwitter className=" w-6 h-6 text-[#04A38A]" />
                   </a>
@@ -157,6 +160,7 @@ function Footer() {
                     href="https://www.instagram.com/"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Visit our Instagram page"
                   >
                     <AiFillInstagram className=" w-6 h-6 text-[#04A38A]" />
                   </a>
@@ -166,6 +170,7 @@ function Footer() {
                     href="https://wa.me/qr/75NMRFJYIYX2I1"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Contact us on WhatsApp"
                   >
                     <FaWhatsapp className=" w-6 h-6 text-[#04A38A]" />
                   </a>
