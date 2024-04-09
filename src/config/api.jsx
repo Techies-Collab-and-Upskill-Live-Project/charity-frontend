@@ -1,4 +1,34 @@
 import apiService from "../services/apiServicesNoAuth";
+import { getCachedData, setCachedData } from "./dbUtil";
+
+const baseURL = process.env.REACT_APP_API_URL;
+// Generic function to fetch data with caching
+const fetchDataWithCache = async (url, cacheKey) => {
+  try {
+    // Try to get data from cache first
+    const cachedData = await getCachedData(cacheKey);
+    if (cachedData) {
+      return cachedData;
+    }
+
+    const fullUrl = baseURL + url;
+    // If not in cache, fetch from server
+    const response = await fetch(fullUrl);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const data = await response.json();
+
+    // Cache the newly fetched data
+    await setCachedData(cacheKey, data);
+
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return null;
+  }
+};
 
 // get access token from local storage
 export const getAccessToken = () => {
@@ -118,13 +148,25 @@ export const getFeaturedCampaign = async () => {
 // get categories
 export const getCampaignCategories = async () => {
   try {
-    const response = await apiService.get("/campaign_category/list/");
-    return response.data.campaign_categories;
+    const response = await fetchDataWithCache(
+      "/campaign_category/list/",
+      "campaign_categories"
+    );
+    return response.campaign_categories;
   } catch (error) {
     console.error("Failed to fetch featured campaign:", error);
     return null;
   }
 };
+// export const getCampaignCategories = async () => {
+//   try {
+//     const response = await apiService.get("/campaign_category/list/");
+//     return response.data.campaign_categories;
+//   } catch (error) {
+//     console.error("Failed to fetch featured campaign:", error);
+//     return null;
+//   }
+// };
 
 // get campaigns in a category
 export const getCampaignsForCategory = async (selectedcategory) => {

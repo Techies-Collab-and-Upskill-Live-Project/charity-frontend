@@ -71,7 +71,7 @@ const TrendingSection = () => {
                     loading="lazy"
                   />
                   <div className="p-2">
-                    <h5 className="text-[#161616]">{campaign.title}</h5>
+                    <h4 className="text-[#161616]">{campaign.title}</h4>
                     <p className="text-[12px] text-[#515151]">
                       {clampDescription(campaign.description)}
                     </p>
