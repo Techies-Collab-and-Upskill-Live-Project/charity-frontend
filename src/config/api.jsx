@@ -204,3 +204,14 @@ export const reportCampaign = async (campaignId, reportData) => {
     throw new Error("Report failed: " + error.message);
   }
 };
+
+// // a request to get users profile details
+// export const getUserProfile = async (apiService) => {
+//   try {
+//     const response = await apiService.get("/auth/profile/get/");
+//     return response.data;
+//   } catch (error) {
+//     console.error("Failed to fetch user profile details:", error);
+//     return null;
+//   }
+// };

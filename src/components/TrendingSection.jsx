@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 import { clampDescription } from "../services/utils";
 import { CurrencyContext } from "../context/CurrencyContext";
 import { formatCurrency } from "../services/utils";
+// import AuthContext from "../auth/context/AuthContext";
 
 const TrendingSection = () => {
+  //   const { user } = useContext(AuthContext);
+  //   console.log("user", user);
   const [trendingCampaigns, setTrendingCampaigns] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -140,8 +143,10 @@ const TrendingSection = () => {
                       </div>
                       <div className="w-[190px] px-4 py-2 bg-orange-50 rounded-[20px] justify-center items-center flex">
                         <div className="text-yellow-800 text-sm font-semibold  leading-tight">
-                          {campaign.donor_count}{" "}
-                          {campaign.donor_count <= 1 ? "donor" : "donors"}
+                          +{campaign.donor_count}{" "}
+                          {campaign.donor_count <= 1
+                            ? "person is donating"
+                            : "people are donating"}
                         </div>
                       </div>
                     </div>

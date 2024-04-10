@@ -71,15 +71,15 @@ const Signup = () => {
                   alt=""
                   className=" w-6 h-6"
                 />{" "}
-                <span>Sign in with Google</span>
+                <span>Sign up with Google</span>
               </button>
               <button className="bg-blue-500 flex items-center justify-center w-full p-2 space-x-4 border rounded-md text-white">
                 <FaFacebook className=" h-6 w-6  " />{" "}
-                <span>Sign in with Facebook</span>
+                <span>Sign up with Facebook</span>
               </button>
-              <button className=" md:hidden bg-black flex items-center justify-center w-full p-2 space-x-4 border rounded-md text-white">
+              <button className=" hidden md:hidden bg-black flex items-center justify-center w-full p-2 space-x-4 border rounded-md text-white">
                 <AiOutlineApple className=" h-6 w-6  " />{" "}
-                <span>Sign in with Apple</span>
+                <span>Sign up with Apple</span>
               </button>
             </div>
             <div className="flex items-center w-full my-4">
@@ -88,7 +88,7 @@ const Signup = () => {
               <hr className="w-full text-gray-400 h-1" />
             </div>
             <div>
-              <div className="md:flex hidden">
+              <div className="md:flex">
                 <div>
                   <div className="space-y-2">
                     <label htmlFor="firstName" className="block text-sm">
