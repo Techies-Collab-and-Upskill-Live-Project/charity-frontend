@@ -96,7 +96,7 @@ function NavBar() {
               (navbarOpen ? " flex" : " hidden")
             }
           >
-            <nav className="flex flex-col items-center justify-around lg:flex-row lg:ml-auto">
+            <nav className="flex flex-col items-center justify-around lg:flex-row lg:ml-auto lg:space-bet">
               <div className=" flex items-center">
                 <Link to="/discover" className="nav-link">
                   Explore

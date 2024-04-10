@@ -54,7 +54,7 @@ const CategoryList = () => {
             name="selectcategory"
             id="selectcategory"
             value={selectedCategory}
-            className="rounded-md ring-gray-600 ring-2 focus:ring-2 focus:outline-none focus:ring-teal-500 font-medium text-sm px-4 py-2.5"
+            className="rounded-md ring-gray-600 ring-2 focus:ring-2 focus:outline-none focus:ring-teal-500 font-medium text-sm px-4 py-2.5 "
             onChange={handleCategoryChange}
           >
             {campaignCategories.map((category) => (
@@ -202,8 +202,10 @@ const CategoryList = () => {
                           </div>
                           <div className="w-[190px] px-4 py-2 bg-orange-50 rounded-[20px] justify-center items-center flex">
                             <div className="text-yellow-800 text-sm font-semibold  leading-tight">
-                              {campaign.donor_count}{" "}
-                              {campaign.donor_count <= 1 ? "donor" : "donors"}
+                              +{campaign.donor_count}{" "}
+                              {campaign.donor_count <= 1
+                                ? "person is donating"
+                                : "people are donating"}
                             </div>
                           </div>
                         </div>
