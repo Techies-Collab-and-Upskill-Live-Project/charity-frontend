@@ -65,7 +65,8 @@ const TrendingSection = () => {
               <Link key={campaign.id} to={`/campaign/${campaign.id}`}>
                 <div
                   key={campaign.id}
-                  className="overflow-hidden transition-shadow duration-300 bg-white rounded-md"
+                  className="overflow-hidden transition-shadow duration-300 bg-white rounded-md flex flex-col justify-between"
+                  style={{ minHeight: "500px" }}
                 >
                   <img
                     src={campaign.images[0]?.image}
@@ -74,7 +75,9 @@ const TrendingSection = () => {
                     loading="lazy"
                   />
                   <div className="p-2">
-                    <h4 className="text-[#161616]">{campaign.title}</h4>
+                    <h4 className="text-[#161616] truncate">
+                      {campaign.title}
+                    </h4>
                     <p className="text-[12px] text-[#515151]">
                       {clampDescription(campaign.description)}
                     </p>
@@ -88,7 +91,7 @@ const TrendingSection = () => {
                           style={{
                             width: `${(campaign.raised / campaign.goal) * 100}%`,
                           }}
-                          className="h-2 left-0 top-0 absolute bg-teal-600 rounded-lg transition-width duration-300"
+                          className="h-2 left-0 top-0 absolute bg-[#04A38A] rounded-lg transition-width duration-300"
                         />
                       </div>
                       <div

@@ -21,6 +21,10 @@ import PrivateRoutesComponent from "./auth/utils/PrivateRoutesComponent";
 import DiscoverPage from "./pages/dicover/page.jsx";
 import DonatePage from "./pages/donate/page.jsx";
 import ShareCampaignPage from "./pages/donate/ShareCampaignPage.jsx";
+// import DashboardSidebar from './pages/dashboard/dashboardsiderbar.jsx';
+// import DashboardNav from './pages/dashboard/dashboardnav.jsx';
+import Dashboard from './pages/dashboard/page.jsx';
+;
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -52,6 +56,7 @@ function App() {
 
       {/*  PrivateRoutes */}
       <Route path="/*" element={<PrivateRoutesComponent />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
 }

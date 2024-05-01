@@ -26,7 +26,7 @@ const DashboardSta = () => {
     fetchData();
   }, [axiosInstance]); // Dependency array ensures `fetchData` runs only when `axiosInstance` changes
 
-  console.log("first", user.first_name);
+  //   console.log("first", user.first_name);
   return (
     <div className="p-4">
       <div className="w-full grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 ">

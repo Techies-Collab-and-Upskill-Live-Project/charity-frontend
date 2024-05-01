@@ -28,7 +28,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   let location = useLocation();
-  let from = location.state?.from?.pathname || "/discover";
+  let from = location.state?.from?.pathname || "/dashboard";
 
   const formik = useFormik({
     initialValues: {

@@ -85,7 +85,7 @@ function Footer() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="bg-teal-500 rounded-md ml-4 px-4 py-3 text-sm text-white max-sm:ml-0 max-sm:mt-4 "
+                    className="bg-[#04A38A] rounded-md ml-4 px-4 py-3 text-sm text-white max-sm:ml-0 max-sm:mt-4 "
                   >
                     {loading ? (
                       <Circles

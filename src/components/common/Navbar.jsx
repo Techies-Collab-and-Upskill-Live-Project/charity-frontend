@@ -102,16 +102,7 @@ function NavBar() {
                   Explore
                 </Link>
                 <div className="relative">
-                  <FaChevronDown
-                    className="text-gray-600 w-2 h-2  focus:outline-none"
-                    onClick={toggleExploreDropdown}
-                  />
 
-                  <DropdownMenu
-                    isOpen={isExploreDropdownOpen}
-                    closeDropdown={closeDropdowns}
-                    options={exploreOptions}
-                  />
                 </div>
               </div>
               <div className=" flex items-center ">
@@ -119,16 +110,7 @@ function NavBar() {
                   Currency
                 </Link>
                 <div className="relative">
-                  <FaChevronDown
-                    className="text-gray-600 w-2 h-2 focus:outline-none"
-                    onClick={toggleOtherDropdown}
-                  />
-
-                  <DropdownMenu
-                    isOpen={isOtherDropdownOpen}
-                    closeDropdown={closeDropdowns}
-                    options={otherOptions}
-                  />
+                  
                 </div>
               </div>
 

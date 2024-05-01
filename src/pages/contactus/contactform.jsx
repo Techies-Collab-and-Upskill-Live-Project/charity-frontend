@@ -53,8 +53,8 @@ const ContactUsForm = () => {
     <div className="bg-white w-full">
       <div className=" container mx-auto w-full">
         <div className="py-16 lg:py-20 mx-auto">
-          <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 ">
-            <div className="mt-28 mr-28">
+          <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 max-sm:py-0 max-sm:px-0 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 ">
+            <div className="mt-28 mr-28 max-sm:mt-12 max-sm:mr-0">
               <h3>
                 Need More Info? <br /> Contact Us
               </h3>
@@ -73,7 +73,7 @@ const ContactUsForm = () => {
                 loading="lazy"
               />
             </div>
-            <div className="mt-28">
+            <div className="mt-28 max-sm:mt-5">
               <form onSubmit={formik.handleSubmit}>
                 <div>
                   <label htmlFor="full_name" className="mb-10">
@@ -87,7 +87,7 @@ const ContactUsForm = () => {
                     onBlur={formik.handleBlur}
                     value={formik.values.full_name}
                     placeholder=" John Mark"
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96 max-sm:w-80"
                   />
                   {formik.touched.full_name && formik.errors.full_name && (
                     <p className="text-red-500">{formik.errors.full_name}</p>
@@ -103,7 +103,7 @@ const ContactUsForm = () => {
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                     placeholder="olivia@untitledui.com"
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96 max-sm:w-80"
                   />
                   {formik.touched.email && formik.errors.email && (
                     <p className="text-red-500">{formik.errors.email}</p>
@@ -117,7 +117,7 @@ const ContactUsForm = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.enquiry_type}
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96 max-sm:w-80"
                   >
                     <option value="">Select Enquiry Type</option>
                     <option value="Technical Support">Technical Support</option>
@@ -142,7 +142,7 @@ const ContactUsForm = () => {
                     onBlur={formik.handleBlur}
                     value={formik.values.subject}
                     placeholder="Enter subject"
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96 max-sm:w-80"
                   />
                   {formik.touched.subject && formik.errors.subject && (
                     <p className="text-red-500">{formik.errors.subject}</p>
@@ -159,7 +159,7 @@ const ContactUsForm = () => {
                     value={formik.values.message}
                     cols="30"
                     rows="10"
-                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96"
+                    className="block  rounded-md border-0 py-1.5 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:outline-none focus:ring-teal-500 sm:text-sm sm:leading-6 mt-2 mb-5 w-96 max-sm:w-80"
                   ></textarea>
                   {formik.touched.message && formik.errors.message && (
                     <p className="text-red-500">{formik.errors.message}</p>
@@ -168,7 +168,7 @@ const ContactUsForm = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-96 bg-teal-500 rounded-md px-4 text-sm text-white mt-5  py-3 flex items-center justify-center "
+                  className="w-96 max-sm:w-80 bg-teal-500 rounded-md px-4 text-sm text-white mt-5  py-3 flex items-center justify-center "
                 >
                   {loading ? (
                     <Circles

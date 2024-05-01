@@ -16,6 +16,11 @@ const exchangeRates = {
   GHS: 6, // USD to GHS, example rate
 };
 
+// function formatCurrencyWithSpace(amount) {
+//   return amount.replace(/(\$)(\d)/, "$1 $2");
+// }
+
+// Usage
 function formatCurrency(amount, currency = "USD") {
   let convertedAmount = amount;
 
@@ -28,7 +33,6 @@ function formatCurrency(amount, currency = "USD") {
     style: "currency",
     currency,
   }).format(convertedAmount);
-
   return formatter;
 }
 export { formatCurrency };

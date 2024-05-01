@@ -11,6 +11,7 @@ const CategoryList = () => {
     const fetchCampaignCategories = async () => {
       const data = await getCampaignCategories();
       setCampaignCategories(data);
+      console.log(data)
     };
     fetchCampaignCategories();
   }, []);

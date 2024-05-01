@@ -27,7 +27,7 @@ const Cta = () => {
     <div className=" bg-white mx-auto w-full">
       <div className=" container mx-auto w-full">
         <div className="py-6 md:py-12">
-          <div className="  px-2 py-6 lg:px-10 lg:py-20 bg-emerald-800 rounded-lg">
+          <div className="  px-2 py-6 lg:px-10 lg:py-20 bg-[#026354] rounded-lg">
             <h3 className=" text-white ">Featured Campaign</h3>
             <div className="gap-8 items-center py-4 px-2 mx-auto  xl:gap-16 md:grid lg:grid-cols-2 sm:py-8 lg:px-6">
               <img
