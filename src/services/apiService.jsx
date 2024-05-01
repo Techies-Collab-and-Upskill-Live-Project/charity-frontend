@@ -24,8 +24,10 @@ const useApiService = () => {
   axiosInstance.interceptors.request.use(async (req) => {
     const user = jwtDecode(authTokens.access);
     const isExpired = dayjs.unix(user.exp).diff(dayjs()) < 1;
+    console.log("isExpired", isExpired);
 
     //     if (!isExpired) return req;
+    console.log("access", authTokens.access);
     const response = await axios.post(`${refreshURL}/token/refresh/`, {
       refresh: authTokens.refresh,
       headers: {
@@ -33,7 +35,7 @@ const useApiService = () => {
       },
       Authorization: `Bearer ${authTokens.access}`,
     });
-
+    console.log("response", response);
     localStorage.setItem("authTokens", JSON.stringify(response.data));
 
     setAuthTokens(response.data);
